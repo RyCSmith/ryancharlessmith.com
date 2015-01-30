@@ -1,0 +1,210 @@
+/* Styles for mobile Skills Section ---------------------------------------------------- */
+#mb-second-row,
+#mb-third-row,
+#mb-fourth-row,
+#mb-fifth-row {
+	margin-top: 10px;
+}
+
+#mb-second-row,
+#mb-third-row,
+#mb-fourth-row,
+#mb-fifth-row {
+	margin-top: 10px;
+}
+
+/* Styles for mobile Social Section ---------------------------------------------------- */
+.mb-social-row {
+	margin-top: 10px;
+
+}
+#mb-soc-1, #mb-soc-2,
+#mb-soc-3, #mb-soc-4,
+#mb-soc-5, #mb-soc-6,
+#mb-soc-7 {
+	display: none;
+}
+
+/* Styles for mobile About Section ---------------------------------------------------- */
+#mb-profile-pic {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0 auto;
+}
+#mb-title-name {
+	padding-top: 20px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+@media(min-width: 450px){
+	#mb-title-name{
+		font-size: 60px;
+	}
+}
+@media(min-width: 640px){
+	#mb-title-name{
+		font-size: 80px;
+	}
+}
+#mb-about-top-row {
+	background-color: #000000;
+	text-align: center;
+}
+#mb-profile-pic-box {
+	text-align: center;
+}
+/* Styles for mobile menu ---------------------------------------------------- */
+
+#spacer-div {
+	height: 55px;
+}
+.overlayp {
+    z-index: 99998;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: -1001px;
+    /* the following lines provide a transition for the mb menu
+    -commented out right now because mobile performance was poor*/
+    /*transition: margin-top .6s ease-in;
+    -moz-transition: margin-top .6s ease-in;
+    -webkit-transition: margin-top .6s ease-in;*/
+    width: 100%;
+}
+.overlayp.active {
+    margin-top: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);}
+.panel {
+  background: #88AD8B;
+  height: 357px;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+.mb-menu-col {
+	outline: 1px solid rgb(89, 75, 75);
+	height: 50px;
+	font-size: 24px;
+	text-align: center;
+	color: #FFFFFF;
+}
+/* Styles for mobile header ---------------------------------------------------- */
+#head-container{
+	background-color:#000000;
+	position: fixed;
+	z-index:99999;
+	top:0; 
+	left:0;
+	width:100%;
+	height:55px;
+	padding:0;
+	text-align: center;
+/*	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);
+*/}
+#head-row,
+.head-col {
+	font-size: 30px;
+	height: 40px;
+	margin: 0 auto;
+	top:0; 
+	left:0;
+	height: 100%;
+	color: #337ab7;
+	vertical-align: middle;
+}
+#head2{
+	position:fixed;
+	margin-top:80; 
+	left:0;
+	width:100%;
+	height:45px;
+	padding:0;
+}
+#mbimage {
+	width: 100%;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/*Formatting for MOBILE CONTACT-FORM */
+#mb-name-input,
+#mb-mail-input,
+#mb-message-input {
+	color: #000000;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	border-radius: 5px;
+	box-shadow: 10px 0px 5px rgba(0, 0, 0, 0.6);
+	background-color : #FFFFFF;
+	border-color: transparent;
+}
+
+#mb-contact-label {
+	margin-top: 50px;
+	font-size: 32px;
+	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.6);
+	font-weight: bold;
+}
+
+#mb-contact-label-text {
+	font-size: 14px;
+	margin-top: 7px;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.6);
+}
+/*the following media queries resize the contact form to fit the 
+height of the screen (full size layout) */
+@media (min-height: 720px){
+	#mb-message-input {
+		height: 300px;
+	}
+}
+@media (max-height: 719px) {
+	#mb-message-input {
+		height: 200px;
+	}
+}
+
+@media (max-height: 619px){
+	#mb-message-input {
+		height: 100px;
+	}
+}
+@media (max-height: 510px){
+	#mb-message-input {
+		height: 50px;
+	}
+}
+
+#mb-message-form {
+	text-align: center;
+	margin-top: 5px;
+}
+
+#mb-name-label {
+	margin-top: 7px;
+}
+
+#mb-contact-button {
+	background-color: #D2D2FF;
+	width: 162px;
+	height: 50px;
+	border-radius: 5px;
+	box-shadow: 10px 0px 5px rgba(0, 0, 0, 0.6);
+	border-color: transparent;
+	font-size: 24px;
+	color: #000000;
+}
+
+#mb-contact-button-new {
+	background-color: #FFFAC7;
+	width: 162px;
+	height: 70px;
+	border-radius: 5px;
+	box-shadow: 10px 0px 5px rgba(0, 0, 0, 0.6);
+	border-color: transparent;
+	font-size: 18px;
+	color: #000000;
+}
