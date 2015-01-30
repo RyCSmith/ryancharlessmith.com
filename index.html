@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+		<title>Ryan's Home Page</title>
+	    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	    <link rel="stylesheet" type="text/css" href="css/customStyle.css">
+        <link rel="stylesheet" type="text/css" href="css/MBcustomStyles.css">
+	    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="js/dom-variables.js"></script>
+	    <script type="text/javascript" src="js/customOps.js"></script>
+        <script src="js/prefixfree.min.js"></script>
+	    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-58836523-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+  	</head>
+  	<body>
+
+<!--holder tags for elements that will be added to DOM -->
+<div id="mobile-menu-holder"></div>
+<header id="head2" class="content"></header>
+
+<!-- sidebar for 767 < size screens -->
+<div class='sidebar' id="sidebar">
+    <form name="message-form" id="message-form">
+        <div id="contact-label">CONTACT</div>
+        <div id="contact-label-text">To contact me by email, please fill out the form below:</div>
+      <p>
+        <label id="name-label">NAME: </label><br>
+        <input id="name-input" type="text" name="name">
+      </p>
+      <p>
+        <label>EMAIL:</label><br>
+        <input id="mail-input" type="text">
+      </p>
+      <p>
+        <label>MESSAGE:</label> <br>
+        <textarea id="message-input"></textarea>
+      </p>
+      <button type="button" id="contact-button">SEND</button>
+      <button type="button" id="contact-button-new" class="disappear">SEND NEW MESSAGE</button>
+    </form>
+</div>
+
+<!-- Image Slider -->
+      	<div class="slider-container content" id="slider-container">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			  </ol>
+			 
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner">
+			    <div class="item active">
+			      <img src="images/glades1.jpg" alt="...">
+			    </div>
+			    <div class="item">
+			      <img src="images/cabin1.jpg" alt="...">
+			    </div>
+			    <div class="item">
+			      <img src="images/cabin2.jpg" alt="...">
+			    </div>
+			  </div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left"></span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right"></span>
+			  </a>
+			</div> <!-- Carousel -->
+		</div>
+
+<!-- Control Bar -->
+<header id="head1"></header>
+<!--Floating Container -->
+	<div class="container content" id="floating-container"></div>
+
+<!-- Main Container -->
+    <div class="outer-container content" id="main-container">
+    	<div class="container" id="inner-main-container">
+<!-- About Section - filled dynamically -->
+            <a NAME="ABOUT"></a>
+            <div id="about-container"></div>
+<!-- FS Skills Section -->  
+            <a NAME="SKILLS"></a>  		
+    		<div class="row category-header" id="fs-skills-section">
+    			<div class="col-md-12">
+    				<h1>SKILLS</h1>
+    				<ul class="skills-row" id="top-row">
+	    				<li><img class="img-responsive image-limiter circle-image top-row-image" src="images/java.jpg" alt="profile pic"></li>
+	    				<li><img class="img-responsive image-limiter circle-image top-row-image" src="images/python.jpg" alt="profile pic"></li>
+	    				<li><img class="img-responsive image-limiter circle-image top-row-image" src="images/c.jpg" alt="profile pic"></li>
+	    				<li><img class="img-responsive image-limiter circle-image top-row-image" src="images/css.jpg" alt="profile pic"></li>
+	    				<li><img class="img-responsive image-limiter circle-image top-row-image" src="images/js.jpg" alt="profile pic"></li>
+    				</ul>
+    				<ul class="skills-row table-width-adjuster" id="second-row">
+	    				<li><img class="img-responsive image-limiter circle-image second-row-image" src="images/html.jpg" alt="profile pic"></li>
+	    				<li><img class="img-responsive image-limiter circle-image second-row-image" src="images/bootstrap.jpg" alt="profile pic"></li>
+	    				<li><img class="img-responsive image-limiter circle-image second-row-image" src="images/git.jpg" alt="profile pic"></li>
+	    				<li><img class="img-responsive image-limiter circle-image second-row-image" src="images/jquery.jpg" alt="profile pic"></li>
+    				</ul>
+    				<ul class="skills-row" id="third-row">
+	    				<li><img class="img-responsive image-limiter circle-image third-row-image" src="images/magento.jpg" alt="profile pic"></li>
+	    				<li><img class="img-responsive image-limiter circle-image third-row-image" src="images/spanish.jpg" alt="profile pic"></li>
+	    				<li><img class="img-responsive image-limiter circle-image third-row-image" src="images/portuguese.jpg" alt="profile pic"></li>
+	    				<li><img class="img-responsive image-limiter circle-image third-row-image" src="images/gimp.jpg" alt="profile pic"></li>
+	    				<li><img class="img-responsive image-limiter circle-image third-row-image" src="images/holder_image.jpg" alt="profile pic"></li>
+    				</ul>
+    			</div>
+    		</div>
+<!-- Mobile - Skills Section --> 
+            <div id="mb-skills-section">        
+                <div class="row category-header">
+                    <a NAME="SKILLS"></a>
+                    <h1>SKILLS</h1>
+                </div>
+                <div class="row" id="mb-top-row">
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-top-row-image" src="images/java.jpg" alt="profile pic">
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-top-row-image" src="images/python.jpg" alt="profile pic">
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-top-row-image" src="images/c.jpg" alt="profile pic">
+                    </div>
+                </div>
+                <div class="row" id="mb-second-row">
+                    <div class="col-xs-4">        
+                            <img class="img-responsive image-limiter circle-image mb-second-row-image" src="images/css.jpg" alt="profile pic">
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-second-row-image" src="images/js.jpg" alt="profile pic">
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-second-row-image" src="images/html.jpg" alt="profile pic">
+                    </div>
+                </div>   
+                <div class="row" id="mb-third-row">
+                    <div class="col-xs-4">        
+                            <img class="img-responsive image-limiter circle-image mb-third-row-image" src="images/bootstrap.jpg" alt="profile pic">
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-third-row-image" src="images/git.jpg" alt="profile pic">
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-third-row-image" src="images/jquery.jpg" alt="profile pic">
+                    </div>
+                </div>
+                <div class="row" id="mb-fourth-row">
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/magento.jpg" alt="profile pic">
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/spanish.jpg" alt="profile pic">
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/portuguese.jpg" alt="profile pic">
+                    </div>
+                </div>
+                <div class="row" id="mb-fifth-row">
+                    <div class="col-xs-4">       
+                            <img class="img-responsive image-limiter circle-image mb-fifth-row-image" src="images/gimp.jpg" alt="profile pic">
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-fifth-row-image" src="images/holder_image.jpg" alt="profile pic">
+                    </div>        
+                </div>
+            </div>
+<!-- Projects Section --> 
+			<div class="row category-header">
+                <a NAME="PROJECTS"></a>
+				<div class="col-md-12">
+					<h1 class="text-center">PROJECTS</h1>
+                    <div class="text-center">Click for Details.</div>
+				</div>
+			</div>   		
+    		<div class="row text-center" >
+    			<div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-1')" onmouseout="mouseOffProjOpacity()">
+    				<div class="project-item" id="proj-1" data-toggle="modal" data-target="#proj-1-modal">
+						<img class="img-responsive project-image" src="images/this_site.jpg" alt="profile pic">
+						<div class="project-caption">This Website</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-2')" onmouseout="mouseOffProjOpacity()">
+    				<div class="project-item" id="proj-2" data-toggle="modal" data-target="#proj-2-modal">
+    					<img class="img-responsive project-image" src="images/gone_fishin.jpg" alt="profile pic">
+						<div class="project-caption">Gone Fishin' Game</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-3')" onmouseout="mouseOffProjOpacity()">
+    				<div class="project-item" id="proj-3" data-toggle="modal" data-target="#proj-3-modal">
+    					<img class="img-responsive project-image" src="images/lc4.jpg" alt="profile pic">
+						<div class="project-caption">LC4 Binary Interpreter</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="row text-center">
+    			<div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-4')" onmouseout="mouseOffProjOpacity()">
+    				<div class="project-item" id="proj-4" data-toggle="modal" data-target="#proj-4-modal">
+    					<img class="img-responsive project-image" src="images/flash_cards.jpg" alt="profile pic">
+						<div class="project-caption">Flash Cards</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-5')" onmouseout="mouseOffProjOpacity()">
+    				<div class="project-item" id="proj-5" data-toggle="modal" data-target="#proj-5-modal">
+    					<img class="img-responsive project-image" src="images/kaleid.jpg" alt="profile pic">
+						<div class="project-caption">Kaleidoscope</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-6')" onmouseout="mouseOffProjOpacity()">
+    				<div class="project-item" id="proj-6" data-toggle="modal" data-target="#proj-6-modal">
+    					<img class="img-responsive project-image" src="images/library.jpg" alt="profile pic">
+						<div class="project-caption">Library</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="row text-center">
+    			<div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-7')" onmouseout="mouseOffProjOpacity()">
+    				<div class="project-item" id="proj-7" data-toggle="modal" data-target="#proj-7-modal">
+    					<img class="img-responsive project-image" src="images/nursery.jpg" alt="profile pic">
+						<div class="project-caption">Nursery</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-8')" onmouseout="mouseOffProjOpacity()">
+    				<div class="project-item" id="proj-8" data-toggle="modal" data-target="#proj-8-modal">
+    					<img class="img-responsive project-image" src="images/tidyhtml.jpg" alt="profile pic">
+						<div class="project-caption">tidyHTML</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-9')" onmouseout="mouseOffProjOpacity()">
+    				<div class="project-item" id="proj-9" data-toggle="modal" data-target="#proj-9-modal">
+    					<img class="img-responsive project-image" src="images/pinnsvin_site.jpg" alt="profile pic">
+						<div class="project-caption">Pinnsvin Website</div>
+    				</div>
+    			</div>
+    		</div>
+<!-- Social Section -->
+			<div class="row category-header" id="fs-social-section">
+                <a NAME="SOCIAL"></a>
+				<div class="col-md-12">
+					<h1 class="text-right">SOCIAL</h1>
+					<ul class="social-row" id="social-row">
+	    				<li><a href="https://www.facebook.com/ryancs2"><img class="img-responsive image-limiter sm-circle-image" id="soc-1" src="images/facebook.jpg" alt="pic"></a></li>
+	    				<li><a href="http://linkedin.com/pub/ryan-charles-smith/1b/933/552/ryan-charles-smith/1b/933/552"><img class="img-responsive image-limiter sm-circle-image" id="soc-2"src="images/linkedin.jpg" alt="pic"></a></li>
+	    				<li><a href="https://github.com/RyCSmith"><img class="img-responsive image-limiter sm-circle-image" id="soc-3"src="images/github.png" alt="pic"></a></li>
+	    				<li><a href="https://www.quora.com/Ryan-Smith-66"><img class="img-responsive image-limiter sm-circle-image" id="soc-4"src="images/quora.jpg" alt="pic"></a></li>
+	    				<li><a href="https://plus.google.com/106942059773984319945/"><img class="img-responsive image-limiter sm-circle-image" id="soc-5"src="images/google_plus.jpg" alt="pic"></a></li>
+	    				<li><img class="img-responsive image-limiter sm-circle-image" id="soc-6"src="images/skype.jpg" alt="pic"></li>
+	    				<li><a href="https://twitter.com/Smithryc"><img class="img-responsive image-limiter sm-circle-image" id="soc-7"src="images/twitter.jpg" alt="pic"></a></li>
+    				</ul>
+				</div>
+			</div>
+<!-- Mobile Social Section -->
+            <a NAME="SOCIAL2"></a>
+            <div class="row category-header" id="mb-social-section">
+                <h1 class="text-right">SOCIAL</h1>
+            </div>
+            <div class="row mb-social-row">
+                <div class="col-xs-6">
+                        <a href="https://www.facebook.com/ryancs2"><img class="img-responsive image-limiter sm-circle-image" id="mb-soc-1" src="images/facebook.jpg" alt="pic"></a>
+                </div>
+                <div class="col-xs-6">
+                        <a href="http://linkedin.com/pub/ryan-charles-smith/1b/933/552/ryan-charles-smith/1b/933/552"><img class="img-responsive image-limiter sm-circle-image" id="mb-soc-2"src="images/linkedin.jpg" alt="pic"></a>
+                </div>
+            </div>
+            <div class="row mb-social-row">
+                <div class="col-xs-6">
+                        <a href="https://github.com/RyCSmith"><img class="img-responsive image-limiter sm-circle-image" id="mb-soc-3"src="images/github.png" alt="pic"></a>
+                </div>
+                <div class="col-xs-6">
+                        <a href="https://www.quora.com/Ryan-Smith-66"><img class="img-responsive image-limiter sm-circle-image" id="mb-soc-4"src="images/quora.jpg" alt="pic"></a>
+                </div>
+            </div>
+            <div class="row mb-social-row">
+                <div class="col-xs-6">
+                        <a href="https://plus.google.com/106942059773984319945/"><img class="img-responsive image-limiter sm-circle-image" id="mb-soc-5"src="images/google_plus.jpg" alt="pic"></a>
+                </div>
+                <div class="col-xs-6">
+                        <img class="img-responsive image-limiter sm-circle-image" id="mb-soc-6"src="images/skype.jpg" alt="pic">
+                </div>
+            <div class="row mb-social-row">
+                <div class="col-xs-6">
+                        <a href="https://twitter.com/Smithryc"><img class="img-responsive image-limiter sm-circle-image" id="mb-soc-7"src="images/twitter.jpg" alt="pic"></a>
+                </div>
+            </div>
+<!-- Resume Section -->
+            <div id="resume-section" class="category-header">
+                <a NAME="RESUME"></a>
+                <div class="row">
+                    <div class="col-md-12">
+                    <h1 class="text-center">RESUME</h1> 
+                    <p id="resume-info-text">These are some highlights from my resume. The full PDF version is available to view or download <a href="files/Ryan_Smith_CV.pdf">here</a>. (*contact info's been removed before hosting so please get in touch via this site if you wish to do so) </p>
+                    </div>
+                </div>
+                <div class="row" id="education-top-row">
+                    <div class="col-md-3">
+                        <div class="resume-header text-uppercase">School</div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="program">Master of Computer and Information Technology</div>
+                        <div class="school">University of Pennsylvania, Philadelphia, PA</div>
+                        <div class="graduation">Expected May, 2016</div>
+                        <div class="course-headings text-uppercase">completed courses</div>
+                        <ul class="details">
+                            <li>Programming Languages and Techniques</li>
+                            <li>Computer Architecture</li>
+                            <li>Discrete Mathematics</li>
+                        </ul>
+                        <div class="course-headings text-uppercase">current courses</div>
+                        <ul class="details">
+                            <li>Programming Languages and Techniques II</li>
+                            <li>Theory of Computation</li>
+                            <li>Digital System Organization and Design</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="text-uppercase"></div>
+                    </div>
+                    <div class="col-md-9" id="central">
+                        <div class="program">BA, Spanish with a minor in Latin American Studies</div>
+                        <div class="school">Central Connecticut State University, New Britain, CT</div>
+                        <div class="graduation">May 2010. Cum Laude</div>
+                        <ul class="details">
+                            <li>3.52 cumulative GPA.</li>
+                            <li>Have participated in two study abroad programs. León, Spain, 1 year. Florianópolis, Brazil, 6 months.</li>
+                            <li>Recipient of the FIPSE grant to study in Brazil.</li>
+                            <li>Recipient of monthly scholarship for translations done on behalf of University of State of Santa Catarina.</li>
+                            <li>Member of the Spanish club.</li>
+                            <li>Co-Founder of the Portuguese conversation group.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" id="additional-courses">
+                    <div class="col-md-3">
+                        <div class="resume-header text-uppercase">Additional Courses</div>
+                    </div>
+                    <div class="col-md-9">
+                        <ul class="details">
+                            <li>Java Programming - Virginia Western Community College</li>
+                            <li>Intro to HTML and CSS - Udacity.com</li>
+                            <li>JavaScript Basics - Udacity.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="resume-header text-uppercase">Work</div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">Discover Learn Work Career Training Services</div>
+                        <div class="title">Employment Specialist</div>
+                        <div class="dates">January 2012 - July 2014</div>
+                        <ul class="job-responsibilities">
+                            <li>Served as member of ecommerce team, conducting routine management, maintenance and design modifications for Magento-based web-store generating $50k+ in first-year sales.</li>
+                            <li>Executed Facebook and Google AdWords Campaigns and listed products via Amazon Marketplace.</li>
+                            <li>Developed individualized service plans to meet the needs of individuals with developmental disabilities.</li>
+                            <li>Designed and implemented plan to include assistive technologies in the program.</li>
+                            <li>Arranged community-based employment and internships for program participants.</li>
+                            <li>Completed monthly billing invoices in excess of $250k for all services provided by Guilford, CT facility.</li>
+                            <li>Conducted community outreach. Outreach includes hosting a monthly parent support group, attending career and transition fairs and hosting flower sales to benefit the program.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="text-uppercase"></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">Goombay Coffee Company</div>
+                        <div class="title">Co-Founder</div>
+                        <div class="dates">December 2010 - March 2012</div>
+                        <ul class="job-responsibilities">
+                            <li>Magento-based ecommerce startup providing monthly, artisan-coffee subscription service.</li>
+                            <li>Offered alternative marketing, ecommerce platform and drop ship structure for small coffee roasters.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="text-uppercase"></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">University of Arizona</div>
+                        <div class="title">Graduate Assistant in Teaching</div>
+                        <div class="dates">August 2010 - January 2011</div>
+                        <ul class="job-responsibilities">
+                            <li>Independently instructed two second level Spanish classes, Spanish 102, at the university.</li>
+                            <li>Developed daily lessons, supporting course materials and test preparation programs for students.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="text-uppercase"></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">CCSU Center for the Caribbean and Latin American Studies</div>
+                        <div class="title">Student Assistant</div>
+                        <div class="dates">January 2009 - January 2010</div>
+                        <ul class="job-responsibilities">
+                            <li> Developed awareness of Latino, Latin American, and Caribbean cultures in the New Britain community through the organization and promotion of musical acts, lectures and other related events on campus.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<!--mobile contact form -->            
+            <a NAME="CONTACT"></a>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form name="mb-message-form" id="mb-message-form">
+                        <div id="mb-contact-label">CONTACT</div>
+                        <div id="mb-contact-label-text">To contact me by email, please fill out the form below:</div>
+                      <p>
+                        <label id="mb-name-label">NAME: </label><br>
+                        <input id="mb-name-input" type="text" name="mb-name">
+                      </p>
+                      <p>
+                        <label>EMAIL:</label><br>
+                        <input id="mb-mail-input" type="text">
+                      </p>
+                      <p>
+                        <label>MESSAGE:</label> <br>
+                        <textarea id="mb-message-input"></textarea>
+                      </p>
+                      <button type="button" id="mb-contact-button">SEND</button>
+                      <button type="button" id="mb-contact-button-new" class="disappear">SEND NEW MESSAGE</button>
+                    </form>
+                    </div>
+                </div>
+<!-- footer -->        
+            <div class="row" id="footer">
+                <hr id="footer-hr-1">
+                <div class="col-xs-3">
+                    <div>RYAN</div>
+                </div>
+                <div class="col-xs-9">
+                    <div class="text-right">ryancharlessmith.com</div>
+                </div>
+            </div>
+    	</div>
+    </div>
+</div>
+
+
+<!--**********JavaScript beyond this point ************************************************************-->
+<!--Sets speed for carousel -->
+	<script>
+	    $('.carousel').carousel({
+	        interval: 11100
+	    })
+	</script>
+
+<!--This script responds the the SCREEN-SLIDE-BUTTON.
+    -On button click - isOpen class is toggled
+    -calls getMCWay and toggles bar coloring if above waypoint 
+    -calls changeDirectionIcon and changes icon as appropriate-->
+    <script>
+        $('#head1').on('click', 'a.contact-slide-button', function() {
+            $('.content').toggleClass('isOpen');
+            changeDirectionIcon();
+            if (getMCWay()){
+                $('#bar-inner').toggleClass('bar-background');
+            }
+        });
+    </script>
+
+<!--This script powers the menu button on the mobile nav bar -->
+    <script>
+        $('#head1').on('click', 'a.menu-button', function(){
+            $('#menu-overlay').toggleClass('active');
+        });
+    </script>
+
+<!--***************** MAIL SENDING FUNCTIONS *******************************************************-->
+<!--This calls the sendMessageForm() function and sends and email with message info
+    -also call updateContactSent() to change options and button display -->
+    <script>
+        $('#contact-button').click(function() {
+            sendMessageForm("#name-input", "#mail-input", "#message-input");
+            updateContactFormSent("#name-input", "#mail-input", "#message-input", 'contact-button', 'contact-button-new');
+        });
+    </script>
+    <script>
+        $('#mb-contact-button').click(function() {
+            sendMessageForm("#mb-name-input", "#mb-mail-input", "#mb-message-input");
+            updateContactFormSent("#mb-name-input", "#mb-mail-input", "#mb-message-input", 'mb-contact-button', 'mb-contact-button-new');
+        });
+    </script>
+
+<!--This script responds to the contact-button-new/mb-contact-button-new and resets the contact form -->
+    <script type="text/javascript">
+        $('#contact-button-new').click(function() {
+            resetContactForm("#name-input", "#mail-input", "#message-input", 'contact-button', 'contact-button-new');
+        });
+    </script>
+    <script type="text/javascript">
+        $('#mb-contact-button-new').click(function() {
+            resetContactForm("#mb-name-input", "#mb-mail-input", "#mb-message-input", 'mb-contact-button', 'mb-contact-button-new');
+        });
+    </script>
+<!--****************************************************************************************************-->
+<!-- This script powered the side-slide for the mobile menu contact button
+-it is no longer used but commented in case need arises -->
+    // <script>
+    //     $('#mobile-menu-holder').on('click', 'a.mb-menu-contact-button', function() {
+    //         console.log("its here");
+    //         $('.content').toggleClass('isOpen');
+    //         var o=$('.overlayp');
+    //         o.toggleClass('active');
+    //     });
+    // </script>
+
+<!-- Project Modals -->
+<!-- Modal This modal code (content excluded) was obtained from a Udacity.com tutorial "Intro to HTML and CSS"-->
+    <!--Project 1 - Modal -->
+        <div class="modal fade" id="proj-1-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">This Site</h4>
+              </div>
+              <div class="modal-body">
+                <p>This is the first version of this site. There are a few more things I'd like to do such as slow-scrolling around the page from the navigation bar links and better postioning of the jumps on different size screens. Improvements to come!</p>
+                <p>This site was built using HTML, CSS and JavaScript. It is entirely my design and did not employ any pre-made templates.</p>
+                <p>In order to optimize this site for mobile, I built a dynamic DOM from which elements are added, removed and hidden to achieve two distinct layouts based on screen size. This is achieved using a fillDOM() function that runs each time the page is loaded or the window is resized. It will enter the mobile version anytime the window width falls below 768px (it was designed to be thumb-friendly so I think the mobile version best achieves its style goals and utility when viewed on a phone - portrait style).</p>
+                <p>The CSS is based off of the Bootstrap framework and is supplemented by my own stylesheets customStyle.css and MBcustomStyles.css. The latter contains a handful of supplements specific to the mobile layout.</p>
+                <p>This site uses the jQuery 1.11.2 library as well as the following few plugins:</p>
+                <ul class="modal-list">
+                    <li>prefixfree from Lea Verou - link: <a href="https://github.com/LeaVerou/prefixfree">https://github.com/LeaVerou/prefixfree</a>.
+                    This attempts to cut down on the number of redundant css prefixes needed for cross-browser compatibility.</li>
+                    <li>waypoints from Caleb Troughton - link: <a href="https://github.com/imakewebthings/waypoints">https://github.com/imakewebthings/waypoints</a>.
+                    This provides the capability to invoke scripts based on the location of elements on the page during scrolling.</li>
+                    <li>I also use a single function borrowed with some modification from Mohammad Hamza Dhamiya's plugin JQPanels to service the mobile version's menu which appears and exits from the top of the screen - link: <a href="https://github.com/bloggerever/jQPanels">https://github.com/bloggerever/jQPanels</a>. The plugin is very useful but I chose not to include the entire script as it powers two other movement styles I did not use.</li>
+                </ul>
+                <p>There are a few JS scripts in index.html to handle button clicks and call other functions. The modal classes I am using were taken with some adaptation from a udacity.com tutorial. The rest of my JS is contained in customOps.js. There are various functions that power most of the effects of the site and handle things such as positioning of containers during page load and window resizing. Elements used in filDOM() are saved as string variables in a file called dom-variables.js.</p> 
+                <p>I had some trouble running python scripts to send email via Gmail from the current server and am using a cool service called Mandrill (I think from the mail chimp guys) to relay the ajax POST scripts connected to the contact form. They provide API keys and handle server side scripts to forward (free up to 1000 emails or so).</p>
+                <p>One last note, the site uses basic Google Analytics fed from Google's snippet in the head.</p>
+                <p>You can check out the full source code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/ryancharlessmith.com">This Site Rep</a></li>
+                </ul>
+                <p>Please feel free to reach out with any questions or suggestions! Thanks for checking out the site!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 2 - Modal -->
+        <div class="modal fade" id="proj-2-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Gone Fishin' Game</h4>
+              </div>
+              <div class="modal-body">
+                <p>Overview: Fun desktop game where user competes against computer to survive and thrive as a fish.</p>
+                <p>Design: This game was designed and created by Ryan Smith and Anders Schneider.</p>
+                <p>Use:</p> 
+                <ol class="modal-list">
+                    <li>Move the red user-fish by moving the mouse or your finger on the trackpad.</li> 
+                    <li>Collide with smaller fish in order to eat and grow. </li> 
+                    <li>Do not collide with larger fish or they will eat you and the game will end. The fish will enter from the right and left sides of the screen. They will be random sizes and travel at random speeds (within reason). *Hint - they swim in a straight line across the screen. </li> 
+                    <li>You will achieve a score based on the size and quantity of the food you eat. </li> 
+                    <li>Avoid sharks (black fish with a fin) at all costs! They will eat you and end the game even if you are bigger (they're sharks afterall...) *Hint - keep an eye out. Sharks are slower than you but will continue to pursue you across the screen. If you move quickly you can corral them.
+                </ol>
+                <p>You can check out the code on github here:
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/Gone-Fishin-Game">Gone Fishin' Rep</a></li>
+                </ul>
+                <p>Thanks for checking out the site!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 3 - Modal -->
+        <div class="modal fade" id="proj-3-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">LC4 Binary Interpreter</h4>
+              </div>
+              <div class="modal-body">
+                <p>Design: This concept was created as an assignment by Professor Thomas Farmer at the University of Pennsylvania. .h files were provided. All implementation completed by Ryan Smith.</p>
+
+                <p>Overview: Program to investigate binary program files and print contents. (for lc4 micro-architecture) LC4 is a micro-architecture created by the University of Pennsylvania. This program was created with knowledge of the LC4 ISA. In interrogates LC4 binary files (.obj) and prints the contents in the form.</p>
+
+                <p>This program operates by interrogating the file information in bit form and constructing a linked list. Each node of the linked list contains informatino pertaining to the label, address, contents, and assembly fields mentioned above.</p>
+
+                <p>Functions are provided for manipulating the linked list (search, add node, delete list/free memory, etc.)</p>
+
+                <p>Use: This program is executed from the command line. To use this program use the command "make all" from within the directory containing the Makefile. Then run the file "lc4" that is created. (on mac this is run with the command ./lc4) You will be prompted by the program to provide the file you would like to interrogate. Make sure to include the .obj extension in the file name.</p>
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/LC4-Binary-Interpreter">LC4-Binary-Interpreter Rep</a></li>
+                </ul>
+                <p>Thanks for checking out the site!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 5 - Modal -->
+        <div class="modal fade" id="proj-5-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Kaleidoscope</h4>
+              </div>
+              <div class="modal-body">
+                <p>Design: This project was built on the MVC model outline provided by Dave Matuszek at the University of Pennsylvania. All graphic, GUI and implementation design by Ryan Smith and Nicki Hoffman.</p>
+
+                <p>Overview: Interactive kaleidoscope graphic built in Java/Swing. Uses the MVC design model.</p>
+
+                <p>Use: This program is displayed inside a resizable JFrame-based GUI. Slider provided to allow user to adjust speed. Color button changes colors of kaleidoscope components at random.</p>
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/Kaleidoscope">Kaleidoscope Rep</a></li>
+                </ul>
+                <p>Thanks for checking out the site!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 4 - Modal -->
+        <div class="modal fade" id="proj-4-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Flash Cards</h4>
+              </div>
+              <div class="modal-body">
+                <p>Design: This concept and initial structure was created as an assignment by Professor Dave Matuszek at the University of Pennsylvania. All implementation, GUI design and implementation developed by Ryan Smith and Rajveer Parikh. *Note SimpleIO.java was created by Dave Matuszek for use with this program.</p>
+
+                <p>Overview: Program to create sets of flash cards and then study from them.</p>
+
+                <p>Use: This program is launched from the RunFlashCards file which presents the user with the choice of opening the study perspective or editor perspective. Each perspective consists of a GUI that allows the user to interact with the program.</p>
+
+                <p>Editor GUI: Allows user to create a study file for the first time or to load a study file and add/edit/remove items from it. -A new blank file can be created in a text editor and then loaded for editing. -Alternatively, upon opening the editor perspective, a user can commence adding items through the GUI. When complete, Save As can be used to generate a .txt file is the proper format which can later be loaded for editing or studying.</p>
+
+                <p>Study GUI: Allows user to load in a study file from which a list of 20 randomly selected questions will be loaded. The program will present a question. The user enters the answer in the provided text field and then presses Enter. -If the question was answered correctly it will be indicated and the user can press Next to continue to the next question. Following a correct answer, the record of “times correct” will be incremented. When this reaches 4, the item will not be presented again as a question. -If the user answered incorrectly it will be indicated and the user will need to enter the correct answer before continuing. Additionally, the “times correct” counter for the question will be reset to zero. -When the user has reviewed all 20 questions, they will be reshuffled and those answered correctly less than 4 times will be presented again. -If the user chooses to Save, the study list will be updated with the current “times correct” per question. -The user can also choose to Save As in order to avoid modifying the original list while saving a copy with the updated “times correct”. This will include all items in the original file, not only the random study selection and, as such, is a useful feature for retaining results from various study sessions. The “times correct” is easily viewable in the saved .txt file.</p>
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/FlashCards">Flash Cards Rep</a></li>
+                </ul>
+                <p>Thanks for checking out the site!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 6 - Modal -->
+        <div class="modal fade" id="proj-6-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Library</h4>
+              </div>
+              <div class="modal-body">
+                <p>Design: This concept and initial structure was created as an assignment by Professor Dave Matuszek at the University of Pennsylvania. All implementation details and code developed by Ryan Smith and Steve Schenkel.</p>
+
+                <p>Overview: Program to run the basic functions of a public/private library.</p>
+
+                <p>Use: This file does not have a GUI. It is intended to be run from the command line by navigating to the containing folder and running python RunLibrary.py. Note: All other classes and text file containing initial collection of books must be contained in the same folder.</p>
+
+                <p>Other Info: The program and unit tests are written in Python. -An initial collection of books was provided by Dr. Matuszek and is included as a text file titled collection.txt. -The close() command was designed for daily use while opening and closing the library. The quit() command is for use only if the library is to close for good. Patrons and books in the collections at the time of quit will not be saved.</p>
+                                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/Library">Library Rep</a></li>
+                </ul>
+                <p>Thanks for checking out the site!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 7 - Modal -->
+        <div class="modal fade" id="proj-7-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Nursery</h4>
+              </div>
+              <div class="modal-body">
+                <p>Design: The concept and initial components of this program were designed by Diane Wolff at Virginia Western Community College. Implementation and code designed by Ryan Smith.</p>
+                <p>Overview: Program to run the fundamental operations of an agricultural nursery. Enforces principles of defensive programming. *Please see note below regarding documentation.</p>
+                <p>This program consists of 13 classes all contained within the package rsmithNurseryProject. A brief description of the classes is as follows:</p>
+                <ul class="modal-list">
+                    <li>RunNursery - used to launch the operation of the nursery.</li>
+                    <li>InputOutput - this class is used to read customer, inventory and sales data in and out of serializable files. This data will be read in automatically each time the program starts and the updated data will overwrite prior data each time the program closes. Note: the program must be shut down as intended using the command in order to prevent data loss. The 3 files are initially populated with data provided by Professor Wolff for display purposes.</li>
+                    <li>MenuInfo - provides methods that service the menu options provided by RunNursery.</li>
+                    <li>MakeSale - provide items to take customer and product info and complete a sale.</li>
+                    <li>Sales - provides blueprint for Sales object. Implements Serializable.</li>
+                    <li>Customer - provides the blueprint for a Customer object. Implements Comparable and Serializable for sorting.</li>
+                    <li>Inventory - abstract class for inventory items. Implements Comparable and Serializable for sorting.</li>
+                    <li>Plants - abstract class that extends Inventory. Lays blueprint for Plant objects.</li>
+                    <li>BulkProducts - extends Inventory. Lays blueprint for non-plant items.</li>
+                    <li>Perennials - extends Plants. Provides blueprint for Perennial plant objects.</li>
+                    <li>Trees - extends Plants. Provides blueprint for Tree plant objects.</li>
+                    <li>Day - provides methods for tracking and assigning dates to sales.</li>
+                    <li>DayComparator - implements Comparator and used for arranging sales by date.</li>
+                </ul>
+                <p>Use: This project does not use a GUI. It is intended to be run from the command line.</p>
+                <p>Other Info: This project was designed within the Eclipse IDE which provided an overview of constructors, methods etc. While it attempts to enforce proper naming conventions, it lacks proper documentation at this time. Documentation will be added to improve readability.</p>
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/Nursery">Nursery Rep</a></li>
+                </ul>
+                <p>Thanks for checking out the site!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 8 - Modal -->
+        <div class="modal fade" id="proj-8-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">tidyHTML</h4>
+              </div>
+              <div class="modal-body">
+                <p>Design: This concept was created as an assignment by Professor Dave Matuszek at the University of Pennsylvania. All implementation details and code developed by Ryan Smith and Theresa Breiner.
+                </p>
+                <p>Overview: Formats an unorganized HTML file into a correct and more visually-appealing layout.
+                </p>
+                <p>Use: This file does not have a GUI. It can be run from the command line by navigating to the containing folder and running python tidyHTML.py.</p>
+
+                <p>Other Info:</p> 
+                <ul class="modal-list">
+                    <li>Note: This program is not yet entirely up to par. There are some issues with additional newlines that need to be adjusted. </li>
+                    <li>The program and unit tests are written in Python.</li>
+                    <li>The program will make two temporary files that will only exist during execution; a file with a randomly generated integer name and postcut.html. These will be deleted before execution concludes.</li>
+                    <li>The program will preserve the original file submitted for editing in the same folder from which it was selected with the .bak extension.</li>
+                    <li>The reformatted file will overwrite the file submitted for editing.</li>
+                </ul>
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/tidyHTML">tidyHTML Rep</a></li>
+                </ul>
+                <p>Thanks for checking out the site!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 9 - Modal -->
+        <div class="modal fade" id="proj-9-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Site Info</h4>
+              </div>
+              <div class="modal-body">
+                <p>This site was created to practice and showcase some of my capabilities in HTML and CSS. It is entirely my design and was created without pre-existing HTML templates. The following is some techincal info about the site:</p>
+                <ul class="modal-list">
+                    <li>The site uses a lite version of the Bootstrap framework including only Typography, Grid System, and Modals functionality. </li>
+                    <li>I modified the container display size in the media query corresponding to the largest screen and the modal's z-index. Otherwise the bootstrap.css document is unaltered. </li>
+                    <li>I created an additional CSS file, customStyle.css, which provides a few style overrides and defines a number of characteristics for text, spacing, etc. used across the site. It also covers all formatting used in the navigation bar.</li>
+                    <li>The site uses a very limited amount of JavaScript to service the modal you are currently viewing. This code was obtained from a Udacity.com tutorial and is noted in the index.html comments. </li>
+                </ul>
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/Pinnsvin-Website">Pinnsvin Site Rep</a></li>
+                </ul>
+                <p>Thanks for checking out the site!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+	</body>
+</html>
