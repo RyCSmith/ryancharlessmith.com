@@ -3,11 +3,17 @@
 $(window).load(function(){
 	fillDOM();
 	setHeights();
+	if (!getBlackOutHeight()){
+		document.getElementById('bar-inner').className += ' bar-background';
+	}
 });
 
 $(window).resize(function(){
 	fillDOM();
 	setHeights();
+	if (!getBlackOutHeight()){
+		document.getElementById('bar-inner').className += ' bar-background';
+	}
 	//calling fillDOM() on window resize will reset the navbar 
 	//on full size screen where bar has effects (fade-in and arrow movement)
 	//this can throw it off (only until next resize or refresh)
@@ -73,12 +79,6 @@ function closeMenu(){
 		$('.overlayp').toggleClass('active');
 	}
 }
-
-//------------------------------------------------------------------------------------------
-//variable holds whether or not page is above first waypoint (#main-container)
-//this is used for deciding whether or not to add color to the nav-bar when opening
-//contact form
-var mcWay = true;
 
 //------------------------------------------------------------------------------------------
 //CONTACT-FORM functions - removes and adds buttons and updates text based on actions
@@ -196,11 +196,15 @@ jQuery(function($) {
 });
 
 //------------------------------------------------------------------------------------------
-//FUNCTION RETURNS VALUE OF MCWAY (T/F CHECKS TO SEE IF WAYPOINT WAS PASSED)
-function getMCWay(){
-	return mcWay;
+//FUNCTION RETURNS T/F WHETHER FS-NAV-BAR BACKGROUND MUST BE ADDED BASED ON POSITIONING
+function getBlackOutHeight(){
+	if ($(window).scrollTop() - top_of_element("main-container") < -174){
+		console.log(top_of_element("main-container"))
+		return true;
+	}
+	else
+		return false;
 }
-
 
 //------------------------------------------------------------------------------------------
 //POSITION MAJOR ELEMENTS BASED ON SCREEN SIZE 
@@ -395,7 +399,17 @@ function fillDOM(){
 	}
 }
 
-
+//------------------------------------------------------------------------------------------
+//Returns top of element passed in as argument in relation to finite position on page
+function top_of_element(elm_arg){
+	var element = document.getElementById(elm_arg); //replace elementId with your element's Id.
+	var rect = element.getBoundingClientRect();
+	var elementTop; //x and y
+	var scrollTop = document.documentElement.scrollTop?
+	                document.documentElement.scrollTop:document.body.scrollTop;
+	elementTop = rect.top+scrollTop;
+	return elementTop;
+}
 
 
 
