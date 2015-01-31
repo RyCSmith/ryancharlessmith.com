@@ -1,4 +1,81 @@
 //------------------------------------------------------------------------------------------
+/*This script responds the the SCREEN-SLIDE-BUTTON.
+    -On button click - isOpen class is toggled
+    -calls getBlacOutHeight() and toggles bar-background if applicable
+    -calls changeDirectionIcon and changes icon as appropriate*/
+$(function() {
+    $('#head1').on('click', 'a.contact-slide-button', function(event) {
+        $('.content').toggleClass('isOpen');
+            changeDirectionIcon();
+            if (getBlackOutHeight()){
+                $('#bar-inner').toggleClass('bar-background');
+            }
+    });
+});
+
+//------------------------------------------------------------------------------------------
+//Returns top of element passed in as argument in relation to finite position on page
+function top_of_element(elm_arg){
+	var element = document.getElementById(elm_arg); //replace elementId with your element's Id.
+	var rect = element.getBoundingClientRect();
+	var elementTop; //x and y
+	var scrollTop = document.documentElement.scrollTop?
+	                document.documentElement.scrollTop:document.body.scrollTop;
+	elementTop = rect.top+scrollTop;
+	return elementTop;
+}
+
+//------------------------------------------------------------------------------------------
+//SCROLLING FUNCTIONS - power fs-nav-bar scroll functions based on postion on page
+$(function() {
+    $('#head1').on('click', 'a.home-button', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: 0
+        }, 1000, 'easeInOutCirc');
+        // console.log(test4());
+                    // console.log($('#soc-6').offsetTop());
+
+        event.preventDefault();
+    });
+});
+$(function() {
+    $('#head1').on('click', 'a.about-button', function(event) {
+        scroll("about-container");
+    });
+});
+$(function() {
+    $('#head1').on('click', 'a.skills-button', function(event) {
+        scroll("fs-skills-section");
+    });
+});
+$(function() {
+    $('#head1').on('click', 'a.project-button', function(event) {
+        scroll("projects-section");
+    });
+});
+$(function() {
+    $('#head1').on('click', 'a.social-button', function(event) {
+        scroll("fs-social-section");
+    });
+});
+$(function() {
+    $('#head1').on('click', 'a.resume-button', function(event) {
+        scroll("resume-section");
+    });
+});
+function scroll(target){
+	var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: top_of_element(target) - 75
+        }, 1000, 'easeInOutCirc');
+        // console.log(test4());
+                    // console.log($('#soc-6').offsetTop());
+
+        event.preventDefault();
+}
+
+//------------------------------------------------------------------------------------------
 //FILLS DOM (according to screen size) on each WINDOW LOAD OR RESIZE
 $(window).load(function(){
 	fillDOM();
@@ -311,20 +388,6 @@ jQuery(function($) {
  
 });
 
-//------------------------------------------------------------------------------------------
-/*This script responds the the SCREEN-SLIDE-BUTTON.
-    -On button click - isOpen class is toggled
-    -calls getBlacOutHeight() and toggles bar-background if applicable
-    -calls changeDirectionIcon and changes icon as appropriate*/
-$(function() {
-    $('#head1').on('click', 'a.contact-slide-button', function(event) {
-        $('.content').toggleClass('isOpen');
-            changeDirectionIcon();
-            if (getBlackOutHeight()){
-                $('#bar-inner').toggleClass('bar-background');
-            }
-    });
-});
 
 //SIDE-SLIDER-ICON-this changes the contact icons as side panel is exposed and covered
 function changeDirectionIcon(){
@@ -400,68 +463,6 @@ function fillDOM(){
 		document.getElementById('fs-social-section').style.display = "none";
 		document.getElementById('mb-social-section').style.display = "block";
 	}
-}
-
-//------------------------------------------------------------------------------------------
-//Returns top of element passed in as argument in relation to finite position on page
-function top_of_element(elm_arg){
-	var element = document.getElementById(elm_arg); //replace elementId with your element's Id.
-	var rect = element.getBoundingClientRect();
-	var elementTop; //x and y
-	var scrollTop = document.documentElement.scrollTop?
-	                document.documentElement.scrollTop:document.body.scrollTop;
-	elementTop = rect.top+scrollTop;
-	return elementTop;
-}
-
-//------------------------------------------------------------------------------------------
-//SCROLLING FUNCTIONS - power fs-nav-bar scroll functions based on postion on page
-$(function() {
-    $('#head1').on('click', 'a.home-button', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: 0
-        }, 1000, 'easeInOutCirc');
-        // console.log(test4());
-                    // console.log($('#soc-6').offsetTop());
-
-        event.preventDefault();
-    });
-});
-$(function() {
-    $('#head1').on('click', 'a.about-button', function(event) {
-        scroll("about-container");
-    });
-});
-$(function() {
-    $('#head1').on('click', 'a.skills-button', function(event) {
-        scroll("fs-skills-section");
-    });
-});
-$(function() {
-    $('#head1').on('click', 'a.project-button', function(event) {
-        scroll("projects-section");
-    });
-});
-$(function() {
-    $('#head1').on('click', 'a.social-button', function(event) {
-        scroll("fs-social-section");
-    });
-});
-$(function() {
-    $('#head1').on('click', 'a.resume-button', function(event) {
-        scroll("resume-section");
-    });
-});
-function scroll(target){
-	var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: top_of_element(target) - 75
-        }, 1000, 'easeInOutCirc');
-        // console.log(test4());
-                    // console.log($('#soc-6').offsetTop());
-
-        event.preventDefault();
 }
 
 //------------------------------------------------------------------------------------------
