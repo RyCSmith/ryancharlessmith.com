@@ -199,7 +199,6 @@ jQuery(function($) {
 //FUNCTION RETURNS T/F WHETHER FS-NAV-BAR BACKGROUND MUST BE ADDED BASED ON POSITIONING
 function getBlackOutHeight(){
 	if ($(window).scrollTop() - top_of_element("main-container") < -174){
-		console.log(top_of_element("main-container"))
 		return true;
 	}
 	else
@@ -411,7 +410,55 @@ function top_of_element(elm_arg){
 	return elementTop;
 }
 
+//------------------------------------------------------------------------------------------
+//SCROLLING FUNCTIONS - power fs-nav-bar scroll functions based on postion on page
+$(function() {
+    $('#head1').on('click', 'a.home-button', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: 0
+        }, 1000, 'easeInOutCirc');
+        // console.log(test4());
+                    // console.log($('#soc-6').offsetTop());
 
+        event.preventDefault();
+    });
+});
+$(function() {
+    $('#head1').on('click', 'a.about-button', function(event) {
+        scroll("about-container");
+    });
+});
+$(function() {
+    $('#head1').on('click', 'a.skills-button', function(event) {
+        scroll("fs-skills-section");
+    });
+});
+$(function() {
+    $('#head1').on('click', 'a.project-button', function(event) {
+        scroll("projects-section");
+    });
+});
+$(function() {
+    $('#head1').on('click', 'a.social-button', function(event) {
+        scroll("fs-social-section");
+    });
+});
+$(function() {
+    $('#head1').on('click', 'a.resume-button', function(event) {
+        scroll("resume-section");
+    });
+});
+function scroll(target){
+	var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: top_of_element(target) - 75
+        }, 1000, 'easeInOutCirc');
+        // console.log(test4());
+                    // console.log($('#soc-6').offsetTop());
+
+        event.preventDefault();
+}
 
 
 
