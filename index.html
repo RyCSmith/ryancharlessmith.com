@@ -470,20 +470,6 @@
 	    })
 	</script>
 
-<!--This script responds the the SCREEN-SLIDE-BUTTON.
-    -On button click - isOpen class is toggled
-    -calls getBlacOutHeight() and toggles bar-background if applicable
-    -calls changeDirectionIcon and changes icon as appropriate-->
-    <script>
-        $('#head1').on('click', 'a.contact-slide-button', function() {
-            $('.content').toggleClass('isOpen');
-            changeDirectionIcon();
-            if (getBlackOutHeight()){
-                $('#bar-inner').toggleClass('bar-background');
-            }
-        });
-    </script>
-
 <!--This script powers the menu button on the mobile nav bar -->
     <script>
         $('#head1').on('click', 'a.menu-button', function(){
