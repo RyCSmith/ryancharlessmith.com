@@ -196,16 +196,6 @@ jQuery(function($) {
 });
 
 //------------------------------------------------------------------------------------------
-//FUNCTION RETURNS T/F WHETHER FS-NAV-BAR BACKGROUND MUST BE ADDED BASED ON POSITIONING
-function getBlackOutHeight(){
-	if ($(window).scrollTop() - top_of_element("main-container") < -174){
-		return true;
-	}
-	else
-		return false;
-}
-
-//------------------------------------------------------------------------------------------
 //POSITION MAJOR ELEMENTS BASED ON SCREEN SIZE 
 function setHeights(){
 	var winWidth= $(window).width();
@@ -322,6 +312,20 @@ jQuery(function($) {
 });
 
 //------------------------------------------------------------------------------------------
+/*This script responds the the SCREEN-SLIDE-BUTTON.
+    -On button click - isOpen class is toggled
+    -calls getBlacOutHeight() and toggles bar-background if applicable
+    -calls changeDirectionIcon and changes icon as appropriate*/
+$(function() {
+    $('#head1').on('click', 'a.contact-slide-button', function(event) {
+        $('.content').toggleClass('isOpen');
+            changeDirectionIcon();
+            if (getBlackOutHeight()){
+                $('#bar-inner').toggleClass('bar-background');
+            }
+    });
+});
+
 //SIDE-SLIDER-ICON-this changes the contact icons as side panel is exposed and covered
 function changeDirectionIcon(){
 	if ($('#slide-button').hasClass('glyphicon glyphicon-arrow-left')){
@@ -460,5 +464,13 @@ function scroll(target){
         event.preventDefault();
 }
 
-
+//------------------------------------------------------------------------------------------
+//FUNCTION RETURNS T/F WHETHER FS-NAV-BAR BACKGROUND MUST BE ADDED BASED ON POSITIONING
+function getBlackOutHeight(){
+	if ($(window).scrollTop() - top_of_element("main-container") < -174){
+		return true;
+	}
+	else
+		return false;
+}
 
