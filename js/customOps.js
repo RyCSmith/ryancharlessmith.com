@@ -80,7 +80,7 @@ function scroll(target){
 $(window).load(function(){
 	fillDOM();
 	setHeights();
-	if (!getBlackOutHeight()){
+	if ($(window).width() > 767 && !getBlackOutHeight()){
 		document.getElementById('bar-inner').className += ' bar-background';
 	}
 });
@@ -88,7 +88,7 @@ $(window).load(function(){
 $(window).resize(function(){
 	fillDOM();
 	setHeights();
-	if (!getBlackOutHeight()){
+	if ($(window).width() > 767 && !getBlackOutHeight()){
 		document.getElementById('bar-inner').className += ' bar-background';
 	}
 	//calling fillDOM() on window resize will reset the navbar 
@@ -133,11 +133,10 @@ $(window).bind('mousewheel DOMMouseScroll', function(event) {
 // });
 
 
-//checks for scrolling and performs actions eachtime
-//*This currently throws an error when refreshing or loading when not at 
-//*exact top of screen but recovers as soon as scroll occurs
-//*can be avoided by setting speed lower
-//-continuously repositions mobile menu just off screen
+//checks for scrolling and performs actions eachtime (Executes upon SCROLLING)
+//*This currently throws an error when refreshing or loading when not at exact top of screen but recovers as soon as scroll occurs. can be avoided by setting speed lower
+//-continuously repositions mobile menu just off screen of mobile view
+//-handles nav-bar coloring on fs
 var scrollTimeout = null;
 $(window).scroll(function(){
     if (scrollTimeout) clearTimeout(scrollTimeout);
@@ -145,6 +144,19 @@ $(window).scroll(function(){
 	    if ($(window).width() < 768){
 	    	document.getElementById('menu-overlay').style.top = $(window).scrollTop() + "px";
 	    	closeMenu();
+		}
+		else {
+			if (!getBlackOutHeight()){
+				if (!($("#bar-inner").hasClass("bar-background"))){
+					document.getElementById('bar-inner').className += ' bar-background';
+				}
+			}
+			else{
+				if ($("#bar-inner").hasClass("bar-background")){
+					document.getElementById('bar-inner').className -= ' bar-background';
+				}
+			}
+
 		}
     },1);
 });
@@ -242,35 +254,19 @@ jQuery(function($) {
  
 });
 
-//------------------------------------------------------------------------------------------
-//NAV-BAR FADE-IN FUNC (BASED ON SCREEN SIZE)
-//this transition is handled in 2 different ways for reference
-//---1 -- takes an element with no background and adds a class with background
-//---2 -- changes the style of the element directly
-
-jQuery(function($) {
- 	var winWidth= $(window).width();
- 	//one problem here is that winWidth is not always the most current, it seems to be
- 	//establish only at load
- 	//---only provides fade-in effects for full screen version ---
- 	if (winWidth > 767){
-		$('#main-container').waypoint(function() {
-			if (direction === "down"){
-				// $('.appear').fadeIn( 1500 );
-				document.getElementById('bar-inner').className += ' bar-background';
-				mcWay = false;
-			}
-			if (direction === "up"){
-				document.getElementById('bar-inner').className -= ' bar-background';
-				mcWay = true;
-			}
-		},
-		{
-			offset: '50%',
-			// triggerOnce: true
-		});
-	}
-});
+//MOBILE SOCIAL RESET
+//serves a very specific function - removes style attribute from mobile social icons
+//after the waypoint has been triggered in mobile mode then the size of screen is resized to fs without refresh
+//-in prior case mb social icons persist even though container has display: none;
+function resetMBSocial(){
+	document.getElementById('mb-soc-1').removeAttribute("style");
+	document.getElementById('mb-soc-2').removeAttribute("style");
+	document.getElementById('mb-soc-3').removeAttribute("style");
+	document.getElementById('mb-soc-4').removeAttribute("style");
+	document.getElementById('mb-soc-5').removeAttribute("style");
+	document.getElementById('mb-soc-6').removeAttribute("style");
+	document.getElementById('mb-soc-7').removeAttribute("style");
+}
 
 //------------------------------------------------------------------------------------------
 //POSITION MAJOR ELEMENTS BASED ON SCREEN SIZE 
@@ -444,7 +440,7 @@ function fillDOM(){
 		document.getElementById('fs-skills-section').style.display = "block";
 		document.getElementById('mb-social-section').style.display = "none";
 		document.getElementById('fs-social-section').style.display = "block";
-		// $('#slider-container').html(FScarousel);
+		resetMBSocial();
 
 	}
 	else {
