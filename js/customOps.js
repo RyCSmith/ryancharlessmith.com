@@ -406,7 +406,7 @@ function changeDirectionIcon(){
 //------------------------------------------------------------------------------------------
 //PROJECTS-FOCUS - changes opacity based on mouseover events
 function mouseOnProjOpacity(proj){
-	var projArray = ["proj-1", "proj-2", "proj-3", "proj-4", "proj-5", "proj-6", "proj-7", "proj-8", "proj-9"];
+	var projArray = ["proj-1", "proj-2", "proj-3", "proj-4", "proj-5", "proj-6", "proj-7", "proj-8", "proj-9", "proj-10", "proj-11", "proj-12", "proj-13", "cs-1", "cs-2"];
 	var index = projArray.indexOf(proj);
 	if (index > -1) {
     	projArray.splice(index, 1);
@@ -417,7 +417,7 @@ function mouseOnProjOpacity(proj){
 }
 
 function mouseOffProjOpacity(){
-	var projArray = ["proj-1", "proj-2", "proj-3", "proj-4", "proj-5", "proj-6", "proj-7", "proj-8", "proj-9"];
+	var projArray = ["proj-1", "proj-2", "proj-3", "proj-4", "proj-5", "proj-6", "proj-7", "proj-8", "proj-9", "proj-10", "proj-11", "proj-12", "proj-13", "cs-1", "cs-2"];
 	for (count in projArray){
 		document.getElementById(projArray[count]).style.opacity = "1.0";
 	}
