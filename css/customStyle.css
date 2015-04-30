@@ -261,6 +261,34 @@ height of the screen (full size layout) */
 	overflow: hidden;
 	border-radius: 0 0 10px 10px;
 }
+
+/*-------------------------------------------------------------------------------------------*/
+/* Formatting for PROJECT VIDEOS */
+@media (max-width: 575px) {
+  .video-limiter {
+    width: 365px;
+    height: 205px;
+  }
+}
+@media (min-width: 576px) {
+  .video-limiter {
+    width: 575px;
+    height: 323px;
+  }
+}
+@media (min-width: 992px) {
+  .video-limiter {
+    width: 365px;
+    height: 205px;
+  }
+}
+@media (min-width: 1200px) {
+  .video-limiter {
+    width: 575px;
+    height: 323px;
+  }
+}
+
 /*-------------------------------------------------------------------------------------------*/
 /* Formatting for SOCIAL table */
 .social-row {
