@@ -1,3 +1,12 @@
+/*Styles for main container ------------------------------------------------------------*/
+.outer-container {
+	left:0;
+	right: 0;
+	width:100%;
+	padding-left: 0;
+	padding-right:0;
+	overflow: hidden;
+}
 /* Styles for mobile Skills Section ---------------------------------------------------- */
 #mb-second-row,
 #mb-third-row,
