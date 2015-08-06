@@ -264,10 +264,16 @@ height of the screen (full size layout) */
 
 /*-------------------------------------------------------------------------------------------*/
 /* Formatting for PROJECT VIDEOS */
-@media (max-width: 575px) {
+@media (max-width: 370px) {
   .video-limiter {
-    width: 365px;
-    height: 205px;
+    width: 295px;
+    height: 166px;
+  }
+}
+@media (min-width: 371px) {
+  .video-limiter {
+    width: 347px;
+    height: 197px;
   }
 }
 @media (min-width: 576px) {
@@ -491,23 +497,111 @@ ul {
 
 /*-------------------------------------------------------------------------------------------*/
 /*RESUME section formatting */
-#resume-info-text {
-	font-size: 18px;
+
+@media (min-width: 400px){
+	#resume-info-text {
+		font-size: 18px;
+	}
 }
-.resume-header {
-	font-size: 30px;
+@media (max-width: 399px){
+	#resume-info-text {
+		font-size: 16px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
 }
 
-.program {
-	font-size: 28px;
+@media (min-width: 400px){
+	.resume-header {
+		font-size: 30px;
+	}
+}
+@media (max-width: 399px){
+	.resume-header {
+		font-size: 25px;
+		text-align: center;
+		text-decoration: underline;
+	}
 }
 
-.school {
-	font-size: 24px;
+@media (min-width: 400px){
+	.program {
+		font-size: 28px;
+	}	
+}
+@media (max-width: 399px){
+	.program {
+		font-size: 20px;
+		font-weight: bold;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
 }
 
-.graduation {
-	font-size: 18px;
+@media (min-width: 400px){
+	.school {
+		font-size: 24px;
+	}
+}
+@media (max-width: 399px){
+	.school {
+		font-size: 20px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
+@media (min-width: 400px){
+	.graduation {
+		font-size: 18px;
+	}
+}
+@media (max-width: 399px){
+	.graduation {
+		font-size: 16px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
+@media (min-width: 400px){
+	.business {
+		font-size: 28px;
+	}
+}
+@media (max-width: 399px){
+	.business {
+		font-weight: bold;
+		font-size: 20px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
+@media (min-width: 400px){
+	.title{
+		font-size: 24px;
+	}
+}
+@media (max-width: 399px){
+	.title{
+		font-size: 20px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
+@media (min-width: 400px){
+	.dates {
+		font-size: 18px;
+	}
+}
+@media (max-width: 399px){
+	.dates {
+		font-size: 16px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
 }
 
 .course-headings {
@@ -517,24 +611,11 @@ ul {
 
 .details {
 	margin-left: 40px;
-
 }
 
 #central {
 	margin-top: 35px;
 	margin-bottom: 50px;
-}
-
-.business {
-	font-size: 28px;
-}
-
-.title{
-	font-size: 24px;
-}
-
-.dates {
-	font-size: 18px;
 }
 
 .job-responsibilities {
