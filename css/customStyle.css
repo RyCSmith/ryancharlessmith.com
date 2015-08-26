@@ -316,13 +316,12 @@ height of the screen (full size layout) */
 */	    width: 14.25%;  /* (100 / numItems)% */
 /*	    line-height: 17px;
 */	    text-align: center;
-	    background: #FFFF;
 	    white-space: nowrap;
 	    
 	}​
 }
 
-@media (max-width: 649px) {
+@media (max-width: 649px){
     .social-row li {
         display: block;
         width: 100%;
@@ -358,7 +357,6 @@ height of the screen (full size layout) */
 	    width: 20%;  /* (100 / numItems)% */
 	    line-height: 17px;
 	    text-align: center;
-	    background: #FFFF;
 	    white-space: nowrap;
 	    
 	}​
@@ -485,8 +483,7 @@ ul {
 	    padding-bottom: 3px;
 	}​
 }
-/*#337ab7
-*/
+
 @media (max-width: 767px) {
     #nav li {
         display: block;
@@ -516,7 +513,7 @@ ul {
 		font-size: 30px;
 	}
 }
-@media (max-width: 399px){
+@media only screen and (max-width: 399px){
 	.resume-header {
 		font-size: 25px;
 		text-align: center;

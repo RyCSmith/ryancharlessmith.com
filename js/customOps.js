@@ -213,7 +213,7 @@ function sendMessageForm(nameInput, mailInput, messageInput){
              })
 }
 //------------------------------------------------------------------------------------------
-//SOCIAL FADE-IN
+//SOCIAL SECTION FADE-IN
 //fades in a row of elements based on waypoint
 
 jQuery(function($) {
@@ -233,40 +233,6 @@ jQuery(function($) {
 		});
  
 });
-
-//MOBILE SOCIAL FADE-IN
-jQuery(function($) {
-		$("#proj-9").waypoint(function() {
-			if ($(window).width() < 768){
-				$('#mb-soc-1').fadeIn( 1500 );
-				$('#mb-soc-2').fadeIn( 2000 );
-				$('#mb-soc-3').fadeIn( 2500 );
-				$('#mb-soc-4').fadeIn( 3000 );
-				$('#mb-soc-5').fadeIn( 3500 );
-				$('#mb-soc-6').fadeIn( 4000 );
-				$('#mb-soc-7').fadeIn( 4500 );
-			}
-		},
-		{
-			offset: '1%',
-			triggerOnce: true
-		});
- 
-});
-
-//MOBILE SOCIAL RESET
-//serves a very specific function - removes style attribute from mobile social icons
-//after the waypoint has been triggered in mobile mode then the size of screen is resized to fs without refresh
-//-in prior case mb social icons persist even though container has display: none;
-function resetMBSocial(){
-	document.getElementById('mb-soc-1').removeAttribute("style");
-	document.getElementById('mb-soc-2').removeAttribute("style");
-	document.getElementById('mb-soc-3').removeAttribute("style");
-	document.getElementById('mb-soc-4').removeAttribute("style");
-	document.getElementById('mb-soc-5').removeAttribute("style");
-	document.getElementById('mb-soc-6').removeAttribute("style");
-	document.getElementById('mb-soc-7').removeAttribute("style");
-}
 
 //------------------------------------------------------------------------------------------
 //POSITION MAJOR ELEMENTS BASED ON SCREEN SIZE 
@@ -440,8 +406,6 @@ function fillDOM(){
 		document.getElementById('fs-skills-section').style.display = "block";
 		document.getElementById('mb-social-section').style.display = "none";
 		document.getElementById('fs-social-section').style.display = "block";
-		resetMBSocial();
-
 	}
 	else {
 		$('#sidebar').html(FSsidebar);
