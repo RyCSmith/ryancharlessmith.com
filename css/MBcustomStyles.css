@@ -27,13 +27,14 @@
 	margin-top: 10px;
 
 }
-#mb-soc-1, #mb-soc-2,
-#mb-soc-3, #mb-soc-4,
-#mb-soc-5, #mb-soc-6,
-#mb-soc-7 {
-	display: none;
+.sm-circle-image-mb {
+	background-repeat: no-repeat;
+    background-position: 50%;
+    left: 0;
+	right: 0;
+    margin: 0 auto;
+    box-shadow: 0 5px 20px #ffffff;
 }
-
 /* Styles for mobile About Section ---------------------------------------------------- */
 #mb-profile-pic {
 	padding-top: 10px;
