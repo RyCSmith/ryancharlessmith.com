@@ -426,7 +426,8 @@
                         <div class="dates">May 2015 - August 2015.</div>
                         <ul class="job-responsibilities">
                             <li>Software Engineering Intern on the Sales Technology - Business Intelligence Team.</li>
-                            <li>Designed and implemented program to automate load testing of Business Intelligence platform and assets.</li>
+                            <li>Designed and implemented program to dynamically create and perform realistic load testing of the Business Intelligence platform including web applications and QlikView dashboards.</li>
+                            <li>Load testing program was used to successfully identify areas for improvement within the platform. </li>
                         </ul>
                     </div>
                 </div>
@@ -621,20 +622,22 @@
                 <h4 class="modal-title" id="myModalLabel">This Site</h4>
               </div>
               <div class="modal-body">
-                <p>This is the first version of this site. There are a few more things I'd like to do such as slow-scrolling around the page from the navigation bar links and better postioning of the jumps on different size screens. Improvements to come!</p>
+                <p>This is the first version of this site. There are a few more things I'd like to improve such as more specific responsive displays for different size screens. Improvements to come!</p>
                 <p>This site was built using HTML, CSS and JavaScript. It is entirely my design and did not employ any pre-made templates.</p>
                 <p>In order to optimize this site for mobile, I built a dynamic DOM from which elements are added, removed and hidden to achieve two distinct layouts based on screen size. This is achieved using a fillDOM() function that runs each time the page is loaded or the window is resized. It will enter the mobile version anytime the window width falls below 768px (it was designed to be thumb-friendly so I think the mobile version best achieves its style goals and utility when viewed on a phone - portrait style).</p>
                 <p>The CSS is based off of the Bootstrap framework and is supplemented by my own stylesheets customStyle.css and MBcustomStyles.css. The latter contains a handful of supplements specific to the mobile layout.</p>
-                <p>This site uses the jQuery 1.11.2 library as well as the following few plugins:</p>
+                <p>This site uses jQuery as well as the following few plugins:</p>
                 <ul class="modal-list">
                     <li>prefixfree from Lea Verou - link: <a href="https://github.com/LeaVerou/prefixfree">https://github.com/LeaVerou/prefixfree</a>.
                     This attempts to cut down on the number of redundant css prefixes needed for cross-browser compatibility.</li>
                     <li>waypoints from Caleb Troughton - link: <a href="https://github.com/imakewebthings/waypoints">https://github.com/imakewebthings/waypoints</a>.
                     This provides the capability to invoke scripts based on the location of elements on the page during scrolling.</li>
+                    <li>jQuery Easing from GSGD - link: <a href="https://github.com/gdsmith/jquery.easing">https://github.com/gdsmith/jquery.easing</a>.
+                        This provides smooth scrolling between different points of the page from the menu bar links.</li>
                     <li>I also use a single function borrowed with some modification from Mohammad Hamza Dhamiya's plugin JQPanels to service the mobile version's menu which appears and exits from the top of the screen - link: <a href="https://github.com/bloggerever/jQPanels">https://github.com/bloggerever/jQPanels</a>. The plugin is very useful but I chose not to include the entire script as it powers two other movement styles I did not use.</li>
                 </ul>
-                <p>There are a few JS scripts in index.html to handle button clicks and call other functions. The modal classes I am using were taken with some adaptation from a udacity.com tutorial. The rest of my JS is contained in customOps.js. There are various functions that power most of the effects of the site and handle things such as positioning of containers during page load and window resizing. Elements used in filDOM() are saved as string variables in a file called dom-variables.js.</p> 
-                <p>I had some trouble running python scripts to send email via Gmail from the current server and am using a cool service called Mandrill (I think from the mail chimp guys) to relay the ajax POST scripts connected to the contact form. They provide API keys and handle server side scripts to forward (free up to 1000 emails or so).</p>
+                <p>There are a few JS scripts in index.html to handle button clicks and call other functions. The modal classes I am using are from Bootstrap and were taken with some adaptation from a udacity.com tutorial. The rest of my JS is contained in customOps.js. There are various functions that power most of the effects of the site and handle things such as positioning of containers during page load and window resizing. Elements used in filDOM() are saved as string variables in a file called dom-variables.js.</p> 
+                <p>I'm currently hosted on my university's server which limits my ability to run server side scripts so I'm using a cool service called Mandrill (I think from the mail chimp guys) to relay the ajax POST scripts connected to the contact form. They provide API keys and handle server side scripts to forward (free up to 1000 emails or so).</p>
                 <p>One last note, the site uses basic Google Analytics fed from Google's snippet in the head.</p>
                 <p>You can check out the full source code on github here:</p>
                 <ul>
