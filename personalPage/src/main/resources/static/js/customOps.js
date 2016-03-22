@@ -154,30 +154,23 @@ function resetContactForm(nameInput, mailInput, messageInput, contactButton, new
 	document.getElementById(newContactButton).className += ' disappear';
 }
 
-//ajax script uses Mandrill to send an email when contact-button is clicked
 function sendMessageForm(nameInput, mailInput, messageInput){
-	var htmlField = "Name: " + $(nameInput).val() + "\nEmail: " + $(mailInput).val() + "\nMessage: " + $(messageInput).val();
-
-            $.ajax({
-              type: "POST",
-              url: "https://mandrillapp.com/api/1.0/messages/send.json",
-              data: {
-                'key': 't23aFSNXdET5iENOvL4jWg',
-                'message': {
-                  'from_email': 'rycsmith@gmail.com',
-                  'to': [
-                      {
-                        'email': 'rycsmith@gmail.com',
-                        'name': 'Ryan',
-                        'type': 'to'
-                      }
-                    ],
-                  'autotext': 'true',
-                  'subject': "Email from your website.",
-                  'html': htmlField
-                }
-              }
-             })
+	$.ajax({
+		type: "POST",
+		url: "/receivemail",
+		data: {
+			'name' : $(nameInput).val(),
+			'email' : $(mailInput).val(),
+			'message' : $(messageInput).val()
+		},
+		success : function(json) {
+            console.log("success");
+        },
+        error : function(xhr,errmsg,err) {
+            console.log(errmsg);
+            console.log(xhr.status + ": " + xhr.responseText); 
+        }
+	});
 }
 
 

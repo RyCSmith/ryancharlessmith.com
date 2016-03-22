@@ -214,12 +214,12 @@
             <div id="about-container-fs">
                 <div class="row" id="about-section">
                     <div class="col-md-4" id="profile-pic-box">
-                        <img id="profile-pic" class="img-responsive image-limiter" src="images/profile-pic.png" alt="profile pic"/>
+                        <img id="profile-pic" class="img-responsive image-limiter" src="images/profile-pic.jpg" alt="profile pic"/>
                     </div>
                     <div class="col-md-8">
                         <h1>ABOUT</h1>
                         <div id="profile text" class="text-justify">
-                            <p>Hi and welcome! Thanks for checking out my page. I built this site to provide some information about my skills, and past experiences and showcase a few of my projects.</p>
+                            <p>Hi and welcome! Thanks for checking out my page. I built this site to provide some information about my skills and past experiences and to showcase a few of my projects.</p>
                             <p>I’m currently a second year computer science student in the Master of Computer and Information Technology program (MCIT) at the University of Pennsylvania (expected graduation May 2016). I spent last summer interning as a software developer on the Sales Technology - Business Intelligence team at Goldman Sachs. Before coming to Penn I worked in both the social services and world languages fields, teaching Spanish in a number of settings and spending two and a half years as an Employment Specialist at a vocational training service for individuals with developmental disabilities.</p><p>Outside of my studies I enjoy backcountry camping, travel, home brewing, craft coffee and all things computer science. There are a couple of pictures from past trips on the slider above.</p>
                             <p>Please feel free to get in touch (contact button above) with any questions about the MCIT program, Philly, CS, etc. or just to connect.</p>
                             <p>For details about this site and its design check out the info in the Projects section below.</p>
@@ -233,14 +233,14 @@
                         <div id="mb-title-name">RYAN SMITH</div>
                     </div>
                     <div class="col-xs-6" id="mb-profile-pic-box">
-                        <img id="mb-profile-pic" class="img-responsive image-limiter" src="images/profile-pic.png" alt="profile pic"/>
+                        <img id="mb-profile-pic" class="img-responsive image-limiter" src="images/profile-pic.jpg" alt="profile pic"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <h1>ABOUT</h1>
                         <div id="profile text" class="text-justify">
-                            <p>Hi and welcome! Thanks for checking out my page. I built this site to provide some information about my skills, and past experiences and showcase a few of my projects.</p>
+                            <p>Hi and welcome! Thanks for checking out my page. I built this site to provide some information about my skills and past experiences and to showcase a few of my projects.</p>
                             <p>I’m currently a second year computer science student in the Master of Computer and Information Technology program (MCIT) at the University of Pennsylvania (expected graduation May 2016). I spent last summer interning as a software developer on the Sales Technology - Business Intelligence team at Goldman Sachs. Before coming to Penn I worked in both the social services and world languages fields, teaching Spanish in a number of settings and spending two and a half years as an Employment Specialist at a vocational training service for individuals with developmental disabilities.</p>
                             <p>Outside of my studies I enjoy backcountry camping, travel, home brewing, craft coffee and all things computer science.</p>
                             <p>Please feel free to get in touch (contact form below) with any questions about the MCIT program, Philly, CS, etc. or just to connect.</p><p>For details about this site and its design check out the info in the Projects section below.</p>
@@ -695,6 +695,42 @@
             </div>
       </div>
     </div>
+
+<!--**********JavaScript beyond this point ************************************************************-->
+<!--Sets speed for carousel -->
+  <script>
+      $('.carousel').carousel({
+          interval: 11100
+      })
+  </script>
+
+<!--***************** MAIL SENDING FUNCTIONS *******************************************************-->
+<!--This calls the sendMessageForm() function and sends and email with message info
+    -also call updateContactSent() to change options and button display -->
+    <script>
+        $('#contact-button').click(function() {
+            sendMessageForm("#name-input", "#mail-input", "#message-input");
+            updateContactFormSent("#name-input", "#mail-input", "#message-input", 'contact-button', 'contact-button-new');
+        });
+    </script>
+    <script>
+        $('#mb-contact-button').click(function() {
+            sendMessageForm("#mb-name-input", "#mb-mail-input", "#mb-message-input");
+            updateContactFormSent("#mb-name-input", "#mb-mail-input", "#mb-message-input", 'mb-contact-button', 'mb-contact-button-new');
+        });
+    </script>
+
+<!--This script responds to the contact-button-new/mb-contact-button-new and resets the contact form -->
+    <script type="text/javascript">
+        $('#contact-button-new').click(function() {
+            resetContactForm("#name-input", "#mail-input", "#message-input", 'contact-button', 'contact-button-new');
+        });
+    </script>
+    <script type="text/javascript">
+        $('#mb-contact-button-new').click(function() {
+            resetContactForm("#mb-name-input", "#mb-mail-input", "#mb-message-input", 'mb-contact-button', 'mb-contact-button-new');
+        });
+    </script>
 
 <!--****************************************************************************************************-->
 
