@@ -220,7 +220,7 @@
                         <h1>ABOUT</h1>
                         <div id="profile text" class="text-justify">
                             <p>Hi and welcome! Thanks for checking out my page. I built this site to provide some information about my skills and past experiences and to showcase a few of my projects.</p>
-                            <p>I’m currently a second year computer science student in the Master of Computer and Information Technology program (MCIT) at the University of Pennsylvania (expected graduation May 2016). I spent last summer interning as a software developer on the Sales Technology - Business Intelligence team at Goldman Sachs. Before coming to Penn I worked in both the social services and world languages fields, teaching Spanish in a number of settings and spending two and a half years as an Employment Specialist at a vocational training service for individuals with developmental disabilities.</p><p>Outside of my studies I enjoy backcountry camping, travel, home brewing, craft coffee and all things computer science. There are a couple of pictures from past trips on the slider above.</p>
+                            <p>I’m a recent grad from the Master of Computer and Information Technology program (MCIT) at the University of Pennsylvania and current dev at 1stdibs.com, an ecommerce marketplace for 'The most beautiful things on Earth', where I work as a backend engineer for platform. Before making my way into tech I worked in both the social services and world languages fields, teaching Spanish in a number of settings and spending two and a half years as an Employment Specialist at a vocational training service for individuals with developmental disabilities.</p><p>Outside of my studies I enjoy backcountry camping, travel, home brewing, craft coffee and all things computer science. There are a couple of pictures from past trips on the slider above.</p>
                             <p>Please feel free to get in touch (contact button above) with any questions about the MCIT program, Philly, CS, etc. or just to connect.</p>
                             <p>For details about this site and its design check out the info in the Projects section below.</p>
                         </div>
@@ -270,10 +270,10 @@
               
             </ul>
             <ul class="skills-row" id="third-row">
-              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/jquery.jpg" alt="jquery pic"/></li>
-                        <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/css.jpg" alt="css pic"/></li>
-              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/spanish.jpg" alt="spanish pic"/></li>
-              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/portuguese.jpg" alt="portuguese pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/react.jpg" alt="jquery pic"/></li>
+                        <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/aws.jpg" alt="css pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/postgres.jpg" alt="spanish pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/mysql.jpg" alt="portuguese pic"/></li>
               <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/bootstrap.jpg" alt="bootstrap pic"/></li>
             </ul>
           </div>
@@ -366,6 +366,12 @@
           </div>
         </div>
         <div class="row text-center">
+       			<div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-6')" onmouseout="mouseOffProjOpacity()">
+                    <div class="project-item" id="proj-6" data-toggle="modal" data-target="#proj-2-modal">
+                        <img class="img-responsive project-image" src="images/datalake2.png" alt="profile pic"/>
+                        <div class="project-caption">DataLake</div>
+                    </div>
+                </div>
                 <div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-2')" onmouseout="mouseOffProjOpacity()">
                     <div class="project-item" id="proj-2" data-toggle="modal" data-target="#proj-5-modal">
                         <img class="img-responsive project-image" src="images/bugs.jpg" alt="profile pic"/>
@@ -376,12 +382,6 @@
                     <div class="project-item" id="proj-3" data-toggle="modal" data-target="#proj-6-modal">
                         <img class="img-responsive project-image" src="images/watchdog.jpg" alt="profile pic"/>
                         <div class="project-caption">WatchDog</div>
-                    </div>
-                </div>
-                <div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-6')" onmouseout="mouseOffProjOpacity()">
-                    <div class="project-item" id="proj-6" data-toggle="modal" data-target="#proj-2-modal">
-                        <img class="img-responsive project-image" src="images/reddit1.jpg" alt="profile pic"/>
-                        <div class="project-caption">Reddit SMS Service</div>
                     </div>
                 </div>
         </div>
@@ -421,16 +421,16 @@
                 </div>
             </div>        
             <div class="row text-center" >
-                <div class="col-md-6">
-                    <iframe class="video-limiter" src="https://www.youtube.com/embed/x5qLWy97hfo?rel=0" frameborder="0" allowfullscreen="true"></iframe>
+            	<div class="col-md-6">
+                    <iframe class="video-limiter" width="420" height="315" src="https://www.youtube.com/embed/FZQxBHsoJpA" frameborder="0" allowfullscreen="true"></iframe>
                 </div>
                 <div class="col-md-6">
-                    <iframe class="video-limiter" src="https://www.youtube.com/embed/ayUI7DKIauk?rel=0" frameborder="0" allowfullscreen="true"></iframe>
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/x5qLWy97hfo?rel=0" frameborder="0" allowfullscreen="true"></iframe>
                 </div>
             </div>    
             <div class="row text-center" >
                 <div class="col-md-6">
-                    <iframe class="video-limiter" width="420" height="315" src="https://www.youtube.com/embed/dc00YncypSU" frameborder="0" allowfullscreen="true"></iframe>
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/ayUI7DKIauk?rel=0" frameborder="0" allowfullscreen="true"></iframe>
                 </div>
                 <div class="col-md-6">
                     <iframe class="video-limiter" src="https://www.youtube.com/embed/vlI6xWngsEk?rel=0" frameborder="0" allowfullscreen="true"></iframe>
@@ -545,6 +545,34 @@
                 <div class="row work-row">
                     <div class="col-md-3">
                         <div class="resume-header text-uppercase">Work</div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">1stdibs.com</div>
+                        <div class="title">Java Software Engineer</div>
+                        <div class="dates">May 2016 - Present.</div>
+                        <ul class="job-responsibilities">
+                            <li>New member of the backend, inventory dev team.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="text-uppercase"></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">Homfield.com</div>
+                        <div class="title">Co-Founder and Software Engineer</div>
+                        <div class="dates">September 2015 - Present.</div>
+                        <ul class="job-responsibilities">
+                            <li>Homfield.com is a website to discover and book new and inspiring spaces for your next event.</li>
+							<li>Responsible for design and implementation of all technical features of the Homfield.com service.</li>
+							<li>More info on Homfield in the projects section above.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="text-uppercase"></div>
                     </div>
                     <div class="col-md-9">
                         <div class="business">University of Pennsylvania - School of Engineering and Applied Science</div>
@@ -762,26 +790,54 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Reddit SMS Service</h4>
+                <h4 class="modal-title" id="myModalLabel">DataLake</h4>
               </div>
               <div class="modal-body">
-                <p>Django web app to subscribe to subreddit updates via SMS.</p>
-                <p>Features:</p> 
+                <p>The DataLake project is a data normalization, storage and search platform. It attempts to normalize and find meaningful relationships between large data sets of varying formats.</p>
+                <p>How it works:</p> 
                 <ol class="modal-list">
-                    <li>Homepage allows users to request a subreddit post (from 'new' category) be texted to a phone number.</li>
-                    <li>Homepage uses ajax to display the result of this request without reloading.</li>
-                    <li>Users can create password protected accounts and subscribe to receive subreddit updates via SMS on a chosen interval.</li>
-                    <li>Uses a cache system so that the program will never exceed reddit API usage while maintaining data that is at most 2 minutes old. When a user request comes in, the program will first look in the cache. If the subreddit does not exist, the request will be fulfilled then added to the cache and included in subsequent updates.</li>
-                    <li>In order to fulfill subscriptions and update the cache without blocking I used Celery and RabbitMQ to implement an asynchronous task queue. </li>
-                    <li>The site is connected to a MySQL database hosted in RDS which contains user info and permissions, user subscription details and currently cached items. (Future improvement could be to retain a portion of the cache in local memory).</li>
-                    <li>I developed in a Vagrant environment using Ubuntu. I included the Vagrantfile in GitHub which should have everything needed to launch locally except RabbitMQ (I installed manually as pip version wasn't executing).</li>
-                    <li>I used sslify to deploy the site behind ssl on Heroku using Heroku's standard ssl certificate. </li>
+                    <li>Accepts datasources of various formats such as .json, .xml, and .csv. These can be uploaded via the web interface.</li>
+                    <li>Extractor is triggered and run on uploaded data. Extractor attempts to create a tree to represent the data and then breaks the tree into components for storage in relational databases.</li>
+                    <li>Extractor maintains an inverted index connecting all words that have been found in processed data to the nodes that contained them. 
+	                    <ul>
+		                    <li>For example, a basic json containing a single user's profile information such as 
+		                    <i><b>{"name":"Ryan", "occupation":"SuperDev"}</b></i> will be assigned a root node with the doc title and then have two children nodes. 
+		                    Entries will be created in the index connecting "name" and "Ryan" with the first child node, and "occupation" and "SuperDev" with the second.
+		                   	</li>
+	                   	</ul> 
+                   </li>
+                   <li>A linker is run periodically in the background. It evaluates all pairs of nodes in the databases for certain relationships. 
+                   The most basic of these is string equality. Upon indentifying two related nodes, linker edges are created in the database.</li>
+                   <li>The data can be searched via the web interface. Single and Two Word Search are offered and work as follows:
+                   		<ul>
+	                   		<li>Single Word Search: Indentifies nodes containing the search terms. Fetches all nodes and edges for the containing documents
+		                   	and recreates each representing the document as a tree. Starts at the root and returns the shortest path from root to target node
+		                   	for each document.</li>
+		                   	<li>Two Word Search: Identifies all nodes containing the search terms. Fetches all nodes and edges for all containing documents, then
+		                   	fetches all linker-generated edges between nodes in those documents. Resulting struture is a graph represented internally as an adjacency matrix. 
+		                   	Runs BFS starting at each of the start nodes (those pertaining to search term one) and continues until reaching any of the target
+		                   	nodes (those pertaining to search term two). Returns all paths between the start and target nodes of depth &#60;= 25.
+		                   	</li>
+		                </ul>
+		            </li>
+		            <li>Results are displayed in graph form and relevant documents can be downloaded for further interrogation.</li>
+		            <li>Users can create accounts and enforce permissions over documents. These are currently limited to 'Public', 'Private' and 'Elevated' which
+		            would pertain to a user's affiliated group (e.g. Penn CIS 550). Permissions could be extended to allow granting permission to individual users.
+		            Search and download respect permissions. </li>
                 </ol>
+                <p>Implementation Details</p>
+                <ul>
+                	<li>MySQL databases for normalized data and inverted index storage.</li>
+                	<li>S3 for raw document storage and downloads.</li>
+                	<li>ActiveMQ message queue to trigger extractor when new document uploaded.</li>
+                	<li>Spring framework and Jdbc templates for handrolled ORM of sorts.</li>
+                	<li>Spring MVC and Tomcat for web.</li>
+                	<li>Maven for build.</li>
+                </ul>
                 <p>There's a demonstration video below on this page.</p>
                 <p>You can check out the code on github here:</p>
                 <ul>
-                    <li><a href="https://github.com/RyCSmith/Reddit-SMS-Service">Reddit SMS Service Repo</a></li>
-                    <li>Repo also contains a basic command line tool to send individual subreddit posts via SMS.</li>
+                    <li><a href="https://github.com/RyCSmith/DataLake">DataLake Repo</a></li>
                 </ul>
               </div>
               <div class="modal-footer">
