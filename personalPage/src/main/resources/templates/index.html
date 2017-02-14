@@ -8,13 +8,12 @@
         <link rel="stylesheet" type="text/css" th:href="@{/css/customStyle.css}"></link>
         <link rel="stylesheet" type="text/css" th:href="@{/css/MBcustomStyles.css}"></link>
         <link rel="stylesheet" type="text/css" th:href="@{/css/displayAppendage.css}"></link>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.1.1/jquery.waypoints.min.js"></script>
-        <script type="text/javascript" th:src="@{/js/customOps.js}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'></link>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/mobile-menu.css}"></link>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
+		
+		
+       
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -28,35 +27,6 @@
     </head>
 
 <body>
-
-  <!--holder tags for elements that will be added to DOM -->
-<div id="mobile-menu-holder">
-    <div id="menu-overlay" class="overlayp panel">
-        <div id="spacer-div"></div>
-        <div class="container">
-            <div class="row" id="menu-row">
-                <a href="#ABOUT" class="overlay">
-                    <div class="col-xs-12 mb-menu-col">ABOUT</div>
-                </a>
-                <a href="#SKILLS" class="overlay">
-                    <div class="col-xs-12 mb-menu-col">SKILLS</div>
-                </a>
-                <a href="#PROJECTS" class="overlay">
-                    <div class="col-xs-12 mb-menu-col">PROJECTS</div>
-                </a>
-                <a href="#SOCIAL2" class="overlay">
-                    <div class="col-xs-12 mb-menu-col">SOCIAL</div>
-                </a>
-                <a href="#RESUME" class="overlay">
-                    <div class="col-xs-12 mb-menu-col">RESUME</div>
-                </a>
-                <a href="#CONTACT" class="overlay">
-                    <div class="col-xs-12 mb-menu-col">CONTACT</div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <header id="head2" class="content">
     <img id="mbimage" src="images/cabin-scaled.jpg" alt="cabin photo"/>
@@ -177,24 +147,26 @@
         </div>
     </div>
 </header>
+
 <!--Mobile Header Bar-->
 <header id="headMB">
     <div class="container" id="head-container">
         <div class="row" id="head-row">
-            <a href="#HOME">
-                <div class="col-xs-2 head-col">
-                    <span class="glyphicon glyphicon-home head-center-elm" aria-hidden="true"></span>
-                </div>
-            </a>
-            <div class="col-xs-8 text-uppercase head-center-elm head-col">RYAN SMITH</div>
-            <a class="menu-button overlay head-col">
-                <div class="col-xs-2 text-uppercase text-justified head-col">
-                    <span class="head-center-elm glyphicon glyphicon-align-justify" aria-hidden="true"></span>
-                </div>
-            </a>
+            <!-- menu will be appended here-->
         </div>
     </div>
 </header>
+
+<ul id="mobile-menu">
+    <hr class="border-hr"/>
+    	<li><a class="scroll" href="#HOME">Home</a></li>
+		<li><a class="scroll" href="#ABOUT">About</a></li>
+	    <li><a class="scroll" href="#SKILLS">Skills</a></li>
+	    <li><a class="scroll" href="#PROJECTS">Projects</a></li>
+	    <li><a class="scroll" href="#SOCIAL2">Social</a></li>
+	    <li><a class="scroll" href="#RESUME">Resume</a></li>
+	    <li><a class="scroll" href="#CONTACT">Contact</a></li>
+</ul>
 
 <!--Floating Container -->
   <div class="container content" id="floating-container">
@@ -220,9 +192,9 @@
                         <h1>ABOUT</h1>
                         <div id="profile text" class="text-justify">
                             <p>Hi and welcome! Thanks for checking out my page. I built this site to provide some information about my skills and past experiences and to showcase a few of my projects.</p>
-                            <p>I’m a recent grad from the Master of Computer and Information Technology program (MCIT) at the University of Pennsylvania and current dev at 1stdibs.com, an ecommerce marketplace for 'The most beautiful things on Earth', where I work as a backend engineer for platform. Before making my way into tech I worked in both the social services and world languages fields, teaching Spanish in a number of settings and spending two and a half years as an Employment Specialist at a vocational training service for individuals with developmental disabilities.</p><p>Outside of my studies I enjoy backcountry camping, travel, home brewing, craft coffee and all things computer science. There are a couple of pictures from past trips on the slider above.</p>
+                            <p>I’m a recent grad from the Master of Computer and Information Technology program (MCIT) at the University of Pennsylvania and current dev at 1stdibs.com, an ecommerce marketplace for 'The most beautiful things on Earth', where I work as a backend engineer. Before making my way into tech I worked in both the social services and world languages fields, teaching Spanish in a number of settings and spending two and a half years as an Employment Specialist at a vocational training service for individuals with developmental disabilities.</p>
+                            <p>Outside of my studies I enjoy backcountry camping, travel, home brewing, craft coffee and all things computer science. There are a couple of pictures from past trips on the slider above.</p>
                             <p>Please feel free to get in touch (contact button above) with any questions about the MCIT program, Philly, CS, etc. or just to connect.</p>
-                            <p>For details about this site and its design check out the info in the Projects section below.</p>
                         </div>
                     </div>
                 </div>
@@ -241,9 +213,9 @@
                         <h1>ABOUT</h1>
                         <div id="profile text" class="text-justify">
                             <p>Hi and welcome! Thanks for checking out my page. I built this site to provide some information about my skills and past experiences and to showcase a few of my projects.</p>
-                            <p>I’m currently a second year computer science student in the Master of Computer and Information Technology program (MCIT) at the University of Pennsylvania (expected graduation May 2016). I spent last summer interning as a software developer on the Sales Technology - Business Intelligence team at Goldman Sachs. Before coming to Penn I worked in both the social services and world languages fields, teaching Spanish in a number of settings and spending two and a half years as an Employment Specialist at a vocational training service for individuals with developmental disabilities.</p>
-                            <p>Outside of my studies I enjoy backcountry camping, travel, home brewing, craft coffee and all things computer science.</p>
-                            <p>Please feel free to get in touch (contact form below) with any questions about the MCIT program, Philly, CS, etc. or just to connect.</p><p>For details about this site and its design check out the info in the Projects section below.</p>
+                            <p>I’m a recent grad from the Master of Computer and Information Technology program (MCIT) at the University of Pennsylvania and current dev at 1stdibs.com, an ecommerce marketplace for 'The most beautiful things on Earth', where I work as a backend engineer. Before making my way into tech I worked in both the social services and world languages fields, teaching Spanish in a number of settings and spending two and a half years as an Employment Specialist at a vocational training service for individuals with developmental disabilities.</p>
+                            <p>Outside of my studies I enjoy backcountry camping, travel, home brewing, craft coffee and all things computer science. There are a couple of pictures from past trips on the slider above.</p>
+                            <p>Please feel free to get in touch (contact button above) with any questions about the MCIT program, Philly, CS, etc. or just to connect.</p>
                         </div>
                     </div>
                 </div>
@@ -263,18 +235,18 @@
               <li><img class="img-responsive image-limiter circle-image top-row-image" src="images/js.jpg" alt="js pic"/></li>
             </ul>
             <ul class="skills-row table-width-adjuster" id="second-row">
-              <li><img class="img-responsive image-limiter circle-image second-row-image" src="images/django.jpg" alt="groovy pic"/></li>
-              <li><img class="img-responsive image-limiter circle-image second-row-image" src="images/groovy.jpg" alt="html pic"/></li>
-              <li><img class="img-responsive image-limiter circle-image second-row-image" src="images/spring.png" alt="spring pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image second-row-image" src="images/django.jpg" alt="django pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image second-row-image" src="images/spring2.jpg" alt="sprint pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image second-row-image" src="images/solr.jpg" alt="solr pic"/></li>
               <li><img class="img-responsive image-limiter circle-image second-row-image" src="images/git.jpg" alt="git pic"/></li>
               
             </ul>
             <ul class="skills-row" id="third-row">
-              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/react.jpg" alt="jquery pic"/></li>
-                        <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/aws.jpg" alt="css pic"/></li>
-              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/postgres.jpg" alt="spanish pic"/></li>
-              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/mysql.jpg" alt="portuguese pic"/></li>
-              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/bootstrap.jpg" alt="bootstrap pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/aws.jpg" alt="aws pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/postgres.jpg" alt="postgres pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/mysql.jpg" alt="mysql pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/react.jpg" alt="react pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/scss.png" alt="scss pic"/></li>
             </ul>
           </div>
         </div>
@@ -308,10 +280,10 @@
                 </div>   
                 <div class="row" id="mb-third-row">
                     <div class="col-xs-4">        
-                            <img class="img-responsive image-limiter circle-image mb-third-row-image" src="images/groovy100.jpg" alt="css pic"/>
+                            <img class="img-responsive image-limiter circle-image mb-third-row-image" src="images/spring2.jpg" alt="css pic"/>
                     </div>        
                     <div class="col-xs-4">
-                            <img class="img-responsive image-limiter circle-image mb-third-row-image" src="images/css100.jpg" alt="git pic"/>
+                            <img class="img-responsive image-limiter circle-image mb-third-row-image" src="images/solr.jpg" alt="git pic"/>
                     </div>        
                     <div class="col-xs-4">
                             <img class="img-responsive image-limiter circle-image mb-third-row-image" src="images/git100.jpg" alt="html pic"/>
@@ -319,21 +291,21 @@
                 </div>
                 <div class="row" id="mb-fourth-row">
                     <div class="col-xs-4">
-                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/jquery100.jpg" alt="jquery pic"/>
+                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/aws.jpg" alt="jquery pic"/>
                     </div>        
                     <div class="col-xs-4">
-                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/spanish100.jpg" alt="spanish pic"/>
+                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/postgres.jpg" alt="spanish pic"/>
                     </div>        
                     <div class="col-xs-4">
-                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/portuguese100.jpg" alt="portuguese pic"/>
+                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/mysql.jpg" alt="portuguese pic"/>
                     </div>
                 </div>
                 <div class="row" id="mb-fifth-row">
                     <div class="col-xs-4">       
-                            <img class="img-responsive image-limiter circle-image mb-fifth-row-image" src="images/gimp100.jpg" alt="gimp pic"/>
+                            <img class="img-responsive image-limiter circle-image mb-fifth-row-image" src="images/react.jpg" alt="gimp pic"/>
                     </div>        
                     <div class="col-xs-4">
-                            <img class="img-responsive image-limiter circle-image mb-fifth-row-image" src="images/bootstrap100.jpg" alt="bootstrap pic"/>
+                            <img class="img-responsive image-limiter circle-image mb-fifth-row-image" src="images/scss.png" alt="bootstrap pic"/>
                     </div>        
                 </div>
             </div>
@@ -494,7 +466,7 @@
                 <div class="row">
                     <div class="col-md-12">
                     <h1 class="text-center">RESUME</h1> 
-                    <p id="resume-info-text">These are some highlights from my resume. The full PDF version is available to view or download <a href="files/Ryan_Smith_CV.pdf">here</a>. (*contact info's been removed before hosting so please get in touch via this site if you wish to do so) </p>
+                    <p id="resume-info-text">These are some highlights from my resume. The full PDF version is available to view or download <a href="files/Ryan_Smith_CV.pdf">here</a>. (*contact info has been removed so please get in touch via this site if you wish to do so) </p>
                     </div>
                 </div>
                 <div class="row" id="education-top-row">
@@ -504,9 +476,9 @@
                     <div class="col-md-9">
                         <div class="program">Master of Computer and Information Technology</div>
                         <div class="school">University of Pennsylvania, Philadelphia, PA</div>
-                        <div class="graduation">Expected May, 2016</div>
+                        <div class="graduation">May, 2016</div>
                         <ul class="details">
-                            <li>3.90 current cumulative GPA.</li>
+                            <li>3.78 current cumulative GPA.</li>
                         </ul>
                         <div class="course-headings text-uppercase">completed courses</div>
                         <ul class="details">
@@ -516,11 +488,10 @@
                             <li>Programming Languages and Techniques II (Data Structures and Algorithms)</li>
                             <li>Theory of Computation</li>
                             <li>Digital System Organization and Design</li>
-                        </ul>
-                        <div class="course-headings text-uppercase">current courses</div>
-                        <ul class="details">
                             <li>Internet and Web Systems</li>
                             <li>Software Engineering</li>
+                            <li>Software Systems (Distributed Systems)</li>
+                            <li>Database and Information Systems</li>
                         </ul>
                     </div>
                 </div>
@@ -551,7 +522,8 @@
                         <div class="title">Java Software Engineer</div>
                         <div class="dates">May 2016 - Present.</div>
                         <ul class="job-responsibilities">
-                            <li>New member of the backend, inventory dev team.</li>
+                            <li>Backend Engineer for online marketplace with ~50 million visits and $100 million+ of inventory sold in 100+ countries per year.</li>
+							<li>Implement bug fixes and new features across multiple backend services with specific focus on Solr inventory search.</li>
                         </ul>
                     </div>
                 </div>
@@ -577,7 +549,7 @@
                     <div class="col-md-9">
                         <div class="business">University of Pennsylvania - School of Engineering and Applied Science</div>
                         <div class="title">Teaching Assistant</div>
-                        <div class="dates">August 2015 - Present</div>
+                        <div class="dates">August 2015 - December 2015</div>
                         <ul class="job-responsibilities">
                             <li>Teaching Assistant in CIT590, graduate level programming class for non-computer science majors.</li>
                             <li>Lead a weekly recitation session, graded homework/exams and held office hours.</li>
@@ -608,54 +580,10 @@
                         <div class="title">Employment Specialist</div>
                         <div class="dates">January 2012 - July 2014</div>
                         <ul class="job-responsibilities">
-                            <li>Served as member of ecommerce team, conducting routine management, maintenance and design modifications for Magento-based web-store generating $50k+ in first-year sales.</li>
-                            <li>Executed Facebook and Google AdWords Campaigns and listed products via Amazon Marketplace.</li>
                             <li>Developed individualized service plans to meet the needs of individuals with developmental disabilities.</li>
-                            <li>Designed and implemented plan to include assistive technologies in the program.</li>
                             <li>Arranged community-based employment and internships for program participants.</li>
-                            <li>Completed monthly billing invoices in excess of $250k for all services provided by Guilford, CT facility.</li>
                             <li>Conducted community outreach. Outreach includes hosting a monthly parent support group, attending career and transition fairs and hosting flower sales to benefit the program.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row work-row">
-                    <div class="col-md-3">
-                        <div class="text-uppercase"></div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="business">Goombay Coffee Company</div>
-                        <div class="title">Co-Founder</div>
-                        <div class="dates">December 2010 - March 2012</div>
-                        <ul class="job-responsibilities">
-                            <li>Magento-based ecommerce startup providing monthly, artisan-coffee subscription service.</li>
-                            <li>Offered alternative marketing, ecommerce platform and drop ship structure for small coffee roasters.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row work-row">
-                    <div class="col-md-3">
-                        <div class="text-uppercase"></div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="business">University of Arizona</div>
-                        <div class="title">Graduate Assistant in Teaching</div>
-                        <div class="dates">August 2010 - January 2011</div>
-                        <ul class="job-responsibilities">
-                            <li>Independently instructed two second level Spanish classes, Spanish 102, at the university.</li>
-                            <li>Developed daily lessons, supporting course materials and test preparation programs for students.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row work-row">
-                    <div class="col-md-3">
-                        <div class="text-uppercase"></div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="business">CCSU Center for the Caribbean and Latin American Studies</div>
-                        <div class="title">Student Assistant</div>
-                        <div class="dates">January 2009 - January 2010</div>
-                        <ul class="job-responsibilities">
-                            <li> Developed awareness of Latino, Latin American, and Caribbean cultures in the New Britain community through the organization and promotion of musical acts, lectures and other related events on campus.</li>
+                        	<li>Served as member of ecommerce team, conducting routine management, maintenance and design modifications for Magento-based web-store generating $50k+ in first-year sales.</li>
                         </ul>
                     </div>
                 </div>
@@ -675,18 +603,21 @@
                         </ul>
                     </div>
             </div>
-            <div class="row" id="additional-courses">
-                    <div class="col-md-3">
-                        <div class="resume-header text-uppercase">Additional Courses</div>
-                    </div>
-                    <div class="col-md-9">
-                        <ul class="details">
-                            <li>Java Programming - Virginia Western Community College</li>
-                            <li>Intro to HTML and CSS - Udacity.com</li>
-                            <li>JavaScript Basics - Udacity.com</li>
-                        </ul>
-                    </div>
+            <div class="row work-row">
+                <div class="col-md-3">
+                    <div class="text-uppercase"></div>
                 </div>
+                <div class="col-md-9">
+                    <div class="business">Goombay Coffee Company</div>
+                    <div class="title">Co-Founder</div>
+                    <div class="dates">December 2010 - March 2012</div>
+                    <ul class="job-responsibilities">
+                        <li>Magento-based ecommerce startup providing monthly, artisan-coffee subscription service.</li>
+                        <li>Offered alternative marketing, ecommerce platform and drop ship structure for small coffee roasters.</li>
+                    </ul>
+                </div>
+            </div>
+
 <!--mobile contact form -->            
             <a NAME="CONTACT"></a>
                 <div class="row">
@@ -1057,5 +988,16 @@
             </div>
           </div>
         </div>  
+        
+        
+        <!-- Script Imports -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.1.1/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" th:src="@{/js/customOps.js}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+        <script th:src="@{/js/mobile-menu.js}"></script>
 </body>
 </html>

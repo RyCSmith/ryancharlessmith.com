@@ -1,0 +1,1003 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+        <title>Ryan's Home Page</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"></link>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/customStyle.css}"></link>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/MBcustomStyles.css}"></link>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/displayAppendage.css}"></link>
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'></link>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/mobile-menu.css}"></link>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
+		
+		
+       
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-58836523-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </head>
+
+<body>
+
+<header id="head2" class="content">
+    <img id="mbimage" src="images/cabin-scaled.jpg" alt="cabin photo"/>
+</header>
+
+<!-- sidebar for 767 < size screens -->
+<div class='sidebar' id="sidebar">
+    <form name="message-form" id="message-form">
+        <div id="contact-label">CONTACT</div>
+        <div id="contact-label-text">To contact me by email, please fill out the form below:</div>
+      <p>
+        <label id="name-label">NAME: </label><br/>
+        <input id="name-input" type="text" name="name"/>
+      </p>
+      <p>
+        <label>EMAIL:</label><br/>
+        <input id="mail-input" type="text"/>
+      </p>
+      <p>
+        <label>MESSAGE:</label> <br/>
+        <textarea id="message-input"></textarea>
+      </p>
+      <button type="button" id="contact-button">SEND</button>
+      <button type="button" id="contact-button-new" class="disappear">SEND NEW MESSAGE</button>
+    </form>
+</div>
+
+<!-- Image Slider -->
+        <div class="slider-container content" id="slider-container">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        </ol>
+       
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+                    <center>
+                        <img src="images/glades1.jpg" alt="..."/>
+                    </center>
+          </div>
+          <div class="item">
+                    <center>
+                        <img src="images/cabin1.jpg" alt="..."/>
+                    </center>
+          </div>
+          <div class="item">
+                    <center>
+                        <img src="images/cabin2.jpg" alt="..."/>
+                    </center>
+          </div>
+                <div class="item">
+                    <center>
+                        <img src="images/vieques2.jpg" alt="..."/>
+                    </center>
+                </div>
+                <div class="item">
+                    <center>
+                        <img src="images/tuckerman.jpg" alt="..."/>
+                    </center>
+                </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div> <!-- Carousel -->
+    </div>
+
+<!-- Full Size Header Bar -->
+<header id="headFS">
+    <div id="bar-wrap">
+        <div id="bar-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-uppercase text-justified">
+                        <ul id="nav">
+                            <li>
+                                <a class="home-button">
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="about-button">About</a>
+                            </li>
+                            <li>
+                                <a class="skills-button">Skills</a>
+                            </li>
+                            <li>
+                                <a class="project-button">Projects</a>
+                            </li>
+                            <li>
+                                <a class="social-button">Social</a>
+                            </li>
+                            <li>
+                                <a class="resume-button">Resume</a>
+                            </li>
+                            <li>
+                                <a id="contact-slide-button">
+                                    <span id="slide-button" class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                                    Contact
+                                    <span id="slide-button-2" class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--Mobile Header Bar-->
+<header id="headMB">
+    <div class="container" id="head-container">
+        <div class="row" id="head-row">
+            <!-- menu will be appended here-->
+        </div>
+    </div>
+</header>
+
+<ul id="mobile-menu">
+    <hr class="border-hr"/>
+    	<li><a class="scroll" href="#HOME">Home</a></li>
+		<li><a class="scroll" href="#ABOUT">About</a></li>
+	    <li><a class="scroll" href="#SKILLS">Skills</a></li>
+	    <li><a class="scroll" href="#PROJECTS">Projects</a></li>
+	    <li><a class="scroll" href="#SOCIAL2">Social</a></li>
+	    <li><a class="scroll" href="#RESUME">Resume</a></li>
+	    <li><a class="scroll" href="#CONTACT">Contact</a></li>
+</ul>
+
+<!--Floating Container -->
+  <div class="container content" id="floating-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="inner-float">RYAN SMITH</div>
+            </div>
+        </div>
+    </div>
+
+<!-- Main Container -->
+    <a NAME="HOME"></a>
+    <div class="outer-container content" id="main-container">
+      <div class="container" id="inner-main-container">
+<!-- About Section  -->
+            <a NAME="ABOUT"></a>
+            <div id="about-container-fs">
+                <div class="row" id="about-section">
+                    <div class="col-md-4" id="profile-pic-box">
+                        <img id="profile-pic" class="img-responsive image-limiter" src="images/profile-pic.jpg" alt="profile pic"/>
+                    </div>
+                    <div class="col-md-8">
+                        <h1>ABOUT</h1>
+                        <div id="profile text" class="text-justify">
+                            <p>Hi and welcome! Thanks for checking out my page. I built this site to provide some information about my skills and past experiences and to showcase a few of my projects.</p>
+                            <p>I’m a recent grad from the Master of Computer and Information Technology program (MCIT) at the University of Pennsylvania and current dev at 1stdibs.com, an ecommerce marketplace for 'The most beautiful things on Earth', where I work as a backend engineer. Before making my way into tech I worked in both the social services and world languages fields, teaching Spanish in a number of settings and spending two and a half years as an Employment Specialist at a vocational training service for individuals with developmental disabilities.</p>
+                            <p>Outside of my studies I enjoy backcountry camping, travel, home brewing, craft coffee and all things computer science. There are a couple of pictures from past trips on the slider above.</p>
+                            <p>Please feel free to get in touch (contact button above) with any questions about the MCIT program, Philly, CS, etc. or just to connect.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="about-container-mb">
+                <div class="row" id="mb-about-top-row">
+                    <div class="col-xs-6 text-center">
+                        <div id="mb-title-name">RYAN SMITH</div>
+                    </div>
+                    <div class="col-xs-6" id="mb-profile-pic-box">
+                        <img id="mb-profile-pic" class="img-responsive image-limiter" src="images/profile-pic.jpg" alt="profile pic"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>ABOUT</h1>
+                        <div id="profile text" class="text-justify">
+                            <p>Hi and welcome! Thanks for checking out my page. I built this site to provide some information about my skills and past experiences and to showcase a few of my projects.</p>
+                            <p>I’m a recent grad from the Master of Computer and Information Technology program (MCIT) at the University of Pennsylvania and current dev at 1stdibs.com, an ecommerce marketplace for 'The most beautiful things on Earth', where I work as a backend engineer. Before making my way into tech I worked in both the social services and world languages fields, teaching Spanish in a number of settings and spending two and a half years as an Employment Specialist at a vocational training service for individuals with developmental disabilities.</p>
+                            <p>Outside of my studies I enjoy backcountry camping, travel, home brewing, craft coffee and all things computer science. There are a couple of pictures from past trips on the slider above.</p>
+                            <p>Please feel free to get in touch (contact button above) with any questions about the MCIT program, Philly, CS, etc. or just to connect.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<!-- FS Skills Section -->  
+            <a NAME="SKILLS"></a>     
+        <div class="row category-header" id="fs-skills-section">
+          <div class="col-md-12">
+            <h1>SKILLS</h1>
+            <ul class="skills-row" id="top-row">
+              <li><img class="img-responsive image-limiter circle-image top-row-image" src="images/java.jpg" alt="jave pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image top-row-image" src="images/python.jpg" alt="python pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image top-row-image" src="images/c.jpg" alt="c pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image top-row-image" src="images/c++.jpg" alt="c++ pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image top-row-image" src="images/js.jpg" alt="js pic"/></li>
+            </ul>
+            <ul class="skills-row table-width-adjuster" id="second-row">
+              <li><img class="img-responsive image-limiter circle-image second-row-image" src="images/django.jpg" alt="django pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image second-row-image" src="images/spring2.jpg" alt="sprint pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image second-row-image" src="images/solr.jpg" alt="solr pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image second-row-image" src="images/git.jpg" alt="git pic"/></li>
+              
+            </ul>
+            <ul class="skills-row" id="third-row">
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/aws.jpg" alt="aws pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/postgres.jpg" alt="postgres pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/mysql.jpg" alt="mysql pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/react.jpg" alt="react pic"/></li>
+              <li><img class="img-responsive image-limiter circle-image third-row-image" src="images/scss.png" alt="scss pic"/></li>
+            </ul>
+          </div>
+        </div>
+<!-- Mobile - Skills Section --> 
+            <div id="mb-skills-section">        
+                <div class="row category-header">
+                    <a NAME="SKILLS"></a>
+                    <h1>SKILLS</h1>
+                </div>
+                <div class="row" id="mb-top-row">
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-top-row-image" src="images/java100.jpg" alt="java pic"/>
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-top-row-image" src="images/python100.jpg" alt="python pic"/>
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-top-row-image" src="images/c100.jpg" alt="c pic"/>
+                    </div>
+                </div>
+                <div class="row" id="mb-second-row">
+                    <div class="col-xs-4">        
+                            <img class="img-responsive image-limiter circle-image mb-second-row-image" src="images/c++100.jpg" alt="C++ pic"/>
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-second-row-image" src="images/js100.jpg" alt="js pic"/>
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-second-row-image" src="images/django100.jpg" alt="groovy pic"/>
+                    </div>
+                </div>   
+                <div class="row" id="mb-third-row">
+                    <div class="col-xs-4">        
+                            <img class="img-responsive image-limiter circle-image mb-third-row-image" src="images/spring2.jpg" alt="css pic"/>
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-third-row-image" src="images/solr.jpg" alt="git pic"/>
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-third-row-image" src="images/git100.jpg" alt="html pic"/>
+                    </div>
+                </div>
+                <div class="row" id="mb-fourth-row">
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/aws.jpg" alt="jquery pic"/>
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/postgres.jpg" alt="spanish pic"/>
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-fourth-row-image" src="images/mysql.jpg" alt="portuguese pic"/>
+                    </div>
+                </div>
+                <div class="row" id="mb-fifth-row">
+                    <div class="col-xs-4">       
+                            <img class="img-responsive image-limiter circle-image mb-fifth-row-image" src="images/react.jpg" alt="gimp pic"/>
+                    </div>        
+                    <div class="col-xs-4">
+                            <img class="img-responsive image-limiter circle-image mb-fifth-row-image" src="images/scss.png" alt="bootstrap pic"/>
+                    </div>        
+                </div>
+            </div>
+<!-- Projects Section --> 
+      <div class="row category-header" id="projects-section">
+                <a NAME="PROJECTS"></a>
+        <div class="col-md-12">
+          <h1 class="text-center">PROJECTS</h1>
+                    <div class="text-center">Click for Details.</div>
+        </div>
+      </div>      
+        <div class="row text-center" >
+          <div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-1')" onmouseout="mouseOffProjOpacity()">
+            <div class="project-item" id="proj-1" data-toggle="modal" data-target="#proj-1-modal">
+            <img class="img-responsive project-image" src="images/homfield.png" alt="profile pic"/>
+            <div class="project-caption">Homfield</div>
+            </div>
+          </div>
+          <div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-7')" onmouseout="mouseOffProjOpacity()">
+            <div class="project-item" id="proj-7" data-toggle="modal" data-target="#proj-4-modal">
+              <img class="img-responsive project-image" src="images/bingle-result.png" alt="profile pic"/>
+            <div class="project-caption">Bingle Search Engine</div>
+            </div>
+          </div>
+          <div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-8')" onmouseout="mouseOffProjOpacity()">
+            <div class="project-item" id="proj-8" data-toggle="modal" data-target="#proj-12-modal">
+              <img class="img-responsive project-image" src="images/mrds.png" alt="profile pic"/>
+            <div class="project-caption">Map Reduce System</div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+       			<div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-6')" onmouseout="mouseOffProjOpacity()">
+                    <div class="project-item" id="proj-6" data-toggle="modal" data-target="#proj-2-modal">
+                        <img class="img-responsive project-image" src="images/datalake2.png" alt="profile pic"/>
+                        <div class="project-caption">DataLake</div>
+                    </div>
+                </div>
+                <div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-2')" onmouseout="mouseOffProjOpacity()">
+                    <div class="project-item" id="proj-2" data-toggle="modal" data-target="#proj-5-modal">
+                        <img class="img-responsive project-image" src="images/bugs.jpg" alt="profile pic"/>
+                        <div class="project-caption">Bugs Language Interpreter</div>
+                    </div>
+                </div>
+                <div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-3')" onmouseout="mouseOffProjOpacity()">
+                    <div class="project-item" id="proj-3" data-toggle="modal" data-target="#proj-6-modal">
+                        <img class="img-responsive project-image" src="images/watchdog.jpg" alt="profile pic"/>
+                        <div class="project-caption">WatchDog</div>
+                    </div>
+                </div>
+        </div>
+            <div class="row text-center">
+                <div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-5')" onmouseout="mouseOffProjOpacity()">
+                    <div class="project-item" id="proj-5" data-toggle="modal" data-target="#proj-7-modal">
+                        <img class="img-responsive project-image" src="images/maze.jpg" alt="profile pic"/>
+                        <div class="project-caption">Maze Generator/Solver</div>
+                    </div>
+                </div>
+                <div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-4')" onmouseout="mouseOffProjOpacity()">
+                    <div class="project-item" id="proj-4" data-toggle="modal" data-target="#proj-3-modal">
+                        <img class="img-responsive project-image" src="images/lc4.jpg" alt="profile pic"/>
+                        <div class="project-caption">LC4 Binary Interpreter</div>
+                    </div>
+                </div>
+                <div class="col-md-4" onmouseover="mouseOnProjOpacity('proj-9')" onmouseout="mouseOffProjOpacity()">
+                    <div class="project-item" id="proj-9" data-toggle="modal" data-target="#proj-15-modal">
+                        <img class="img-responsive project-image" src="images/tree.jpg" alt="profile pic"/>
+                        <div class="project-caption">Tree API</div>
+                    </div>
+                </div>
+            </div>
+<!-- Project Videos Section -->
+            <div class="row category-header" id="project vid section">
+                <a NAME="VIDEOS"></a>
+                <div class="col-md-12">
+                    <h1 class="text-center">PROJECT DEMONSTRATION VIDEOS</h1>
+                </div>
+            </div>  
+            <div class="row text-center" >
+                <div class="col-md-6">
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/MAX6daUNPCY" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/TQGz7WPcGWo" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+            </div>        
+            <div class="row text-center" >
+            	<div class="col-md-6">
+                    <iframe class="video-limiter" width="420" height="315" src="https://www.youtube.com/embed/FZQxBHsoJpA" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/x5qLWy97hfo?rel=0" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+            </div>    
+            <div class="row text-center" >
+                <div class="col-md-6">
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/ayUI7DKIauk?rel=0" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/vlI6xWngsEk?rel=0" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+            </div>           
+<!-- Social Section -->
+      <div class="row category-header" id="fs-social-section">
+                <a NAME="SOCIAL"></a>
+        <div class="col-md-12">
+          <h1 class="text-center">SOCIAL</h1>
+          <ul class="social-row" id="social-row">
+              <li><a href="https://www.facebook.com/ryancs2"><img class="img-responsive image-limiter sm-circle-image" id="soc-1" src="images/facebook.jpg" alt="pic"/></a></li>
+              <li><a href="http://linkedin.com/in/rycsmith"><img class="img-responsive image-limiter sm-circle-image" id="soc-2" src="images/linkedin.jpg" alt="pic"/></a></li>
+              <li><a href="https://github.com/RyCSmith"><img class="img-responsive image-limiter sm-circle-image" id="soc-2" src="images/github.png" alt="pic"/></a></li>
+              <li><a href="https://www.quora.com/Ryan-Smith-66"><img class="img-responsive image-limiter sm-circle-image" id="soc-2" src="images/quora.jpg" alt="pic"/></a></li>
+              <li><a href="http://stackoverflow.com/users/4119849/rycsmith"><img class="img-responsive image-limiter sm-circle-image" id="soc-2" src="images/stackoverflow.png" alt="pic"/></a></li>
+              <li><a href="https://instagram.com/smithryc/"><img class="img-responsive image-limiter sm-circle-image" id="soc-2" src="images/instagram.jpg" alt="pic"/></a></li>
+              <li><a href="https://twitter.com/Smithryc"><img class="img-responsive image-limiter sm-circle-image" id="soc-2" src="images/twitter.jpg" alt="pic"/></a></li>
+            </ul>
+        </div>
+      </div>
+<!-- Mobile Social Section -->
+            <div id="mb-social-section">
+                <a NAME="SOCIAL2"></a>
+                <div class="row category-header">
+                    <h1 class="text-center">SOCIAL</h1>
+                </div>
+                <div class="row mb-social-row">
+                    <div class="col-xs-6">
+                            <a href="https://www.facebook.com/ryancs2"><img class="img-responsive image-limiter sm-circle-image-mb" id="mb-soc-1" src="images/facebook.jpg" alt="pic"/></a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="http://linkedin.com/in/rycsmith"><img class="img-responsive image-limiter sm-circle-image-mb" id="soc-2" src="images/linkedin.jpg" alt="pic"/></a>
+                    </div>
+                </div>
+                <div class="row mb-social-row">
+                    <div class="col-xs-6">
+                        <a href="https://github.com/RyCSmith"><img class="img-responsive image-limiter sm-circle-image-mb" id="soc-2" src="images/github.png" alt="pic"/></a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="https://www.quora.com/Ryan-Smith-66"><img class="img-responsive image-limiter sm-circle-image-mb" id="soc-2" src="images/quora.jpg" alt="pic"/></a>
+                    </div>
+                </div>
+                <div class="row mb-social-row">
+                    <div class="col-xs-6">
+                          <a href="http://stackoverflow.com/users/4119849/rycsmith"><img class="img-responsive image-limiter sm-circle-image-mb" id="soc-2" src="images/stackoverflow.png" alt="pic"/></a>
+                    </div>
+                    <div class="col-xs-6">
+                          <a href="https://instagram.com/smithryc/"><img class="img-responsive image-limiter sm-circle-image-mb" id="soc-2" src="images/instagram.jpg" alt="pic"/></a>
+                    </div>
+                </div>
+                <div class="row mb-social-row">
+                    <div class="col-xs-6">
+                          <a href="https://twitter.com/Smithryc"><img class="img-responsive image-limiter sm-circle-image-mb" id="soc-2" src="images/twitter.jpg" alt="pic"/></a>
+                    </div>
+                </div>
+            </div>
+<!-- Resume Section -->
+            <div id="resume-section" class="category-header">
+                <a NAME="RESUME"></a>
+                <div class="row">
+                    <div class="col-md-12">
+                    <h1 class="text-center">RESUME</h1> 
+                    <p id="resume-info-text">These are some highlights from my resume. The full PDF version is available to view or download <a href="files/Ryan_Smith_CV.pdf">here</a>. (*contact info has been removed so please get in touch via this site if you wish to do so) </p>
+                    </div>
+                </div>
+                <div class="row" id="education-top-row">
+                    <div class="col-md-3">
+                        <div class="resume-header text-uppercase">School</div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="program">Master of Computer and Information Technology</div>
+                        <div class="school">University of Pennsylvania, Philadelphia, PA</div>
+                        <div class="graduation">May, 2016</div>
+                        <ul class="details">
+                            <li>3.78 current cumulative GPA.</li>
+                        </ul>
+                        <div class="course-headings text-uppercase">completed courses</div>
+                        <ul class="details">
+                            <li>Programming Languages and Techniques</li>
+                            <li>Computer Architecture</li>
+                            <li>Discrete Mathematics</li>
+                            <li>Programming Languages and Techniques II (Data Structures and Algorithms)</li>
+                            <li>Theory of Computation</li>
+                            <li>Digital System Organization and Design</li>
+                            <li>Internet and Web Systems</li>
+                            <li>Software Engineering</li>
+                            <li>Software Systems (Distributed Systems)</li>
+                            <li>Database and Information Systems</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="text-uppercase"></div>
+                    </div>
+                    <div class="col-md-9" id="central">
+                        <div class="program">BA, Spanish with a minor in Latin American Studies</div>
+                        <div class="school">Central Connecticut State University, New Britain, CT</div>
+                        <div class="graduation">May 2010. Cum Laude</div>
+                        <ul class="details">
+                            <li>3.52 cumulative GPA.</li>
+                            <li>Have participated in two study abroad programs. León, Spain, 1 year. Florianópolis, Brazil, 6 months.</li>
+                            <li>Recipient of the FIPSE grant to study in Brazil.</li>
+                            <li>Recipient of monthly scholarship for translations done on behalf of University of State of Santa Catarina.</li>
+                            <li>Member of the Spanish club.</li>
+                            <li>Co-Founder of the Portuguese conversation group.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="resume-header text-uppercase">Work</div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">1stdibs.com</div>
+                        <div class="title">Java Software Engineer</div>
+                        <div class="dates">May 2016 - Present.</div>
+                        <ul class="job-responsibilities">
+                            <li>Backend Engineer for online marketplace with ~50 million visits and $100 million+ of inventory sold in 100+ countries per year.</li>
+							<li>Implement bug fixes and new features across multiple backend services with specific focus on Solr inventory search.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="text-uppercase"></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">Homfield.com</div>
+                        <div class="title">Co-Founder and Software Engineer</div>
+                        <div class="dates">September 2015 - Present.</div>
+                        <ul class="job-responsibilities">
+                            <li>Homfield.com is a website to discover and book new and inspiring spaces for your next event.</li>
+							<li>Responsible for design and implementation of all technical features of the Homfield.com service.</li>
+							<li>More info on Homfield in the projects section above.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="text-uppercase"></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">University of Pennsylvania - School of Engineering and Applied Science</div>
+                        <div class="title">Teaching Assistant</div>
+                        <div class="dates">August 2015 - December 2015</div>
+                        <ul class="job-responsibilities">
+                            <li>Teaching Assistant in CIT590, graduate level programming class for non-computer science majors.</li>
+                            <li>Lead a weekly recitation session, graded homework/exams and held office hours.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="text-uppercase"></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">Goldman Sachs</div>
+                        <div class="title">Technology Summer Analyst</div>
+                        <div class="dates">May 2015 - August 2015.</div>
+                        <ul class="job-responsibilities">
+                            <li>Software Engineering Intern on the Sales Technology - Business Intelligence Team.</li>
+                            <li>Designed and implemented program to dynamically create and perform realistic load testing of the Business Intelligence platform including web applications and QlikView dashboards.</li>
+                            <li>Load testing program was used to successfully identify areas for improvement within the platform. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="text-uppercase"></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">Discover Learn Work Career Training Services</div>
+                        <div class="title">Employment Specialist</div>
+                        <div class="dates">January 2012 - July 2014</div>
+                        <ul class="job-responsibilities">
+                            <li>Developed individualized service plans to meet the needs of individuals with developmental disabilities.</li>
+                            <li>Arranged community-based employment and internships for program participants.</li>
+                            <li>Conducted community outreach. Outreach includes hosting a monthly parent support group, attending career and transition fairs and hosting flower sales to benefit the program.</li>
+                        	<li>Served as member of ecommerce team, conducting routine management, maintenance and design modifications for Magento-based web-store generating $50k+ in first-year sales.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row work-row">
+                    <div class="col-md-3">
+                        <div class="resume-header text-uppercase">Activities</div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="business">iPraxis - Henry C. Lea Elementary School</div>
+                        <div class="title">Volunteer Mentor</div>
+                        <div class="dates">January 2015 - April 2015</div>
+                        <ul class="job-responsibilities">
+                            <li>Taught Python to eighth grade students with the goal of creating a text-based adventure game for their science fair.</li>
+                            <li>Used lessons on Codecademy.com to support hands-on practice.</li>
+                            <li>Concluded with the development of "dragon-escape" game.</li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="row work-row">
+                <div class="col-md-3">
+                    <div class="text-uppercase"></div>
+                </div>
+                <div class="col-md-9">
+                    <div class="business">Goombay Coffee Company</div>
+                    <div class="title">Co-Founder</div>
+                    <div class="dates">December 2010 - March 2012</div>
+                    <ul class="job-responsibilities">
+                        <li>Magento-based ecommerce startup providing monthly, artisan-coffee subscription service.</li>
+                        <li>Offered alternative marketing, ecommerce platform and drop ship structure for small coffee roasters.</li>
+                    </ul>
+                </div>
+            </div>
+
+<!--mobile contact form -->            
+            <a NAME="CONTACT"></a>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form name="mb-message-form" id="mb-message-form">
+                        <div id="mb-contact-label">CONTACT</div>
+                        <div id="mb-contact-label-text">To contact me by email, please fill out the form below:</div>
+                      <p>
+                        <label id="mb-name-label">NAME: </label><br/>
+                        <input id="mb-name-input" type="text" name="mb-name"/>
+                      </p>
+                      <p>
+                        <label>EMAIL:</label><br/>
+                        <input id="mb-mail-input" type="text"/>
+                      </p>
+                      <p>
+                        <label>MESSAGE:</label> <br/>
+                        <textarea id="mb-message-input"></textarea>
+                      </p>
+                      <button type="button" id="mb-contact-button">SEND</button>
+                      <button type="button" id="mb-contact-button-new" class="disappear">SEND NEW MESSAGE</button>
+                    </form>
+                    </div>
+                </div>
+<!-- footer -->        
+            <div class="row" id="footer">
+                <hr id="footer-hr-1"/>
+                <div class="col-xs-3">
+                    <div>RYAN</div>
+                </div>
+                <div class="col-xs-9">
+                    <div class="text-right">ryancharlessmith.com</div>
+                </div>
+            </div>
+      </div>
+    </div>
+
+<!--**********JavaScript beyond this point ************************************************************-->
+<!--Sets speed for carousel -->
+  <script>
+      $('.carousel').carousel({
+          interval: 11100
+      })
+  </script>
+
+<!--***************** MAIL SENDING FUNCTIONS *******************************************************-->
+<!--This calls the sendMessageForm() function and sends and email with message info
+    -also call updateContactSent() to change options and button display -->
+    <script>
+        $('#contact-button').click(function() {
+            sendMessageForm("#name-input", "#mail-input", "#message-input");
+            updateContactFormSent("#name-input", "#mail-input", "#message-input", 'contact-button', 'contact-button-new');
+        });
+    </script>
+    <script>
+        $('#mb-contact-button').click(function() {
+            sendMessageForm("#mb-name-input", "#mb-mail-input", "#mb-message-input");
+            updateContactFormSent("#mb-name-input", "#mb-mail-input", "#mb-message-input", 'mb-contact-button', 'mb-contact-button-new');
+        });
+    </script>
+
+<!--This script responds to the contact-button-new/mb-contact-button-new and resets the contact form -->
+    <script type="text/javascript">
+        $('#contact-button-new').click(function() {
+            resetContactForm("#name-input", "#mail-input", "#message-input", 'contact-button', 'contact-button-new');
+        });
+    </script>
+    <script type="text/javascript">
+        $('#mb-contact-button-new').click(function() {
+            resetContactForm("#mb-name-input", "#mb-mail-input", "#mb-message-input", 'mb-contact-button', 'mb-contact-button-new');
+        });
+    </script>
+
+<!--****************************************************************************************************-->
+
+<!-- Project Modals -->
+<!-- Modal This modal code (content excluded) was obtained from a Udacity.com tutorial "Intro to HTML and CSS"-->
+    <!--Project 1 - Modal -->
+        <div class="modal fade" id="proj-1-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Homfield</h4>
+              </div>
+              <div class="modal-body">
+                <p>Homfield is a web platform for booking event spaces. It has been an exciting project and a chance to work on creating something from the ground up with two other talented individuals. It's been a lot of fun seeing the project grow from an idea, to a design and later the first version of a product that we can't wait to iterate on. We went live in February 2016 with a soft rollout to businesses we have existing relationships with and look forward to opening up unconditionally soon.</p>
+                <p>From our site: <i>"Launched in 2016, Homfield is an online platform that helps connect individuals to their favorite social venues. We believe that finding that perfect event space for your next private party (birthday, happy hour, work social or other gathering) should be easy. So, we built Homfield to help you quickly and effortlessly book event spaces without the hassle of conducting manual searches.</i> </p>
+                <p><i>We’re naturally social creatures, and we want to help build and strengthen relationships by bringing people together. We want you to focus on the real reasons why you’re planning an event rather than spending time searching for an event space, because an event space is just a room until you fill it with people you love. That’s the Homfield advantage."</i></p>
+                <br/>
+                <a href="https://homfield.com"><button type="button" class="btn btn-warning btn-lg btn-block">Check us out at homfield.com.</button></a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 2 - Modal -->
+        <div class="modal fade" id="proj-2-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">DataLake</h4>
+              </div>
+              <div class="modal-body">
+                <p>The DataLake project is a data normalization, storage and search platform. It attempts to normalize and find meaningful relationships between large data sets of varying formats.</p>
+                <p>How it works:</p> 
+                <ol class="modal-list">
+                    <li>Accepts datasources of various formats such as .json, .xml, and .csv. These can be uploaded via the web interface.</li>
+                    <li>Extractor is triggered and run on uploaded data. Extractor attempts to create a tree to represent the data and then breaks the tree into components for storage in relational databases.</li>
+                    <li>Extractor maintains an inverted index connecting all words that have been found in processed data to the nodes that contained them. 
+	                    <ul>
+		                    <li>For example, a basic json containing a single user's profile information such as 
+		                    <i><b>{"name":"Ryan", "occupation":"SuperDev"}</b></i> will be assigned a root node with the doc title and then have two children nodes. 
+		                    Entries will be created in the index connecting "name" and "Ryan" with the first child node, and "occupation" and "SuperDev" with the second.
+		                   	</li>
+	                   	</ul> 
+                   </li>
+                   <li>A linker is run periodically in the background. It evaluates all pairs of nodes in the databases for certain relationships. 
+                   The most basic of these is string equality. Upon indentifying two related nodes, linker edges are created in the database.</li>
+                   <li>The data can be searched via the web interface. Single and Two Word Search are offered and work as follows:
+                   		<ul>
+	                   		<li>Single Word Search: Indentifies nodes containing the search terms. Fetches all nodes and edges for the containing documents
+		                   	and recreates each representing the document as a tree. Starts at the root and returns the shortest path from root to target node
+		                   	for each document.</li>
+		                   	<li>Two Word Search: Identifies all nodes containing the search terms. Fetches all nodes and edges for all containing documents, then
+		                   	fetches all linker-generated edges between nodes in those documents. Resulting struture is a graph represented internally as an adjacency matrix. 
+		                   	Runs BFS starting at each of the start nodes (those pertaining to search term one) and continues until reaching any of the target
+		                   	nodes (those pertaining to search term two). Returns all paths between the start and target nodes of depth &#60;= 25.
+		                   	</li>
+		                </ul>
+		            </li>
+		            <li>Results are displayed in graph form and relevant documents can be downloaded for further interrogation.</li>
+		            <li>Users can create accounts and enforce permissions over documents. These are currently limited to 'Public', 'Private' and 'Elevated' which
+		            would pertain to a user's affiliated group (e.g. Penn CIS 550). Permissions could be extended to allow granting permission to individual users.
+		            Search and download respect permissions. </li>
+                </ol>
+                <p>Implementation Details</p>
+                <ul>
+                	<li>MySQL databases for normalized data and inverted index storage.</li>
+                	<li>S3 for raw document storage and downloads.</li>
+                	<li>ActiveMQ message queue to trigger extractor when new document uploaded.</li>
+                	<li>Spring framework and Jdbc templates for handrolled ORM of sorts.</li>
+                	<li>Spring MVC and Tomcat for web.</li>
+                	<li>Maven for build.</li>
+                </ul>
+                <p>There's a demonstration video below on this page.</p>
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/DataLake">DataLake Repo</a></li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 3 - Modal -->
+        <div class="modal fade" id="proj-3-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">LC4 Binary Interpreter</h4>
+              </div>
+              <div class="modal-body">
+                <p>Design: This concept was created as an assignment by Dr. Thomas Farmer at the University of Pennsylvania. .h files were provided. All implementation completed by Ryan Smith.</p>
+
+                <p>Overview: Program to investigate binary program files for LC4 and print contents. LC4 is a micro-architecture created by the University of Pennsylvania. This program was created with knowledge of the LC4 ISA. In interrogates LC4 binary files (.obj) and prints the contents in the form of assembly instuctions and memory contents by address.</p>
+
+                <p>This program operates by interrogating the file information in bit form and constructing a linked list. Each node of the linked list contains information pertaining to the label, address, contents, and assembly fields mentioned above.</p>
+
+                <p>Functions are provided for manipulating the linked list (search, add node, delete list/free memory, etc.)</p>
+
+                <p>Use: This program is executed from the command line. To use this program use the command "make all" from within the directory containing the Makefile. Then run the file "lc4" that is created. (on mac this is run with the command ./lc4) You will be prompted by the program to provide the file you would like to interrogate. Make sure to include the .obj extension in the file name.</p>
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/LC4-Binary-Interpreter">LC4-Binary-Interpreter Rep</a></li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 5 - Modal -->
+        <div class="modal fade" id="proj-5-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Bugs Language Interpreter</h4>
+              </div>
+              <div class="modal-body">
+                <p>Design: The Bugs Language is a Turing complete programming language designed by Dr. Dave Matuszek at the University of Pennsylvania. The primary purpose of the language is to create digital drawings. Some helper files (TreeParser, Token, SyntaxException) were provided by Professor Matuszek. All implementation completed by Ryan Smith.</p>
+
+                <p>Overview: Interpreter for Bugs Programming Language.</p>
+
+                <p>Use: The Bugs interpreter accepts Bugs language files as .txt. files. It recognizes proper syntax and parses the file into an syntax tree that can be used to execute the program. It uses the Tree API I wrote (also available on this account) for the Tree data structure. After parsing it synchronizes all drawings within a program and allows the user to control execution. To use, launch the .jar executable and choose load from the file menu. Sample Bugs programs are available in the bugs progs folder (all written by Professor Matuszek). After loading click Run to execute the program.</p>
+
+                <p>There's a demonstration video below on this page.</p>
+                
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/Bugs_Language_Interpreter">Bugs Interpreter Rep</a></li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 4 - Modal -->
+        <div class="modal fade" id="proj-4-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Bingle Search Engine</h4>
+              </div>
+              <div class="modal-body">
+                <p>Overview: Web Search Engine containing web crawler, TF-IDF indexer, PageRank generator, web interface and database. This project was completed by Ryan Smith, Josh Kessler, Josh Fried and Max Tromanhauser.</p>
+
+                <p>Use: This project provides a full web search engine with results ranked using a balance of TF/IDF and PageRank scores. It includes a distributed web crawler which saves documents to S3 buckets and their information to DynamoDB where it can be accessed by PageRank and Indexer components. PageRank and Indexer run as Map Reduce jobs to process the data and populate their own DynamoDB tables with data linking words to document scores and URLs. A robust web interface built on the Spring MVC framework queries these databases in response to search phrases and returns the results considered most relevant.</p>
+
+                <p>There is a demonstration video below on this page.</p>
+
+                <p>You can check out the code and full features documentation on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/Bingle-Search-Engine">Bingle Search Engine Rep</a></li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 6 - Modal -->
+        <div class="modal fade" id="proj-6-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">WatchDog</h4>
+              </div>
+              <div class="modal-body">
+                <p>Design: This app was designed by Ryan Smith, Theresa Breiner and Brad Thompson.</p>
+
+                <p>Overview: WatchDog app for Pebble Watch.</p>
+
+                <p>Use: Application for Pebble watch. Allows the user to monitor temperature and a motion sensor remotely by using a custom server and Arduino microcontroller. </p>
+
+                <p>Server is run from the command line from file WatchDog.cpp. It takes the desired port number as a command line argument. </p>
+
+                <p>Pebble files are installed directly or via CloudPebble.net. The app will then appear in the scrolling menu on the watch.</p>
+
+                <p>App allows users to view most recent temp reading (uses automatic polling), change display on watch and Arduino between celsius and fahrenheit, view high/low/avg temperatures for the last hour, put the Arduino in standby mode and stop reading and motion sensor monitoring, receives an alert if motion sensor is tripped, send scrolling warning message to display on the Arudino 7-segment display, reset alarm remotely. See the user guide in the Docs folder on GitHub for details.</p>
+
+                <p>There's a demonstration video below on this page.</p>
+                
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/WatchDog">WatchDog Rep</a></li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 7 - Modal -->
+        <div class="modal fade" id="proj-7-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Maze Creator/Solver</h4>
+              </div>
+              <div class="modal-body">
+                <p>Design: This concept was assigned by Dr. Arvind Bhursnurmath at the University of Pennsylvania. Skeleton files were provided. All implementation by Ryan Smith.</p>
+                <p>Overview: Uses a modified version of Kruskal's algorithm to generate and solve mazes.</p>
+                <p>Use: This program implements the Disjoint Set data structure and then uses it with a modified version of Kruskal's algorithm (modified in that it attempts to make a spanning tree instead of MST) in order to generate mazes. It then uses either BFS, DFS or randomization to solve the maze. </p>
+               
+                <p>The executable jar is run from the command line and takes two arguments; choice of algorithm to solve (bfs/dfs/random) and an integer for the number of cells wide the maze should be made.</p>
+
+                <p>There's a demonstration video below on this page.</p>
+               
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/Maze_Creator-Solver">Maze Rep</a></li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--Project 12 - Modal -->
+        <div class="modal fade" id="proj-12-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Map Reduce Distributed System</h4>
+              </div>
+              <div class="modal-body">
+                <p>Overview: Distributed Program for processing map reduce jobs across a dynamic number of worker nodes coordinated by one master.</p>
+
+                <p>Design: All code by Ryan Smith. Submitted for CIS-555 at University of Pennsylvania. Ant build script and package skeletons provided by Professor Zach Ives.</p>
+
+                <p>Use:</p>
+
+                <p>This program can be deployed across multiple nodes and uses Java Servlets for web connectivity. It comes with an Ant build script that can be used to produce .war files that can be deployed in any general servlet container ('ant build').</p>
+
+                <p>A worker must be informed of it's IP and Port which can be set in worker/web.xml and should be set before building.</p>
+
+                <p>After launching, each worker will report to the master in 10 second intervals informing the master of their status (IDLE, MAPPING, etc.) and current condition (Keys Processed, etc. if relevant).</p>
+
+                <p>The master retains records of these reports and a worker will be considered to have failed and be offline after failing to report for 30 seconds.</p>
+
+                <p>The master provides a simple web interface through which jobs can be submitted. A .class file containing a map reduce job (which must implement Job and emit to Context) can be loaded dynamically. At the moment, the master does not transmit the file and it is expected to be on each worker's classpath.</p>
+
+                <p>After receiving a job via the web interface, the master divides the work among the available workers and relays all job data including the number of threads that should be used in each step.</p>
+
+                <p>The workers then process MAP the data and hash the results to assign each emitted pair to one of the other available workers. The workers then send the mapped data to each other according to this hash. After data from all other workers has been received, the workers REDUCE the data and output results to the location specified by the user where they can be collected.</p>
+
+                <p>There's a demonstration video below on this page.</p>
+               
+                <p>You can check out the code on github here:</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/Distributed-Map-Reduce">Map Reduce Distributed System Rep</a></li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Project 15 - Modal -->
+        <div class="modal fade" id="proj-15-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Tree API</h4>
+              </div>
+              <div class="modal-body">
+                <p>Overview: API for Tree and Expressions data structures.</p>
+                <p>Design: This project was assigned by Dr. Dave Matuszek at the University of Pennsylvania. Concept structure and was provided. All implementation completed by Ryan Smith.</p>
+                <p>Use: There are 2 APIs in this project. The primary is a Tree. The structure is of generic type and can be assigned any object or primitive value. It maintains an ArrayList of its children and has no limit on how many it can have. A variety of methods for working with the tree are provided. For Trees holding String values, the parse() method is particularly useful. It takes a String of the form "Zero (One (Seven Eight) Two (Three Four))" and constructs a Tree stucture from it.</p>
+                <p>The secondary API is titled Expressions. It constructs a tree structure for storing and working with arithmetic expressions. This uses the Tree structure and can parse and then evaluate String arguments such as "+(/ (+ (5 10 -( *(15 20) 25) 30) 3)3 4)".</p>
+                <p>Other Info: Javadocs are provided.</p>
+                <ul>
+                    <li><a href="https://github.com/RyCSmith/Tree_API">Tree Rep</a></li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>  
+        
+        
+        <!-- Script Imports -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.1.1/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" th:src="@{/js/customOps.js}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+        <script th:src="@{/js/mobile-menu.js}"></script>
+</body>
+</html>

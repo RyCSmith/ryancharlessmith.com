@@ -46,7 +46,7 @@
         <java.version>1.8</java.version>
     </properties>
 
-
+	<!-- this include mvn spring-boot:run and mvn clean package to make the jar -->
     <build>
         <plugins>
             <plugin>
