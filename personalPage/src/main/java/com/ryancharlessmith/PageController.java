@@ -27,14 +27,11 @@ public class PageController {
     		@RequestParam(value="email", required=false, defaultValue="Not Provided") String email,
     		@RequestParam(value="message", required=false, defaultValue="Not Provided") String message) {
     	try {
-			MailClient.generateAndSendEmail(name, email, message);
-		} catch (AddressException e) {
+			new MailinEdited().relay(name, email, message);
+		} catch (Exception e) {
 			e.printStackTrace();
 			return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
-		} catch (MessagingException e) {
-			e.printStackTrace();
-			return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+		} 
     	return new ResponseEntity(HttpStatus.OK);
     }
 

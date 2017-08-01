@@ -12,7 +12,8 @@
         <link rel="stylesheet" type="text/css" th:href="@{/css/mobile-menu.css}"></link>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
 		
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
        
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -186,7 +187,7 @@
             <div id="about-container-fs">
                 <div class="row" id="about-section">
                     <div class="col-md-4" id="profile-pic-box">
-                        <img id="profile-pic" class="img-responsive image-limiter" src="images/profile-pic.jpg" alt="profile pic"/>
+                        <img id="profile-pic" class="img-responsive image-limiter" src="images/profile.jpg" alt="profile pic"/>
                     </div>
                     <div class="col-md-8">
                         <h1>ABOUT</h1>
@@ -205,7 +206,7 @@
                         <div id="mb-title-name">RYAN SMITH</div>
                     </div>
                     <div class="col-xs-6" id="mb-profile-pic-box">
-                        <img id="mb-profile-pic" class="img-responsive image-limiter" src="images/profile-pic.jpg" alt="profile pic"/>
+                        <img id="mb-profile-pic" class="img-responsive image-limiter" src="images/profile.jpg" alt="profile pic"/>
                     </div>
                 </div>
                 <div class="row">
@@ -223,7 +224,7 @@
 
 
 <!-- FS Skills Section -->  
-            <a NAME="SKILLS"></a>     
+        <a NAME="SKILLS"></a>     
         <div class="row category-header" id="fs-skills-section">
           <div class="col-md-12">
             <h1>SKILLS</h1>
@@ -386,10 +387,18 @@
             </div>  
             <div class="row text-center" >
                 <div class="col-md-6">
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/ULjQIjEOYsI" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/o98R1yuMvX0" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+            </div>  
+            <div class="row text-center" >
+                <div class="col-md-6">
                     <iframe class="video-limiter" src="https://www.youtube.com/embed/MAX6daUNPCY" frameborder="0" allowfullscreen="true"></iframe>
                 </div>
                 <div class="col-md-6">
-                    <iframe class="video-limiter" src="https://www.youtube.com/embed/TQGz7WPcGWo" frameborder="0" allowfullscreen="true"></iframe>
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/nmdAdBLwjvQ" frameborder="0" allowfullscreen="true"></iframe>
                 </div>
             </div>        
             <div class="row text-center" >
@@ -402,12 +411,22 @@
             </div>    
             <div class="row text-center" >
                 <div class="col-md-6">
-                    <iframe class="video-limiter" src="https://www.youtube.com/embed/ayUI7DKIauk?rel=0" frameborder="0" allowfullscreen="true"></iframe>
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/TQGz7WPcGWo" frameborder="0" allowfullscreen="true"></iframe>
                 </div>
                 <div class="col-md-6">
                     <iframe class="video-limiter" src="https://www.youtube.com/embed/vlI6xWngsEk?rel=0" frameborder="0" allowfullscreen="true"></iframe>
                 </div>
-            </div>           
+            </div> 
+            <div class="row text-center" >
+                <div class="col-md-6">
+                    <iframe class="video-limiter" src="https://www.youtube.com/embed/ayUI7DKIauk?rel=0" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+                <div class="col-md-6">
+                   
+                </div>
+            </div>    
+
+                      
 <!-- Social Section -->
       <div class="row category-header" id="fs-social-section">
                 <a NAME="SOCIAL"></a>
@@ -522,8 +541,11 @@
                         <div class="title">Java Software Engineer</div>
                         <div class="dates">May 2016 - Present.</div>
                         <ul class="job-responsibilities">
-                            <li>Backend Engineer for online marketplace with ~50 million visits and $100 million+ of inventory sold in 100+ countries per year.</li>
-							<li>Implement bug fixes and new features across multiple backend services with specific focus on Solr inventory search.</li>
+                            <li>Backend Engineer for online marketplace with ~50 million unique visits and ~$150 million of inventory sold in 100+ countries per year.</li>
+                            <li>Primary responsibilities include Solr product search and development of inventory management tools.</li>
+                            <li>Contributed to design and implementation of new production features including vetting reviews, derived product history and introduction of contemporary products vertical.</li>
+                            <li>Implemented admin rollback workflow to reverse weekly release of new inventory to production. Later widely adopted for testing use by QA and Automation teams.</li>
+                            <li>Created testing tools employed across backend services including a database manager to efficiently preserve, set and restore database state for unit testing and domain-specific junit class runners.</li>
                         </ul>
                     </div>
                 </div>
@@ -534,11 +556,11 @@
                     <div class="col-md-9">
                         <div class="business">Homfield.com</div>
                         <div class="title">Co-Founder and Software Engineer</div>
-                        <div class="dates">September 2015 - Present.</div>
+                        <div class="dates">September 2015 - December 2016.</div>
                         <ul class="job-responsibilities">
                             <li>Homfield.com is a website to discover and book new and inspiring spaces for your next event.</li>
 							<li>Responsible for design and implementation of all technical features of the Homfield.com service.</li>
-							<li>More info on Homfield in the projects section above.</li>
+							<li>More info on Homfield and videos in the projects section above.</li>
                         </ul>
                     </div>
                 </div>
@@ -602,20 +624,6 @@
                             <li>Concluded with the development of "dragon-escape" game.</li>
                         </ul>
                     </div>
-            </div>
-            <div class="row work-row">
-                <div class="col-md-3">
-                    <div class="text-uppercase"></div>
-                </div>
-                <div class="col-md-9">
-                    <div class="business">Goombay Coffee Company</div>
-                    <div class="title">Co-Founder</div>
-                    <div class="dates">December 2010 - March 2012</div>
-                    <ul class="job-responsibilities">
-                        <li>Magento-based ecommerce startup providing monthly, artisan-coffee subscription service.</li>
-                        <li>Offered alternative marketing, ecommerce platform and drop ship structure for small coffee roasters.</li>
-                    </ul>
-                </div>
             </div>
 
 <!--mobile contact form -->            
@@ -707,7 +715,7 @@
                 <p>From our site: <i>"Launched in 2016, Homfield is an online platform that helps connect individuals to their favorite social venues. We believe that finding that perfect event space for your next private party (birthday, happy hour, work social or other gathering) should be easy. So, we built Homfield to help you quickly and effortlessly book event spaces without the hassle of conducting manual searches.</i> </p>
                 <p><i>We’re naturally social creatures, and we want to help build and strengthen relationships by bringing people together. We want you to focus on the real reasons why you’re planning an event rather than spending time searching for an event space, because an event space is just a room until you fill it with people you love. That’s the Homfield advantage."</i></p>
                 <br/>
-                <a href="https://homfield.com"><button type="button" class="btn btn-warning btn-lg btn-block">Check us out at homfield.com.</button></a>
+                <p>Check out the project videos below.</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -991,8 +999,6 @@
         
         
         <!-- Script Imports -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.1.1/jquery.waypoints.min.js"></script>
         <script type="text/javascript" th:src="@{/js/customOps.js}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
