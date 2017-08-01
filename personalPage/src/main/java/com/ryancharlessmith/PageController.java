@@ -1,11 +1,6 @@
 package com.ryancharlessmith;
 
-import java.util.Map;
-
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
-import javax.servlet.http.HttpServletRequest;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -21,13 +16,17 @@ public class PageController {
     public String homepage(Model model) {
         return "index";
     }
+    
+    @Autowired
+    private MailinEdited mailin;
+    
     @RequestMapping(value="/receivemail", method = RequestMethod.POST)
     public ResponseEntity receiveMail(Model model,
     		@RequestParam(value="name", required=false, defaultValue="Not Provided") String name, 
     		@RequestParam(value="email", required=false, defaultValue="Not Provided") String email,
     		@RequestParam(value="message", required=false, defaultValue="Not Provided") String message) {
     	try {
-			new MailinEdited().relay(name, email, message);
+    		mailin.relay(name, email, message);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);

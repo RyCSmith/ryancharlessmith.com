@@ -11,6 +11,9 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 import com.google.gson.Gson;
 
 /*
@@ -21,13 +24,16 @@ import com.google.gson.Gson;
     <version>2.7</version>
 </dependency>
  */
+@Component
 public class MailinEdited
 {
 	//sendTESTblue
 	private static final String EMPTY_STRING = "";
     private String base_url = "https://api.sendinblue.com/v2.0";
-    private String api_key = "VRNFCIk6B9G1sJaY";
     private int timeout = 30000;
+    
+    @Value("${sendinblue.api.key}")
+	private String api_key;
 
     public String relay(String name, String email, String message) {
 		Map < String, String > to = new HashMap < String, String > ();
