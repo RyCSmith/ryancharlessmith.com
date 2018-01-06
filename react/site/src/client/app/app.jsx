@@ -1,20 +1,12 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 window.React = React;
-import { BrowserRouter } from 'react-router-dom'
-// var RecommendationWidget = require('./RecommendationWidget');
-// var urls = require('./Shared/UrlConstants');
+import { BrowserRouter } from 'react-router-dom';
 
-// ReactDOM.render((
-// 		<h1>Hello, world!</h1>
-//     ),
-//     document.getElementById('react-box')
-// );
-
-import MainPage from './MainPage.jsx';
+import Main from './Main.jsx';
 
 ReactDOM.render((
 	<BrowserRouter>
-		<MainPage />
+		<Main />
 	</BrowserRouter>
 ), document.getElementById('react-box'));

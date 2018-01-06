@@ -5,13 +5,10 @@ class HomePage extends React.Component {
 
   render() {
     return (
-    		<div>
-				<div>HomePage</div>
-				<ul>
-			        <li><Link to='/test/other'>Other</Link></li>
-			      </ul>
-			</div>
-		);
+		<div>
+			<div>HomePage</div>
+		</div>
+	);
   }
 
 }

@@ -5,7 +5,7 @@ var BUILD_DIR = path.resolve(__dirname, '../../personalPage/src/main/resources/s
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
 var config = {
-  entry: APP_DIR + '/app.jsx',
+  entry: APP_DIR + '/App.jsx',
   output: {
     path: BUILD_DIR,
     filename: 'test.js'
