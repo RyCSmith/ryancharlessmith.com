@@ -1,0 +1,33 @@
+SETUP COMMANDS
+	npm init - make a package.json
+	npm i webpack -S
+	-make webpack config
+	npm i babel-core babel-loader babel-preset-env babel-preset-react -S
+	-make .babelrc file
+		{
+		  "presets" : ["env", "react"]
+		}
+	npm i react react-dom -S
+	npm install --save react-router-dom
+
+
+WEBPACK REACT
+	build app to static file
+		webpack
+	watch app files for changes and rebuild via webpack
+		webpack --watch
+
+SASS
+	watch directory and build all to another directory on change:
+		sass --update <sass-dir>:<output-dir>/
+	build a directory of scss to css:
+		sass --update <sass-dir>:<output-dir>/
+	build single file:
+		sass <dir>/<filename>.scss <output-dir>/<filename>.css
+
+
+BOTH
+	watch both and rebuild on change
+		npm run start 
+	build both and exit
+		npm run build

@@ -3,3 +3,5 @@
 */files/*
 */target/*
 personalPage/src/main/resources/application.properties
+react/site/node_modules/*
+react/site/.sass-cache/
