@@ -16,6 +16,11 @@ public class PageController {
     public String homepage(Model model) {
         return "index";
     }
+
+    @RequestMapping(value="/test")
+    public String test(Model model) {
+        return "test";
+    }
     
     @Autowired
     private MailinEdited mailin;
