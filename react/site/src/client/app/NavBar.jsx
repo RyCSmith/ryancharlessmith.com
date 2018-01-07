@@ -9,8 +9,10 @@ let NavBar = (props) => {
 			  	<div className={classNames("container", "nav-bar-container", "text-uppercase")}>
 			  		<div className="row">
 						<div className={classNames("col-lg-6", "nav-name-box")}>
-							<div className={classNames("nav-name", "text-uppercase")}>Ryan C Smith</div>
-							<div className={classNames("nav-title")}>Software Developer</div>
+							<Link to='/test'>
+								<div className={classNames("nav-name", "text-uppercase")}>Ryan C Smith</div>
+								<div className={classNames("nav-title")}>Software Developer</div>
+							</Link>
 						</div>
 						<div className="col-lg-6">
 							<div className={classNames("row", "links-row")}>
