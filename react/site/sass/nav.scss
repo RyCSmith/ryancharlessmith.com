@@ -9,7 +9,7 @@
 
 // RULES 
 
-$smooth-grey: #ACADB0;
+@import 'universal';
 
 a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
@@ -58,9 +58,17 @@ a:active {
     font-size: 10px;
 }
 
+.fixed-nav-bar-spacer {
+	height: 65px;
+}
+
 @media (min-width: 576px) { 
 	.nav-bar {
 		border-bottom: 2px solid;
+	}
+
+	.fixed-nav-bar-spacer {
+		height: 100px;
 	}
 
 	// to try line style under 992 instead
@@ -94,6 +102,10 @@ a:active {
 }
 
 @media (min-width: 992px) {
+	.fixed-nav-bar-spacer {
+		height: 66px;
+	}
+
 	.links-row {
 		text-align: right !important;
 	}
@@ -104,6 +116,15 @@ a:active {
 .nav-bar {
 	border-color: $smooth-grey;
 	padding-bottom: 3px;
+	position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+	z-index: 2;
+}
+
+.fixed-nav-bar-spacer {
+	width: 100%;
 }
 
 .nav-bar-container {
