@@ -1,7 +1,13 @@
+// DEV
+
 // * {
 // 	border-style: solid;
 // 	border-width: 1px;
 // }
+// font-family: 'Kanit', sans-serif;
+
+
+// RULES 
 
 $smooth-grey: #ACADB0;
 
@@ -21,27 +27,44 @@ a:active {
 	color: $smooth-grey;
 }
 
-.nav-bar {
-		border-bottom: 5px solid;
-		border-color: #000;
-		padding-bottom: 3px;
-	}
+// CONDITIONAL - LESS THAN 576 PX
 
-@media (min-width: 992px) {
+.nav-bar {
+	border-bottom: 1px solid;
+}
+
+.nav-name-box {
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: $smooth-grey;
+}
+
+.links-row {
+	text-align: center !important;
+}
+
+.nav-name {
+	font-size:	16px;
+	text-align: left !important;
+}
+
+.nav-title {
+	font-size:	10px;
+	text-align: right !important;
+}
+
+.link-col {
+	padding-top: 6px;
+    font-size: 10px;
+}
+
+@media (min-width: 576px) { 
 	.nav-bar {
 		border-bottom: 2px solid;
-		border-color: $smooth-grey;
-		padding-bottom: 3px;
 	}
 
-	.nav-bar-container {
-		font-family: 'Catamaran', sans-serif;
-		font-weight: 900;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		// font-family: 'Kanit', sans-serif;
-	}
-
+	// to try line style under 992 instead
+	// move nav-name-box, nav-name and nav-title to next block
 	.nav-name-box {
 	    border-style: solid;
 	    border-width: 3px;
@@ -50,27 +73,59 @@ a:active {
 
 	.nav-name {
 		font-size:20px;
-	    padding-top: 3;
-	    margin-left: auto;
-	    margin-right: auto;
-	    color: $smooth-grey;
-		padding-top: 3px;
-		padding-bottom: 2px;
-		letter-spacing: 3px;
+		text-align: right !important;
 	}
 
 	.nav-title {
 		font-size:14px;
-		color: $smooth-grey;
-		padding-top: 9px;
-	}
-
-	.links-row {
-		
+		text-align: left !important;
+		position: absolute;
+	    top: 8px;
 	}
 
 	.link-col {
 		padding-top: 15px;
 	    font-size: 13px;
 	}
+
+	.nav-bar-container {
+		padding-bottom: 10px;
+	}
+}
+
+@media (min-width: 992px) {
+	.links-row {
+		text-align: right !important;
+	}
+}
+
+// ALWAYS STYLES
+
+.nav-bar {
+	border-color: $smooth-grey;
+	padding-bottom: 3px;
+}
+
+.nav-bar-container {
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 900;
+	padding-top: 10px;
+}
+
+.nav-name {
+    padding-top: 3;
+    color: $smooth-grey;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	letter-spacing: 3px;
+	display: inline-block;
+	width: 50%;
+	padding-right: 9px;
+}
+
+.nav-title {
+	color: $smooth-grey;
+	display: inline-block;
+	width: 50%;
+    padding-left: 9px;
 }
