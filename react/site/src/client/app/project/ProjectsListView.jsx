@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class ProjectsListView extends React.Component {
 
   render() {
+  	console.log("ProjectsListView render");
     return (
     	<div>
 			<div>ProjectsListView</div>

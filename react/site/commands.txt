@@ -9,6 +9,7 @@ SETUP COMMANDS
 		}
 	npm i react react-dom -S
 	npm install --save react-router-dom
+	npm install classnames -S
 
 
 WEBPACK REACT

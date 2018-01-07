@@ -9,6 +9,7 @@ class ProjectsSingleView extends React.Component {
 	}
 
 	render() {
+		console.log("ProjectsSingleView render");
 		return (
 			<div>
 				<div>ProjectsSingleView</div>
