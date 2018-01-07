@@ -6,18 +6,6 @@ class Tile extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {mouseOn : false};
-
-		this.onMouseEnter = this.onMouseEnter.bind(this);
-		this.onMouseLeave = this.onMouseLeave.bind(this);
-	}
-
-	onMouseEnter() {
-		this.setState({mouseOn : true});
-	}
-
-	onMouseLeave() {
-		this.setState({mouseOn : false});
 	}
 
 	render() {
@@ -27,10 +15,12 @@ class Tile extends React.Component {
 				<div className="tile-image-box">
 					<img className="tile-image" src={this.props.imageUrl} />
 				</div>
-				<div 
-					className={classNames("tile-cover", { "tile-cover-on" : this.state.mouseOn, "tile-cover-off" : !this.state.mouseOn })} 
-					onMouseEnter={this.onMouseEnter} 
-					onMouseLeave={this.onMouseLeave} />
+				<div className="tile-cover">
+					<div className={classNames("tile-cover-background")} />
+					<div className={classNames("tile-cover-caption", "text-uppercase")}>
+						{this.props.caption}
+					</div>
+				</div>
 			</div>
 		);
 	}
@@ -44,19 +34,19 @@ class HomePage extends React.Component {
 		<div className={classNames("home-box")}>
 		  	<div className={classNames("container")}>
 		  		<div className={classNames("row", "tile-row")}>
-					<div className={classNames("col-lg-6")}>
-						<Tile left={true} right={false} imageUrl="/images/1.jpg" />
+					<div className={classNames("col-sm-6")}>
+						<Tile left={true} right={false} imageUrl="/images/1.jpg" caption="About" />
 					</div>
-					<div className={classNames("col-lg-6")}>
-					<Tile right={true} left={false}  imageUrl="/images/2.jpg"/>
+					<div className={classNames("col-sm-6")}>
+					<Tile right={true} left={false}  imageUrl="/images/2.jpg" caption="Experience" />
 					</div>
 				</div>
 				<div className={classNames("row", "tile-row")}>
-					<div className={classNames("col-lg-6")}>
-						<Tile left={true} right={false}  imageUrl="/images/3.jpg"/>
+					<div className={classNames("col-sm-6")}>
+						<Tile left={true} right={false}  imageUrl="/images/3.jpg" caption="Projects" />
 					</div>
-					<div className={classNames("col-lg-6")}>
-						<Tile right={true} left={false}  imageUrl="/images/1.jpg"/>
+					<div className={classNames("col-sm-6")}>
+						<Tile right={true} left={false}  imageUrl="/images/1.jpg" caption="Contact" />
 					</div>
 				</div>
 			</div>
