@@ -4,8 +4,8 @@
   "description": "Personal Site.",
   "main": "js/app.js",
   "scripts": {
-    "start": "webpack --watch & sass --watch sass:../../personalPage/src/main/resources/static/css",
-    "build": "sass --update sass:../../personalPage/src/main/resources/static/css & webpack"
+    "start": "webpack --watch",
+    "build": "NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
