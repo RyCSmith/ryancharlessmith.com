@@ -4,6 +4,8 @@ var classNames = require('classnames');
 var SITE_URLS = require('../constants/SiteUrls');
 var IMAGE_URLS = require('../constants/ImageUrls');
 
+import css from './home.scss'
+
 class Tile extends React.Component {
 
 	constructor(props) {
@@ -13,13 +15,13 @@ class Tile extends React.Component {
 	render() {
 		return (
 			<Link to={this.props.linkUrl}>
-				<div className={classNames("tile", {'tile-left': this.props.left, 'tile-right': this.props.right})}>
-					<div className="tile-image-box">
-						<img className="tile-image" src={this.props.imageUrl} />
+				<div className={classNames(css.tile, {[css.tileLeft]: this.props.left, [css.tileRight]: this.props.right})}>
+					<div className={css.tileImageBox}>
+						<img className={css.tileImage} src={this.props.imageUrl} />
 					</div>
-					<div className="tile-cover">
-						<div className={classNames("tile-cover-background")} />
-						<div className={classNames("tile-cover-caption", "text-uppercase")}>
+					<div className={css.tileCover}>
+						<div className={classNames(css.tileCoverBackground)} />
+						<div className={classNames("text-uppercase", css.tileCoverCaption)}>
 							{this.props.caption}
 						</div>
 					</div>
@@ -34,9 +36,9 @@ class HomePage extends React.Component {
 
   render() {
     return (
-		<div className={classNames("home-box")}>
-		  	<div className={classNames("container")}>
-		  		<div className={classNames("row", "tile-row")}>
+		<div className={css.homeBox}>
+		  	<div className="container">
+		  		<div className={classNames("row", css.tileRow)}>
 					<div className={classNames("col-sm-6")}>
 						<Tile 
 							linkUrl={SITE_URLS.ABOUT}
@@ -54,7 +56,7 @@ class HomePage extends React.Component {
 							left={false}  />
 					</div>
 				</div>
-				<div className={classNames("row", "tile-row")}>
+				<div className={classNames("row", css.tileRow)}>
 					<div className={classNames("col-sm-6")}>
 						<Tile 
 							linkUrl={SITE_URLS.PROJECTS}

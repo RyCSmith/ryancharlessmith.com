@@ -10,6 +10,9 @@ SETUP COMMANDS
 	npm i react react-dom -S
 	npm install --save react-router-dom
 	npm install classnames -S
+	npm install sass-loader node-sass webpack --save-dev
+	npm i css-loader --save-dev
+	npm install --save-dev extract-text-webpack-plugin
 
 
 WEBPACK REACT

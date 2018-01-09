@@ -11,129 +11,113 @@
 
 @import 'universal';
 
-a:link, a:visited, a:hover, a:active {
-	text-decoration: none;
-}
-a:link {
-	color: $smooth-grey;
-}
-a:visited {
-	color: $smooth-grey;
-}
-a:hover {
-	color: black;
-}
-a:active {
-	color: $smooth-grey;
-}
-
 // CONDITIONAL - LESS THAN 576 PX
 
-.nav-bar {
+.navBar {
 	border-bottom: 1px solid;
 }
 
-.nav-name-box {
+.navNameBox {
     border-bottom-style: solid;
     border-width: 1px;
     border-color: $smooth-grey;
 }
 
-.links-row {
+.linksRow {
 	text-align: center !important;
 }
 
-.nav-name {
+.navName {
 	font-size:	16px;
 	text-align: left !important;
 }
 
-.nav-title {
+.navTitle {
 	font-size:	10px;
 	text-align: right !important;
 }
 
-.link-col {
+.linkCol {
 	padding-top: 6px;
     font-size: 10px;
 }
 
-.fixed-nav-bar-spacer {
+.fixedNavBarSpacer {
 	height: 65px;
 }
 
 @media (min-width: 576px) { 
-	.nav-bar {
+	.navBar {
 		border-bottom: 2px solid;
 	}
 
-	.fixed-nav-bar-spacer {
+	.fixedNavBarSpacer {
 		height: 100px;
 	}
 
 	// to try line style under 992 instead
 	// move nav-name-box, nav-name and nav-title to next block
-	.nav-name-box {
+	.navNameBox {
 	    border-style: solid;
 	    border-width: 3px;
 	    border-color: $smooth-grey;
 	}
 
-	.nav-name {
+	.navName {
 		font-size:20px;
 		text-align: right !important;
 	}
 
-	.nav-title {
+	.navTitle {
 		font-size:14px;
 		text-align: left !important;
 		position: absolute;
 	    top: 8px;
 	}
 
-	.link-col {
+	.linkCol {
 		padding-top: 15px;
 	    font-size: 13px;
 	}
 
-	.nav-bar-container {
+	.navBarContainer {
 		padding-bottom: 10px;
 	}
 }
 
 @media (min-width: 992px) {
-	.fixed-nav-bar-spacer {
+	.fixedNavBarSpacer {
 		height: 66px;
 	}
 
-	.links-row {
+	.linksRow {
 		text-align: right !important;
 	}
 }
 
 // ALWAYS STYLES
 
-.nav-bar {
+.navBar {
 	border-color: $smooth-grey;
 	padding-bottom: 3px;
 	position: fixed;
     width: 100%;
     top: 0;
     background-color: white;
-	z-index: 2;
+	z-index: 100;
 }
 
-.fixed-nav-bar-spacer {
+.fixedNavBarSpacer {
 	width: 100%;
 }
 
-.nav-bar-container {
+.navBarContainer {
 	font-family: 'Catamaran', sans-serif;
 	font-weight: 900;
 	padding-top: 10px;
 }
 
-.nav-name {
+.navName {
     padding-top: 3;
     color: $smooth-grey;
 	padding-top: 3px;
@@ -144,9 +128,27 @@ a:active {
 	padding-right: 9px;
 }
 
-.nav-title {
+.navTitle {
 	color: $smooth-grey;
 	display: inline-block;
 	width: 50%;
     padding-left: 9px;
+}
+
+.navBar {
+	a:link, a:visited, a:hover, a:active {
+		text-decoration: none;
+	}
+	a:link {
+		color: $smooth-grey;
+	}
+	a:visited {
+		color: $smooth-grey;
+	}
+	a:hover {
+		color: black;
+	}
+	a:active {
+		color: $smooth-grey;
+	}
 }
