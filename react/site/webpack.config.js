@@ -4,17 +4,19 @@ var path = require('path');
 var BUILD_DIR = path.resolve(__dirname, '../../personalPage/src/main/resources/static');
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
+const isProdBuild = process.env.NODE_ENV === "production";
+
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
-    filename: (process.env.NODE_ENV === "production" ? "css/styles.[contenthash].[date].[timestamp].css" : "css/styles.css")
+    filename: 'css/styles' + (isProdBuild ? '.[contenthash]' : '') + '.css'
 });
 
 var config = {
     entry: APP_DIR + '/App.jsx',
     output: {
         path: BUILD_DIR,
-        filename: 'js/bundle.js'
+        filename: 'js/bundle' + (isProdBuild ? '.[chunkhash]' : '') + '.js'
     },
     module : {
         rules : [
@@ -31,7 +33,7 @@ var config = {
                             loader: 'css-loader', // translates CSS into CommonJS
                             query: {
                                 modules: true,
-                                minimize: true,
+                                minimize: isProdBuild,
                                 localIdentName: '[name]__[local]___[hash:base64:5]'
                             }
                         }, 
