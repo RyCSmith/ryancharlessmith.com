@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class PageController {
@@ -17,8 +18,9 @@ public class PageController {
         return "index";
     }
 
-    @RequestMapping(value="/test")
-    public String test(Model model) {
+    @RequestMapping(value="/test/**")
+    public String test(Model model, HttpServletRequest request) {
+        System.out.println(request.getRequestURI());
         return "test";
     }
     
