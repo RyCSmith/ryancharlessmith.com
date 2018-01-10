@@ -29,6 +29,21 @@ class TileRow extends React.Component {
 	}
 }
 
+class TileTwoBaseLabel extends React.Component {
+
+	constructor(props) {
+		super(props);
+	}
+	render() {
+		return (
+			<div className={css.tileTwoLabel}>
+				<div>{this.props.caption}</div>
+				<div>subcaption</div>
+			</div>
+		);
+	}
+}
+
 class Tile extends React.Component {
 
 	constructor(props) {
@@ -36,9 +51,17 @@ class Tile extends React.Component {
 	}
 
 	render() {
+		let tileClasses = classNames(css.tile, {
+			[css.tileTwo] : this.props.rowCount === 2,
+			[css.tileThree] : this.props.rowCount === 3,
+			[css.tileLeft] : this.props.left, 
+			[css.tileRight] : this.props.right,
+			[css.tileCenter] : this.props.center
+		});
+
 		return (
 			<Link to={this.props.linkUrl}>
-				<div className={classNames(css.tile, {[css.tileLeft]: this.props.left, [css.tileRight]: this.props.right})}>
+				<div className={tileClasses}>
 					<div className={css.tileImageBox}>
 						<img className={css.tileImage} src={this.props.imageUrl} />
 					</div>

@@ -1,8 +1,16 @@
 @import '../universal';
 
-$large-tile: 400px;
-$medium-tile: 300px;
-$small-tile: 250px;
+$single-mobile-tile: 250px;
+
+$large-tile-two: 400px;
+$medium-tile-two: 300px;
+$small-tile-two: 250px;
+
+$xlarge-tile-three: 340px;
+$large-tile-three: 290px;
+$medium-tile-three: 208px;
+$small-tile-three: 150px;
+
 $tile-cover-transition-time: opacity 0.2s ease-out;
 
 @mixin tileCoverOn() {
@@ -27,9 +35,15 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 }
 
 @media (max-width: 575px) {
-	.tile {
-	    width: $small-tile;
-		height: $small-tile;
+	.tileTwo {
+	    width: $single-mobile-tile;
+		height: $single-mobile-tile;
+		margin-bottom: 30px; // picked up by tile-row when row not broken 576+
+	}
+
+	.tileThree {
+	    width: $single-mobile-tile;
+		height: $single-mobile-tile;
 		margin-bottom: 30px; // picked up by tile-row when row not broken 576+
 	}
 
@@ -43,10 +57,6 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 		margin-right:auto;
 	}
 
-	.homeBox {
-		padding-top: 30px;
-	}
-
 	.tileCoverCaption {
 		font-size: 30px;
 		padding-top: 100px;
@@ -54,9 +64,14 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 }
 
 @media (min-width: 576px) {
-	.tile {
-	    width: $small-tile;
-		height: $small-tile;
+	.tileTwo {
+	    width: $small-tile-two;
+		height: $small-tile-two;
+	}
+
+	.tileThree {
+	    width: $small-tile-three;
+		height: $small-tile-three;
 	}
 
 	.tileLeft {
@@ -71,10 +86,6 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 		margin-bottom: 30px;
 	}
 
-	.homeBox {
-		padding-top: 50px;
-	}
-
 	.tileCoverCaption {
 		font-size: 35px;
 		padding-top: 100px;
@@ -82,10 +93,16 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 }
 
 @media (min-width: 768px) {
-	.tile {
-		width: $medium-tile;
-		height: $medium-tile;
+	.tileTwo {
+		width: $medium-tile-two;
+		height: $medium-tile-two;
 	}
+
+	.tileThree {
+		width: $medium-tile-three;
+		height: $medium-tile-three;
+	}
+
 	.tileCoverCaption {
 		font-size: 40px;
 		padding-top: 120px;
@@ -93,9 +110,14 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 }
 
 @media (min-width: 992px) {
-	.tile {
-		width: $large-tile;
-		height: $large-tile;
+	.tileTwo {
+		width: $large-tile-two;
+		height: $large-tile-two;
+	}
+
+	.tileThree {
+		width: $large-tile-three;
+		height: $large-tile-three;
 	}
 
 	.tileCover {
@@ -111,6 +133,10 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 }
 
 @media (min-width: 1200px) {
+	.tileThree {
+		width: $xlarge-tile-three;
+		height: $xlarge-tile-three;
+	}
 }
 
 
@@ -121,6 +147,11 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
     border-width: 1px;
     border-color: $smooth-grey;
     position: relative;
+}
+
+.tileCenter {
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .tileImageBox {

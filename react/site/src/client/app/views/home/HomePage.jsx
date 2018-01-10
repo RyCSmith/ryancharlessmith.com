@@ -18,28 +18,28 @@ class HomePage extends React.Component {
 						linkUrl={SITE_URLS.ABOUT}
 						imageUrl={IMAGE_URLS.ABOUT_TILE_IMAGE} 
 						caption="About" 
-						right={false} 
-						left={true}  />
+						left={true} 
+						rowCount={2} />
 					<Tile 
 						linkUrl={SITE_URLS.EXPERIENCE}
 						imageUrl={IMAGE_URLS.EXPERIENCE_TILE_IMAGE} 
 						caption="Experience" 
-						right={true} 
-						left={false}  />
+						right={true}
+						rowCount={2} />
 				</TileRow>
 				<TileRow>
 					<Tile 
 						linkUrl={SITE_URLS.PROJECTS}
 						imageUrl={IMAGE_URLS.PROJECTS_TILE_IMAGE} 
 						caption="Projects" 
-						right={false} 
-						left={true}  />
+						left={true}
+						rowCount={2} />
 					<Tile 
 						linkUrl={SITE_URLS.CONTACT}
 						imageUrl={IMAGE_URLS.CONTACT_TILE_IMAGE} 
 						caption="Contact" 
-						right={true} 
-						left={false}  />
+						right={true}
+						rowCount={2} />
 				</TileRow>
 			</div>
 		</div>
