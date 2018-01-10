@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 window.React = React;
 import { BrowserRouter } from 'react-router-dom';
 
-import Main from './Main.jsx';
+import Main from './views/Main.jsx';
 
 ReactDOM.render((
 	<BrowserRouter>

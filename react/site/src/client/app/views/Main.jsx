@@ -2,16 +2,16 @@ import React from 'react';
 import { Switch } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 
-import NavBar from './NavBar.jsx';
+import NavBar from '../components/NavBar.jsx';
 import HomePage from './home/HomePage.jsx';
 import ProjectsMain from './project/ProjectsMain.jsx';
 import AboutPage from './about/AboutPage.jsx';
 import ContactPage from './contact/ContactPage.jsx';
 import ExperiencePage from './experience/ExperiencePage.jsx';
 
-var SITE_URLS = require('./constants/SiteUrls');
+var SITE_URLS = require('../constants/SiteUrls');
 
-import Tester from './Tester.jsx';
+import Tester from '../Tester.jsx';
 
 class Main extends React.Component {
 	render() {

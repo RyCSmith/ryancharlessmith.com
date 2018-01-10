@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 var classNames = require('classnames');
-var SITE_URLS = require('./constants/SiteUrls');
+var SITE_URLS = require('../constants/SiteUrls');
 
 import css from './nav.scss'
 
