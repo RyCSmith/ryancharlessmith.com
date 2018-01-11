@@ -1,1 +1,13 @@
 $smooth-grey: #ACADB0;
+
+@media (max-width: 575px) {
+	.pageBox {
+		padding-top: 30px;
+	}
+}
+
+@media (min-width: 576px) {
+	.pageBox {
+		padding-top: 50px;
+	}
+}

@@ -5,13 +5,13 @@ var SITE_URLS = require('../../constants/SiteUrls');
 var IMAGE_URLS = require('../../constants/ImageUrls');
 
 import { TileRow, Tile, TileSingleLabel } from '../../components/Tiles.jsx';
-import css from './home.scss'
+import css from './home_page.scss'
 
 class HomePage extends React.Component {
 
   render() {
     return (
-		<div className={css.homeBox}>
+		<div className={css.pageBox}>
 		  	<div className="container">
 		  		<TileRow tileSize={2} >
 					<Tile 
