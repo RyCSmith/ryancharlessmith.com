@@ -57,9 +57,21 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 		margin-right:auto;
 	}
 
-	.tileCoverCaption {
+	.tileTwoSingleCaption {
 		font-size: 30px;
-		padding-top: 100px;
+	}
+
+	.tileThreeDoubleCaption {
+		padding: 5px;
+		
+		.caption {
+			font-size: 20px;
+    		line-height: 130%;
+		}
+
+		.subCaption {
+			display: none;
+		}
 	}
 }
 
@@ -86,9 +98,21 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 		margin-bottom: 30px;
 	}
 
-	.tileCoverCaption {
+	.tileTwoSingleCaption {
 		font-size: 35px;
-		padding-top: 100px;
+	}
+
+	.tileThreeDoubleCaption {
+		padding: 5px;
+
+		.caption {
+			font-size: 17px;
+    		line-height: 130%;
+		}
+
+		.subCaption {
+			display: none;
+		}
 	}
 }
 
@@ -103,9 +127,24 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 		height: $medium-tile-three;
 	}
 
-	.tileCoverCaption {
+	.tileTwoSingleCaption {
 		font-size: 40px;
-		padding-top: 120px;
+	}
+
+	.tileThreeDoubleCaption {
+		padding: 15px;
+
+		.caption {
+			font-size: 20px;
+    		padding-bottom: 5px;
+    		line-height: 130%;
+		}
+
+		.subCaption {
+			font-size: 15px;
+			line-height: 130%;
+			display: block;
+		}
 	}
 }
 
@@ -127,8 +166,19 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 		@include tileCoverOn();
 	}
 
-	.tileCoverCaption {
-		padding-top: 180px;
+	.tileThreeDoubleCaption {
+		padding: 25px;
+
+		.caption {
+			font-size: 30px;
+			line-height: 130%;
+    		padding-bottom: 15px;
+		}
+
+		.subCaption {
+			font-size: 20px;
+			line-height: 130%;
+		}
 	}
 }
 
@@ -141,6 +191,17 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 
 
 // constant 
+
+.tileTwoSingleCaption {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+.tileThreeDoubleCaption {
+	display: table-cell;
+	vertical-align: middle;
+}
 
 .tile {
 	border-style: solid;
@@ -195,5 +256,6 @@ $tile-cover-transition-time: opacity 0.2s ease-out;
 	top: 0;
     z-index: 20;
     transition: $tile-cover-transition-time;
+    display: table;
 }
 

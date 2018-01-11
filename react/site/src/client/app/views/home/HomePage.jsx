@@ -4,7 +4,7 @@ var classNames = require('classnames');
 var SITE_URLS = require('../../constants/SiteUrls');
 var IMAGE_URLS = require('../../constants/ImageUrls');
 
-import { TileRow, Tile } from '../../components/Tiles.jsx';
+import { TileRow, Tile, TileSingleLabel } from '../../components/Tiles.jsx';
 import css from './home.scss'
 
 class HomePage extends React.Component {
@@ -13,33 +13,37 @@ class HomePage extends React.Component {
     return (
 		<div className={css.homeBox}>
 		  	<div className="container">
-		  		<TileRow>
+		  		<TileRow tileSize={2} >
 					<Tile 
 						linkUrl={SITE_URLS.ABOUT}
 						imageUrl={IMAGE_URLS.ABOUT_TILE_IMAGE} 
-						caption="About" 
 						left={true} 
-						rowCount={2} />
+						tileSize={2}>
+						<TileSingleLabel caption="About" tileSize={2} />
+					</Tile>
 					<Tile 
 						linkUrl={SITE_URLS.EXPERIENCE}
 						imageUrl={IMAGE_URLS.EXPERIENCE_TILE_IMAGE} 
-						caption="Experience" 
 						right={true}
-						rowCount={2} />
+						tileSize={2}>
+						<TileSingleLabel caption="Experience" tileSize={2} />
+					</Tile>
 				</TileRow>
-				<TileRow>
+				<TileRow tileSize={2} >
 					<Tile 
 						linkUrl={SITE_URLS.PROJECTS}
 						imageUrl={IMAGE_URLS.PROJECTS_TILE_IMAGE} 
-						caption="Projects" 
 						left={true}
-						rowCount={2} />
+						tileSize={2}>
+						<TileSingleLabel caption="Projects" tileSize={2} />
+					</Tile>
 					<Tile 
 						linkUrl={SITE_URLS.CONTACT}
 						imageUrl={IMAGE_URLS.CONTACT_TILE_IMAGE} 
-						caption="Contact" 
 						right={true}
-						rowCount={2} />
+						tileSize={2}>
+						<TileSingleLabel caption="Contact" tileSize={2} />
+					</Tile>
 				</TileRow>
 			</div>
 		</div>

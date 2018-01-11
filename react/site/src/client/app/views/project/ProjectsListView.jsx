@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 var classNames = require('classnames');
+
 var SITE_URLS = require('../../constants/SiteUrls');
 var IMAGE_URLS = require('../../constants/ImageUrls');
-import { TileRow, Tile } from '../../components/Tiles.jsx';
+
 import css from './projects_list_view.scss'
+import { TileRow, Tile, TileDoubleLabel } from '../../components/Tiles.jsx';
 
 class ProjectsListView extends React.Component {
 
@@ -13,45 +15,49 @@ class ProjectsListView extends React.Component {
     return (
     	<div className={css.pageBox}>
 		  	<div className="container">
-		  		<TileRow>
+		  		<TileRow tileSize={3} >
 					<Tile 
 						linkUrl={SITE_URLS.ABOUT}
 						imageUrl={IMAGE_URLS.ABOUT_TILE_IMAGE} 
-						caption="About" 
 						center={true}
-						rowCount={3} />
+						tileSize={3}>
+						<TileDoubleLabel 
+							caption="Homfield.com" 
+							subCaption={"Website for to discover and book event spaces."} 
+							tileSize={3} />
+					</Tile>
 					<Tile 
 						linkUrl={SITE_URLS.EXPERIENCE}
 						imageUrl={IMAGE_URLS.EXPERIENCE_TILE_IMAGE} 
-						caption="Experience" 
 						center={true}
-						rowCount={3} />
+						tileSize={3}>
+						<TileDoubleLabel 
+							caption="Bingle Search Engine" 
+							subCaption={"Web Search Engine including web crawler, TF-IDF indexer, PageRank generator, and web interface."} 
+							tileSize={3} />
+					</Tile>
 					<Tile 
 						linkUrl={SITE_URLS.EXPERIENCE}
 						imageUrl={IMAGE_URLS.EXPERIENCE_TILE_IMAGE} 
-						caption="Experience" 
 						center={true}
-						rowCount={3} />
+						tileSize={3}>
+						<TileDoubleLabel 
+							caption="Map Reduce System" 
+							subCaption={"Distributed Program for processing map reduce jobs across a dynamic number of worker nodes."} 
+							tileSize={3} />
+					</Tile>
 				</TileRow>
-				<TileRow>
+				<TileRow tileSize={3} >
 					<Tile 
 						linkUrl={SITE_URLS.ABOUT}
 						imageUrl={IMAGE_URLS.ABOUT_TILE_IMAGE} 
-						caption="About" 
 						center={true}
-						rowCount={3} />
-					<Tile 
-						linkUrl={SITE_URLS.EXPERIENCE}
-						imageUrl={IMAGE_URLS.EXPERIENCE_TILE_IMAGE} 
-						caption="Experience" 
-						center={true}
-						rowCount={3} />
-					<Tile 
-						linkUrl={SITE_URLS.EXPERIENCE}
-						imageUrl={IMAGE_URLS.EXPERIENCE_TILE_IMAGE} 
-						caption="Experience" 
-						center={true}
-						rowCount={3} />
+						tileSize={3}>
+						<TileDoubleLabel 
+							caption="DataLake" 
+							subCaption={"Data normalization, storage and search platform."} 
+							tileSize={3} />
+					</Tile>
 				</TileRow>
 		  	</div>
 		</div>
