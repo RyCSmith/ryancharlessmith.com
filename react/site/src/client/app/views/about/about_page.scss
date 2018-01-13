@@ -1,6 +1,42 @@
 @import '../../universal';
 
+
+
 .profilePic {
-	width: 340px;
-	height: 340px;
+	width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.overviewCol {
+	p {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 374px) {
+	.picBox {
+		width: 100%;
+	}
+}
+
+@media (min-width: 375px) {
+	.profilePic {
+		float: left;
+	}
+}
+
+@media (min-width: 768px) {
+	.profilePic {
+		width: 340px;
+	    height: 340px;
+	    margin-right: 20px;
+	    margin-bottom: 5px;
+	}
+	.overviewCol {
+		p {
+			font-size: 16px;
+		}
+	}
 }
