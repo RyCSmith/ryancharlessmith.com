@@ -12,12 +12,12 @@ class FluentImageTilesBox extends React.Component {
 	render() {
 
 		let u  = [];
-		for (let i = 0; i < 2; i++) {
-			u.push(<div className={classNames(css.sixer)}>YO</div>);
+		for (let i = 0; i < 18; i++) {
+			u.push(<div className={classNames(css.squareBox)}>YO</div>);
 		}
 		return (
 			<div className={classNames("row")}>
-				<div className={classNames(css.sizerBox, css.sizerBoxCenter)}>
+				<div className={classNames(css.limitBox)}>
 					{u}
 				</div>
 			</div>

@@ -1,50 +1,73 @@
-@media (max-width: 450px) {
-	.sizerBox {
-		width: 250px;
+/*
+	limitBox matches 100% width of row at each point 576 or < and implements
+	its own 15px padding on left and right to match the 15px padding that other 
+	rows will receive
+
+	under 576 when row becomes 100% screen, the limitBox will reduce to 2 squares centered
+	on screen until 320px when it breaks down to 1
+
+	the squareBoxs will split the (limitBox width - (15px padding x 2)) into even segments
+	and roll up down at the breakpoints
+*/
+
+@media (max-width: 575px) {
+	.limitBox {
+		width: 320px;
+		margin-left: auto;
+		margin-right: auto;
 	}
-	.sixer {
-		height: 125px;
-	    width: 125px;
+	.squareBox {
+		height: 145px;
+	    width: 145px;
 	}
 }
 
-@media (min-width: 451px) {
-	.sizerBox {
-		width: 450px;
+@media (min-width: 576px) {
+	.limitBox {
+		width: 540px;
 	}
-	.sixer {
-		height: 150px;
-	    width: 150px;
+	.squareBox {
+		height: 170px;
+	    width: 170px;
 	}
 }
 
 @media (min-width: 768px) {
-	.sizerBox {
-		width: 600px;
+	.limitBox {
+		width: 720px;
+	}
+	.squareBox {
+		height: 172px;
+	    width: 172px;
 	}
 }
 
 @media (min-width: 992px) {
-	.sixer {
-		height: 200px;
-	    width: 200px;
+	.squareBox {
+		height: 186px;
+	    width: 186px;
 	}
-	.sizerBox {
-		width: 800px;
+	.limitBox {
+		width: 960px;
 	}
 }
 
 @media (min-width: 1200px) {
-	.sizerBox {
-		width: 1000px;
+	.limitBox {
+		width: 1140px;
+	}
+	.squareBox {
+		height: 185px;
+	    width: 185px;
 	}
 }
 
-.sizerBoxCenter {
-	margin-left: auto;
-	margin-right: auto;
+.limitBox {
+	padding-left: 15px;
+	padding-right: 15px;
 }
-.sixer {
+
+.squareBox {
 	border-style: solid;
 	border-width: 1px;
 	display: inline-block;
