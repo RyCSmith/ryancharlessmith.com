@@ -4,12 +4,14 @@ var classNames = require('classnames');
 
 var SITE_URLS = require('../../constants/SiteUrls');
 var IMAGE_URLS = require('../../constants/ImageUrls');
+import FluentImageTilesBox from '../../components/FluentImageTilesBox.jsx';
 
 import css from './about_page.scss'
 
 class AboutPage extends React.Component {
 
 	render() {
+
 		return (
 			<div className={css.pageBox}>
 				<div className="container">
@@ -24,6 +26,8 @@ class AboutPage extends React.Component {
 							<img className={classNames(css.profilePic)} src={IMAGE_URLS.PROFILE_PIC} alt="profile pic" />
 						</div>
 					</div>
+
+					<FluentImageTilesBox />
 				</div>
 			</div>
 		);
