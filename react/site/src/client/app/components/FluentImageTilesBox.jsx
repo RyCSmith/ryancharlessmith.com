@@ -9,16 +9,23 @@ import css from './fluent_image_tiles_box.scss'
 
 class FluentImageTilesBox extends React.Component {
 
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 
-		let u  = [];
-		for (let i = 0; i < 18; i++) {
-			u.push(<div className={classNames(css.squareBox)}>YO</div>);
+		let squares  = [];
+		for (let i = 0; i < this.props.imageUrls.length; i++) {
+			squares.push(<div key={'fluentRowSB' + i } className={classNames(css.squareBox)}>
+				<img className={classNames(css.squareBoxPic)} src={this.props.imageUrls[i]} />
+			</div>);
 		}
+
 		return (
 			<div className={classNames("row")}>
 				<div className={classNames(css.limitBox)}>
-					{u}
+					{squares}
 				</div>
 			</div>
 		);

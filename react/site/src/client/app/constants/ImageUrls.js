@@ -1,12 +1,39 @@
 export const DOMAIN_IMAGE_PREFIX = '/images';
 
+// base image urls
 export const DOG_LAB_400_400 = DOMAIN_IMAGE_PREFIX + '/1.jpg';
 export const MOUTAIN_BIRDS_400_400 = DOMAIN_IMAGE_PREFIX + '/2.jpg';
 export const TABLE_BOOK_400_400 = DOMAIN_IMAGE_PREFIX + '/3.jpg';
+export const PROFILE_PIC = DOMAIN_IMAGE_PREFIX + '/profile.jpg';
 
+export const DJANGO_200_200 = DOMAIN_IMAGE_PREFIX + '/django.jpg';
+export const MYSQL_200_200 = DOMAIN_IMAGE_PREFIX + '/mysql.jpg';
+export const AWS_200_200 = DOMAIN_IMAGE_PREFIX + '/aws.jpg';
+
+// Home time images
 export const ABOUT_TILE_IMAGE = DOG_LAB_400_400;
 export const EXPERIENCE_TILE_IMAGE = MOUTAIN_BIRDS_400_400;
 export const PROJECTS_TILE_IMAGE = TABLE_BOOK_400_400;
 export const CONTACT_TILE_IMAGE = DOG_LAB_400_400;
 
-export const PROFILE_PIC = DOMAIN_IMAGE_PREFIX + '/profile.jpg';
+
+export const SKILL_PICS = [
+	DJANGO_200_200,
+	MYSQL_200_200,
+	AWS_200_200,
+	DJANGO_200_200,
+	MYSQL_200_200,
+	AWS_200_200,
+	DJANGO_200_200,
+	MYSQL_200_200,
+	AWS_200_200,
+	DJANGO_200_200,
+	MYSQL_200_200,
+	AWS_200_200,
+	DJANGO_200_200,
+	MYSQL_200_200,
+	AWS_200_200,
+	DJANGO_200_200,
+	MYSQL_200_200,
+	AWS_200_200
+]

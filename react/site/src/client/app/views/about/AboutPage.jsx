@@ -27,7 +27,7 @@ class AboutPage extends React.Component {
 						</div>
 					</div>
 
-					<FluentImageTilesBox />
+					<FluentImageTilesBox imageUrls={IMAGE_URLS.SKILL_PICS} />
 				</div>
 			</div>
 		);
