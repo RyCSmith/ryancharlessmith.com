@@ -2,6 +2,11 @@
 */images/*
 */files/*
 */target/*
+
 personalPage/src/main/resources/application.properties
+personalPage/.classpath
+personalPage/.settings/*
+personalPage/.project
+
 react/site/node_modules/*
 react/site/.sass-cache/
