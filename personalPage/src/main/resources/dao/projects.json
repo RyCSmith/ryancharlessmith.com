@@ -1,9 +1,9 @@
 [
     {
         "id": 1,
-        "name": "name",
-        "description": "description",
-        "overview": "overview",
+        "name": "Homfield",
+        "description": "Website to discover and book event spaces.",
+        "overview": "Homfield is a web platform for booking event spaces. It has been an exciting project and a chance to work on creating something from the ground up with two other talented individuals. It's been a lot of fun seeing the project grow from an idea, to a design and later the first version of a product that we can't wait to iterate on. We went live in February 2016 with a soft rollout to businesses we have existing relationships with and look forward to opening up unconditionally soon. From our site: \"Launched in 2016, Homfield is an online platform that helps connect individuals to their favorite social venues. We believe that finding that perfect event space for your next private party (birthday, happy hour, work social or other gathering) should be easy. So, we built Homfield to help you quickly and effortlessly book event spaces without the hassle of conducting manual searches. We’re naturally social creatures, and we want to help build and strengthen relationships by bringing people together. We want you to focus on the real reasons why you’re planning an event rather than spending time searching for an event space, because an event space is just a room until you fill it with people you love.\"",
         "implementationDetails": "implementationDetails",
         "technologyInfo": [
             "techInfoOne",
@@ -16,9 +16,9 @@
                 "instrTwo"
             ]
         },
-        "uniqueUrlKey": "uniqueUrlKey",
+        "uniqueUrlKey": "homfield",
         "repoUrl": "repoUrl",
-        "previewImageUrl": "previewImageUrl",
+        "previewImageUrl": "/images/homfield.png",
         "videoUrls": [
             "videoUrlOne",
             "videoUrlTwo"
