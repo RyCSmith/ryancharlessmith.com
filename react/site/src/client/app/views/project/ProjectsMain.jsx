@@ -10,11 +10,10 @@ import ProjectsSingleView from './ProjectsSingleView.jsx';
 class ProjectsMain extends React.Component {
 
 	render() {
-		console.log("ProjectsMain render");
 		return (
 			<Switch>
 				<Route exact path={SITE_URLS.PROJECTS} component={ProjectsListView}/>
-				<Route path='/test/projects/:number' component={ProjectsSingleView}/>
+				<Route path={SITE_URLS.SINGLE_PROJECT} component={ProjectsSingleView}/>
 			</Switch>
 		);
 	}
