@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const https = require('https');
 var classNames = require('classnames');
 
 import css from './projects_single_view.scss'
 var SITE_URLS = require('../../constants/SiteUrls');
+import { httpGet } from '../../util/SimpleHttpRequest.jsx';
 
 class ProjectsSingleView extends React.Component {
 	
 	constructor(props) {
 		super(props);
-		// add state like // this.state = {date: new Date()};
-		this.state = {project:{}};
+		this.state = {project : {}, error : false};
 	}
 
 	componentWillMount() {
@@ -20,21 +19,7 @@ class ProjectsSingleView extends React.Component {
 
 	fetchProject() {
 		let fullUrl = SITE_URLS.PROJECT_API_READ(this.props.match.params.uniqueUrlKey);
-
-		https.get(fullUrl, (resp) => {
-			let data = '';
-
-			resp.on('data', (chunk) => {
-				data += chunk;
-			});
-
-			resp.on('end', () => {
-				this.setState({project : JSON.parse(data)});
-			});
-
-		}).on("error", (err) => {
-			console.log("Error: " + err.message); // TODO: error view
-		});
+		httpGet(fullUrl, (data) => this.setState({project:data}), (err) => this.setState({error:true}), this);
 	}
 
 	render() {
@@ -47,7 +32,6 @@ class ProjectsSingleView extends React.Component {
 			  			</div>
 			  			<div className={classNames("col-sm-6")}>
 							<img src={this.state.project.previewImageUrl} />
-
 			  			</div>
 			  		</div>
 				</div>

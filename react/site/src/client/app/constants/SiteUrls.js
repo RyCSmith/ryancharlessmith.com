@@ -11,3 +11,4 @@ export const API_PREFIX = '/api';
 export const PROJECT_API_PREFIX = API_PREFIX + '/project';
 export const PROJECT_API_READ = (uniqueUrlKey) => PROJECT_API_PREFIX + '/' + uniqueUrlKey;
 export const PROJECT_API_FILTER = (uniqueUrlKeys) => PROJECT_API_PREFIX + '/filter?uniqueUrlKeys=' + uniqueUrlKeys.join(',');
+export const PROJECT_API_FILTER_ALL = PROJECT_API_PREFIX + '/filter?returnAll=true';
