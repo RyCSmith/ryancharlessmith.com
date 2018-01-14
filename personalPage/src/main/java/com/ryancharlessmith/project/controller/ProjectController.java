@@ -2,6 +2,8 @@ package com.ryancharlessmith.project.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,13 +21,15 @@ public class ProjectController {
 	@Autowired
 	private ProjectFacade projectFacade;
 	
-	@RequestMapping(value="/project/{" + UNIQUE_URL_KEY + "}")
-	public Project read(@PathVariable(UNIQUE_URL_KEY) String uniqueUrlKey) {
+	@RequestMapping(value="/api/project/{" + UNIQUE_URL_KEY + "}")
+	public Project read(@PathVariable(UNIQUE_URL_KEY) String uniqueUrlKey, HttpServletRequest request) {
+        System.out.println(request.getRequestURI());
 		return projectFacade.read(uniqueUrlKey);
 	}
 	
-	@RequestMapping(value="/project/filter")
-	public List<Project> filter(ProjectFilter filter) {
+	@RequestMapping(value="/api/project/filter")
+	public List<Project> filter(ProjectFilter filter, HttpServletRequest request) {
+        System.out.println(request.getRequestURI());
 		return projectFacade.filter(filter);
 	}
 
