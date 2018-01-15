@@ -11,8 +11,6 @@ import ExperiencePage from './experience/ExperiencePage.jsx';
 
 var SITE_URLS = require('../constants/SiteUrls');
 
-import Tester from '../Tester.jsx';
-
 class Main extends React.Component {
 	render() {
 		return (
@@ -24,7 +22,6 @@ class Main extends React.Component {
 					<Route exact path={SITE_URLS.EXPERIENCE} component={ExperiencePage}/>
 					<Route exact path={SITE_URLS.CONTACT} component={ContactPage}/>
 					<Route path={SITE_URLS.PROJECTS} component={ProjectsMain}/>
-					<Route exact path='/test/tester' component={Tester}/>
 				</Switch>
 			</div>
 		);

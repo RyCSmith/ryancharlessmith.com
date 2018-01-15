@@ -23,3 +23,19 @@ export const httpGet = (fullUrl, _callback, _errCallback, _callbackObj) => {
 		_errCallback.apply(_callbackObj, [err]);
 	});
 }
+
+
+export const httpPost = (fullUrl) => {
+
+	let options = {
+		method: 'POST',
+		path: fullUrl
+	};
+
+	var postreq = https.request(options, function (res) {
+	    console.log(res);
+	});
+	
+	postreq.write("");
+	postreq.end();
+}

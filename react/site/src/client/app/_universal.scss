@@ -1,4 +1,5 @@
 $smooth-grey: #ACADB0;
+$bluegreen: #06958a;
 
 @media (max-width: 575px) {
 	.pageBox {
@@ -22,4 +23,14 @@ $smooth-grey: #ACADB0;
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
+}
+
+@mixin removeInputStyle() {
+	border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
