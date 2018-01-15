@@ -13,7 +13,7 @@ class ProjectsMain extends React.Component {
 		return (
 			<Switch>
 				<Route exact path={SITE_URLS.PROJECTS} component={ProjectsListView}/>
-				<Route path={SITE_URLS.SINGLE_PROJECT} component={ProjectsSingleView}/>
+				<Route path={SITE_URLS.ROUTER_SINGLE_PROJECT} component={ProjectsSingleView}/>
 			</Switch>
 		);
 	}
