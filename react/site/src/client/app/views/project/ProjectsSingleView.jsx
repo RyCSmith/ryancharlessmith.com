@@ -10,8 +10,8 @@ import { randomHexKey } from '../../util/BasicUtils.jsx';
 class ResumeRow extends React.Component {
 	render() {
 		return (
-			<div className={classNames("row")}>
-				<div className={classNames("col-md-2")}>
+			<div className={classNames("row", css.resumeRow)}>
+				<div className={classNames("col-md-2", "text-uppercase", css.resumeRowHeader)}>
 					{this.props.label}
 				</div>
 				<div className={classNames("col-md-10")}>
@@ -57,6 +57,56 @@ class ParagraphsText extends React.Component {
 	}
 }
 
+class ResumeVideoEmbed extends React.Component {
+	
+	wrapIframe(srcUrl) {
+		return (
+			<div className={css.videoLimiter}>
+				<iframe 
+					width="100%" 
+					height="100%" 
+					src={srcUrl}
+					frameBorder="0" 
+					allow="encrypted-media" 
+					allowFullScreen />
+			</div>
+		);
+	}
+
+	render() {
+		let rows = []
+		let remaining = this.props.urls.length;
+		while (remaining > 1) {
+			rows.push(
+				<div key={randomHexKey("video")} className="row">
+					<div className="col-lg-6">
+						{this.wrapIframe(this.props.urls[this.props.urls.length - remaining])}
+					</div>
+					<div className="col-lg-6">
+						{this.wrapIframe(this.props.urls[this.props.urls.length - remaining + 1])}
+					</div>
+				</div>
+			);
+			remaining = remaining - 2;
+		}
+
+		if (remaining) {
+			rows.push(
+				<div key={randomHexKey("video")} className="row">
+					<div className="col-lg-6">
+						{this.wrapIframe(this.props.urls[this.props.urls.length - 1])}
+					</div>
+					<div className="col-lg-6" />
+				</div>
+			);
+		}
+
+		return (
+			<div>{rows}</div>
+		);
+	}
+}
+
 class ProjectsSingleView extends React.Component {
 	
 	constructor(props) {
@@ -81,7 +131,7 @@ class ProjectsSingleView extends React.Component {
 		if (project) {
 			innerContent.push(
 		  		<div key={randomHexKey(keyPrefix)} className={classNames("row")}>
-		  			<div className={classNames("col-sm-12", "text-center", "text-uppercase")}>
+		  			<div className={classNames("col-sm-12", "text-center", "text-uppercase", css.name)}>
 		  				{project.name}
 		  				<hr/>
 		  			</div>
@@ -137,9 +187,9 @@ class ProjectsSingleView extends React.Component {
 		  	}
 
 		  	if (project.videoUrls) {
-		  		innerContent.push(
+			  	innerContent.push(
 			  		<ResumeRow key={randomHexKey(keyPrefix)} label="Videos">
-			  			<List content={project.videoUrls} numbered={false} />
+			  			<ResumeVideoEmbed urls={project.videoUrls} />
 			  		</ResumeRow>
 			  	);
 		  	}
@@ -147,7 +197,7 @@ class ProjectsSingleView extends React.Component {
 
 		return (
 			<div className={css.pageBox}>
-			  	<div className="container">
+			  	<div className={classNames("container", css.projectContainer)}>
 		  			{innerContent}
 				</div>
 			</div>
