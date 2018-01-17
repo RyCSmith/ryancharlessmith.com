@@ -1,14 +1,16 @@
 package com.ryancharlessmith;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class PageController {
@@ -34,6 +36,17 @@ public class PageController {
     		@RequestParam(value="message", required=false, defaultValue="Not Provided") String message) {
     	try {
     		mailin.relay(name, email, message);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+		} 
+    	return new ResponseEntity(HttpStatus.OK);
+    }
+    
+    @RequestMapping(value="/receivemailll", method = RequestMethod.POST)
+    public ResponseEntity receiveMailll(@RequestBody MailRequest request){
+    	try {
+    		mailin.relay(request.getName(), request.getEmail(), request.getMessage());
 		} catch (Exception e) {
 			e.printStackTrace();
 			return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
