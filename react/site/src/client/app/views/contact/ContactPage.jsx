@@ -40,7 +40,14 @@ class ContactPage extends React.Component {
 			this.setState({emailMissing : true});
 		}
 		else {
-			httpPost(SITE_URLS.MAIL_API_RECEIVE(this.state.name, this.state.email, this.state.message));
+			let data = {
+				"name" : this.state.name,
+				"email" : this.state.email,
+				"message" : this.state.message
+			}
+			console.log(data);
+			
+			httpPost(SITE_URLS.MAIL_API_RECEIVE, data);
 			this.setState({
 				name : '',
 				email : '',

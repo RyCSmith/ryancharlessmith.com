@@ -25,17 +25,22 @@ export const httpGet = (fullUrl, _callback, _errCallback, _callbackObj) => {
 }
 
 
-export const httpPost = (fullUrl) => {
+export const httpPost = (fullUrl, postData) => {
+	let data = JSON.stringify(postData);
 
 	let options = {
 		method: 'POST',
-		path: fullUrl
+		path: fullUrl,
+		headers: {
+			'Content-Type': 'application/json',
+			'Content-Length': data.length
+		}
 	};
 
 	var postreq = https.request(options, function (res) {
 	    console.log(res);
 	});
 	
-	postreq.write("");
+	postreq.write(data);
 	postreq.end();
 }

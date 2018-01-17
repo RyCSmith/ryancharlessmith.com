@@ -5,7 +5,6 @@ var classNames = require('classnames');
 import css from './projects_single_view.scss'
 var SITE_URLS = require('../../constants/SiteUrls');
 import { httpGet } from '../../util/SimpleHttpRequest.jsx';
-import { randomHexKey } from '../../util/BasicUtils.jsx';
 
 class ResumeRow extends React.Component {
 	render() {
@@ -29,7 +28,7 @@ class List extends React.Component {
 		let rows = []
 		for (let i = 0; i < this.props.content.length; i++) {
 			rows.push(
-				<li key={randomHexKey("listContent_" + i)}>{this.props.content[i]}</li>
+				<li key={"listContent_" + i}>{this.props.content[i]}</li>
 			);
 		}
 
@@ -47,7 +46,7 @@ class ParagraphsText extends React.Component {
 		let split = this.props.content.split("\n");
 		for (let i = 0; i < this.props.content.length; i++) {
 			paragraphs.push(
-				<p key={randomHexKey("paragraph_" + i)}>{split[i]}</p>
+				<p key={"paragraph_" + i}>{split[i]}</p>
 			);
 		}
 
@@ -78,7 +77,7 @@ class ResumeVideoEmbed extends React.Component {
 		let remaining = this.props.urls.length;
 		while (remaining > 1) {
 			rows.push(
-				<div key={randomHexKey("video")} className="row">
+				<div key={"video_" + remaining} className="row">
 					<div className="col-lg-6">
 						{this.wrapIframe(this.props.urls[this.props.urls.length - remaining])}
 					</div>
@@ -92,7 +91,7 @@ class ResumeVideoEmbed extends React.Component {
 
 		if (remaining) {
 			rows.push(
-				<div key={randomHexKey("video")} className="row">
+				<div key={"video_0"} className="row">
 					<div className="col-lg-6">
 						{this.wrapIframe(this.props.urls[this.props.urls.length - 1])}
 					</div>
@@ -124,13 +123,12 @@ class ProjectsSingleView extends React.Component {
 	}
 
 	render() {
-		let keyPrefix = "proj";
 		let innerContent = [];
 		let project = this.state.project;
 
 		if (project) {
 			innerContent.push(
-		  		<div key={randomHexKey(keyPrefix)} className={classNames("row")}>
+		  		<div key={"name"} className={classNames("row")}>
 		  			<div className={classNames("col-sm-12", "text-center", "text-uppercase", css.name)}>
 		  				{project.name}
 		  				<hr/>
@@ -140,14 +138,14 @@ class ProjectsSingleView extends React.Component {
 
 		  	if (project.description) {
 		  		innerContent.push(
-			  		<ResumeRow key={randomHexKey(keyPrefix)} label="Purpose">
+			  		<ResumeRow key={"purpose"} label="Purpose">
 			  			<ParagraphsText content={project.description} />
 			  		</ResumeRow>
 			  	);
 		  	}
 		  	if (project.overview) {
 		  		innerContent.push(
-			  		<ResumeRow key={randomHexKey(keyPrefix)} label="Overview">
+			  		<ResumeRow key={"overview"} label="Overview">
 			  			<ParagraphsText content={project.overview} />
 			  		</ResumeRow>
 			  	);
@@ -155,7 +153,7 @@ class ProjectsSingleView extends React.Component {
 
 			if (project.implementationDetails) {
 		  		innerContent.push(
-			  		<ResumeRow key={randomHexKey(keyPrefix)} label="Implementation Details">
+			  		<ResumeRow key={"impl"} label="Implementation Details">
 			  			<ParagraphsText content={project.implementationDetails} />
 			  		</ResumeRow>
 			  	);
@@ -163,7 +161,7 @@ class ProjectsSingleView extends React.Component {
 
 			if (project.technologyInfo) {
 		  		innerContent.push(
-			  		<ResumeRow key={randomHexKey(keyPrefix)} label="Technology Info">
+			  		<ResumeRow key={"tech"} label="Technology Info">
 			  			<List content={project.technologyInfo} numbered={false} />
 			  		</ResumeRow>
 			  	);
@@ -171,7 +169,7 @@ class ProjectsSingleView extends React.Component {
 			
 			if (project.runningInstructions) {
 		  		innerContent.push(
-			  		<ResumeRow key={randomHexKey(keyPrefix)} label="Running Instructions">
+			  		<ResumeRow key={"running"} label="Running Instructions">
 			  			<List content={project.runningInstructions.instructions} 
 			  				numbered={project.runningInstructions.numbered} />
 			  		</ResumeRow>
@@ -180,7 +178,7 @@ class ProjectsSingleView extends React.Component {
 			
 			if (project.repoUrl) {
 		  		innerContent.push(
-			  		<ResumeRow key={randomHexKey(keyPrefix)} label="GitHub">
+			  		<ResumeRow key={"github"} label="GitHub">
 			  			<ParagraphsText content={project.repoUrl} />
 			  		</ResumeRow>
 			  	);
@@ -188,7 +186,7 @@ class ProjectsSingleView extends React.Component {
 
 		  	if (project.videoUrls) {
 			  	innerContent.push(
-			  		<ResumeRow key={randomHexKey(keyPrefix)} label="Videos">
+			  		<ResumeRow key={"videos"} label="Videos">
 			  			<ResumeVideoEmbed urls={project.videoUrls} />
 			  		</ResumeRow>
 			  	);

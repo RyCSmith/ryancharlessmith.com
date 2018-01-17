@@ -34,6 +34,7 @@ class ProjectsListView extends React.Component {
 			let project = projects[i]
 			tiles.push(
 				<Tile 
+					key={"tile_" + i}
 					linkUrl={SITE_URLS.SINGLE_PROJECT(project.uniqueUrlKey)}
 					imageUrl={project.previewImageUrl} 
 					center={true}
@@ -53,7 +54,7 @@ class ProjectsListView extends React.Component {
 			let subarr = tiles.slice(tiles.length - remaining, tiles.length - remaining + num);
 			console.log()
 			tileRows.push(
-				<TileRow tileSize={3} >
+				<TileRow key={"tileRow_" + remaining} tileSize={3} >
 					{subarr}
 				</TileRow>
 			);

@@ -14,4 +14,5 @@ export const PROJECT_API_READ = (uniqueUrlKey) => PROJECT_API_PREFIX + '/' + uni
 export const PROJECT_API_FILTER = (uniqueUrlKeys) => PROJECT_API_PREFIX + '/filter?uniqueUrlKeys=' + uniqueUrlKeys.join(',');
 export const PROJECT_API_FILTER_ALL = PROJECT_API_PREFIX + '/filter?returnAll=true';
 
-export const MAIL_API_RECEIVE = (name, email, message) => '/receivemail?name=' + name + '&email=' + email + '&message=' + message;
+// export const MAIL_API_RECEIVE = (name, email, message) => '/receivemail?name=' + name + '&email=' + email + '&message=' + message;
+export const MAIL_API_RECEIVE = '/receivemailll';

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import NavBar from '../components/NavBar.jsx';
 import HomePage from './home/HomePage.jsx';
@@ -22,6 +21,7 @@ class Main extends React.Component {
 					<Route exact path={SITE_URLS.EXPERIENCE} component={ExperiencePage}/>
 					<Route exact path={SITE_URLS.CONTACT} component={ContactPage}/>
 					<Route path={SITE_URLS.PROJECTS} component={ProjectsMain}/>
+					<Redirect from="*" to={SITE_URLS.HOME} />
 				</Switch>
 			</div>
 		);
