@@ -14,8 +14,8 @@ class AboutPage extends React.Component {
 
 		return (
 			<div className={css.pageBox}>
-				<div className="container">
-					<div className={classNames("row")}>
+				<div className={classNames("container", css.aboutContainer)}>
+					<div className={classNames("row", css.introRow)}>
 						<div className={classNames("col-sm-12", css.overviewCol)}>
 							<div className={classNames("text-center", css.picBox)}>
 								<img className={classNames(css.profilePic)} src={IMAGE_URLS.PROFILE_PIC} alt="profile pic" />
@@ -26,8 +26,16 @@ class AboutPage extends React.Component {
 							<p>Please feel free to get in touch (contact button above) with any questions about the MCIT program, Philly, CS, etc. or just to connect.</p>
 						</div>
 					</div>
-
-					<FluentImageTilesBox imageUrls={IMAGE_URLS.SKILL_PICS} />
+					<div className={classNames("row")}>
+						<div className={classNames("col-sm-12", "text-uppercase", css.skillsCaption)}>
+							Areas of Proficiency
+						</div>
+					</div>
+					<div className={classNames("row")}>
+						<div className={classNames("col-sm-12", css.overviewCol)}>
+							<FluentImageTilesBox imageUrls={IMAGE_URLS.SKILL_PICS} />
+						</div>
+					</div>
 				</div>
 			</div>
 		);
