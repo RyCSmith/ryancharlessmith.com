@@ -30,6 +30,7 @@ public class ProjectController {
 	@RequestMapping(value="/api/project/filter")
 	public List<Project> filter(ProjectFilter filter, HttpServletRequest request) {
         System.out.println(request.getRequestURI());
+        System.out.println(request.getQueryString());
 		return projectFacade.filter(filter);
 	}
 

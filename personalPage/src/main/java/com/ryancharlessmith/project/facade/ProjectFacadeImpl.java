@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
+import java.util.Comparator;
 
 import javax.annotation.PostConstruct;
 
@@ -29,6 +30,7 @@ public class ProjectFacadeImpl implements ProjectFacade {
 	
 	private Gson gson = new Gson();
 	private Map<String, Project> projectCache = new ConcurrentHashMap<>();
+	private final Comparator<Project> ID_COMPARATOR = (o1, o2) -> o1.getId() - o2.getId();
 	
 	@PostConstruct
 	private void init() throws IOException {
@@ -52,14 +54,19 @@ public class ProjectFacadeImpl implements ProjectFacade {
 			return new ArrayList<Project>();
 		}
 		if (filter.isReturnAll()) {
-			return projectCache.values().stream().collect(Collectors.toList());
+			List<Project> all = projectCache.values().stream().collect(Collectors.toList());
+			all.sort(ID_COMPARATOR);
+			return all;
 		}
 		
 		Set<String> keysSet = new HashSet<>(filter.getUniqueUrlKeys());
-		return projectCache.keySet().stream()
+		List<Project> filtered = projectCache.keySet().stream()
 				.filter(x -> keysSet.contains(x))
 				.map(x -> projectCache.get(x))
 				.collect(Collectors.toList());
+
+		filtered.sort(ID_COMPARATOR);
+		return filtered;
 	}
 	
 	
