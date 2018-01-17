@@ -3,21 +3,18 @@
         "id": 1,
         "name": "Homfield.com",
         "description": "Website to discover and book event spaces.",
-        "overview": "Homfield is a web platform for booking event spaces.\nIt has been an exciting project and a chance to work on creating something from the ground up with two other talented individuals. It's been a lot of fun seeing the project grow from an idea, to a design and later the first version of a product that we can't wait to iterate on. We went live in February 2016 with a soft rollout to businesses we have existing relationships with and look forward to opening up unconditionally soon.\nFrom our site: \"Launched in 2016, Homfield is an online platform that helps connect individuals to their favorite social venues. We believe that finding that perfect event space for your next private party (birthday, happy hour, work social or other gathering) should be easy. So, we built Homfield to help you quickly and effortlessly book event spaces without the hassle of conducting manual searches. We’re naturally social creatures, and we want to help build and strengthen relationships by bringing people together. We want you to focus on the real reasons why you’re planning an event rather than spending time searching for an event space, because an event space is just a room until you fill it with people you love.\"",
-        "implementationDetails": "Homfield is a web platform for booking event spaces. It has been an exciting project and a chance to work on creating something from the ground up with two other talented individuale on. We went live in February 2016 with a soft rollout to businesses we have existing relationships with and look forward to opening up unconditionally soon.\nFrom our site: \"Launched in 2016, Homfield is an online platform that helps connect individuals to their favorite social venues. We believe that finding that perfect event space for your next private party (birthday, happy hour, work social or other gathering) should be easy. So, we built Homfield to help you quickly and effortlessly book event spaces without the hassle of conducting manual searches. We’re naturally social creatures, and we want to help build and strengthen relationships by bringing people together. We want you to focus on the real reasons why you’re planning an event rather than spending time searching for an event space, because an event space is just a room until you fill it with people you love.\"",
+        "overview": "We went live in February 2016 with a soft rollout to Philadelphia businesses that we had existing relationships with and opened up unconditionally in Philly and San Francisco shortly thereafter. A few months later we released a significant iteration to expand businesses' ability to offer food, drink, and service packages directed at our ultimate goal of unifying these services from multiple vendors in a single checkout experience in the future.\nUltimately, the site was online for a little over a year before we decided to call it quits. There were a few pain points we came across when developing the service that made the business challenging such as customer focus on restaurant bookings, securing event space availability many months in advance, establishing binding deposit/refund policies and the level of business <-> customer interaction involved in booking an event.\nEven though we didn't hit our goals, we had a great time working on Homfield and it was a really rewarding experience being a part of a 3 person team building, learning and iterating on something new.",
         "technologyInfo": [
-            "techInfoOne techInfoOne techInfoOne techInfoOne techInfoOne",
-            "techInfoTwo techInfoTwo techInfoTwo techInfoTwo techInfoTwo"
+            "Django & Django Rest Framework for web and APIs.",
+            "React, Webpack for checkout FE",
+            "RabbitMQ and Celery for background job queuing",
+            "PostgreSQL on RDS for DB",
+            "S3 for static resources and media",
+            "Stripe for payments",
+            "Twilio for user messaging",
+            "Google JS api for map embeds"
         ],
-        "runningInstructions": {
-            "numbered": true,
-            "instructions": [
-                "instOne",
-                "instrTwo"
-            ]
-        },
         "uniqueUrlKey": "homfield",
-        "repoUrl": "github.com/homfield",
         "previewImageUrl": "/images/homfield.png",
         "videoUrls": [
             "https://www.youtube.com/embed/o98R1yuMvX0?rel=0",
@@ -27,27 +24,100 @@
     },
     {
         "id": 2,
-        "name": "name",
-        "description": "description",
-        "overview": "overview",
-        "implementationDetails": "implementationDetails",
+        "name": "Bingle Search Engine",
+        "description": "Web Search Engine including web crawler, TF-IDF indexer, PageRank generator, and web interface.",
+        "overview": "This project provides a full web search engine with results ranked using a balance of TF/IDF and PageRank scores. It includes a distributed web crawler which saves documents to S3 buckets and their information to DynamoDB where it can be accessed by PageRank and Indexer components. PageRank and Indexer run as Map Reduce jobs to process the data and populate their own DynamoDB tables with data linking words to document scores and URLs. A robust web interface built on the Spring MVC framework queries these databases in response to search phrases and returns the results considered most relevant.",
         "technologyInfo": [
-            "techInfoOne",
-            "techInfoTwo"
+            "Spring Boot for web search engine",
+            "Ehcache for search engine caching",
+            "DynamoDB to store PageRank and TFIDF",
+            "S3 to store page documents"
+        ],
+        "uniqueUrlKey": "bingle-search-engine",
+        "repoUrl": "https://github.com/RyCSmith/Bingle-Search-Engine",
+        "previewImageUrl": "/images/bingle-result.png",
+        "videoUrls": [
+            "https://www.youtube.com/embed/MAX6daUNPCY"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Map Reduce System",
+        "description": "Distributed Program for processing map reduce jobs across a dynamic number of worker nodes.",
+        "implementationDetails": "This program can be deployed across multiple nodes and uses Java Servlets for web connectivity. It comes with an Ant build script that can be used to produce .war files that can be deployed in any general servlet container ('ant build').\nA worker must be informed of it's IP and Port which can be set in worker/web.xml and should be set before building.\nAfter launching, each worker will report to the master in 10 second intervals informing the master of their status (IDLE, MAPPING, etc.) and current condition (Keys Processed, etc. if relevant).\nThe master retains records of these reports and a worker will be considered to have failed and be offline after failing to report for 30 seconds.\nThe master provides a simple web interface through which jobs can be submitted. A .class file containing a map reduce job (which must implement Job and emit to Context) can be loaded dynamically. At the moment, the master does not transmit the file and it is expected to be on each worker's classpath.\nAfter receiving a job via the web interface, the master divides the work among the available workers and relays all job data including the number of threads that should be used in each step.\nThe workers then process MAP the data and hash the results to assign each emitted pair to one of the other available workers. The workers then send the mapped data to each other according to this hash. After data from all other workers has been received, the workers REDUCE the data and output results to the location specified by the user where they can be collected.",
+        "uniqueUrlKey": "map-reduce-system",
+        "repoUrl": "https://github.com/RyCSmith/Distributed-Map-Reduce",
+        "previewImageUrl": "/images/mrds.png",
+        "videoUrls": [
+            "https://www.youtube.com/embed/TQGz7WPcGWo"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "DataLake",
+        "description": "Data normalization, storage and search platform.",
+        "overview": "The DataLake project is a data normalization, storage and search platform. It attempts to normalize and find meaningful relationships between large data sets of varying formats.",
+        "implementationDetails": "Accepts datasources of various formats such as .json, .xml, and .csv. These can be uploaded via the web interface.\nExtractor is triggered and run on uploaded data. Extractor attempts to create a tree to represent the data and then breaks the tree into components for storage inrelational databases.\nExtractor maintains an inverted index connecting all words that have been found in processed data to the nodes that contained them.\nFor example, a basic json containing a single user's profile information such as {\"name\":\"Ryan\", \"occupation\":\"SuperDev\"} will be assigned a root node with the doc title and then have two children nodes. Entries will be created in the index connecting \"name\" and \"Ryan\" with the first child node, and \"occupation\" and \"SuperDev\" with the second.\nA linker is run periodically in the background. It evaluates all pairs of nodes in the databases for certain relationships. The most basic of these is string equalityUpon indentifying two related nodes, linker edges are created in the database.\nThe data can be searched via the web interface. Single and Two Word Search are offered and work as follows:\nSingle Word Search: Indentifies nodes containing the search terms. Fetches all nodes and edges for the containing documents and recreates each representing thedocument as a tree. Starts at the root and returns the shortest path from root to target node for each document.\nTwo Word Search: Identifies all nodes containing the search terms. Fetches all nodes and edges for all containing documents, then fetches all linker-generated edges between nodes in those documents. Resulting struture is a graph represented internally as an adjacency matrix. Runs BFS starting at each of the start nodes (those pertaining to search term one) and continues until reaching any of the target nodes (those pertaining to search term two). Returns all paths between the start and targetnodes of depth &#60;= 25.\nResults are displayed in graph form and relevant documents can be downloaded for further interrogation.\nUsers can create accounts and enforce permissions over documents. These are currently limited to 'Public', 'Private' and 'Elevated' which would pertain to a user's affiliated group (e.g. Penn CIS 550). Permissions could be extended to allow granting permission to individual users.\nSearch and download respects permissions.",
+        "technologyInfo": [
+            "MySQL databases for normalized data and inverted index storage.",
+            "S3 for raw document storage and downloads.",
+            "ActiveMQ message queue to trigger extractor when new document uploaded.",
+            "Spring framework and Jdbc templates for handrolled ORM of sorts.",
+            "Spring MVC and Tomcat for web.",
+            "Maven for build."
+        ],
+        "uniqueUrlKey": "datalake",
+        "repoUrl": "https://github.com/RyCSmith/DataLake",
+        "previewImageUrl": "/images/datalake2.png",
+        "videoUrls": [
+            "https://www.youtube.com/embed/FZQxBHsoJpA"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Bugs Language Interpreter",
+        "description": "Interpreter for Turing Complete Bugs Programming Language.",
+        "overview": "The Bugs Language is a Turing complete programming language designed by Dr. Dave Matuszek at the University of Pennsylvania. The primary purpose of the language is to create digital drawings. Some helper files (TreeParser, Token, SyntaxException) were provided by Professor Matuszek.",
+        "implementationDetails": "The Bugs interpreter accepts Bugs language files as .txt. files. It recognizes proper syntax and parses the file into an syntax tree that can be used to execute the program. After parsing it synchronizes all drawings within a program and allows the user to control execution by issuing and revoking work permits.",
+        "technologyInfo": [
+            "Java",
+            "Swing"
         ],
         "runningInstructions": {
-            "numbered": true,
+            "numbered": false,
             "instructions": [
-                "instOne",
-                "instrTwo"
+                "Launch the .jar executable and choose load from the file menu.",
+                "Sample Bugs programs are available in the bugs progs folder on GitHub."
             ]
         },
-        "uniqueUrlKey": "abcd",
-        "repoUrl": "repoUrl",
-        "previewImageUrl": "previewImageUrl",
+        "uniqueUrlKey": "bugs-language-interpreter",
+        "repoUrl": "https://github.com/RyCSmith/Bugs_Language_Interpreter",
+        "previewImageUrl": "/images/bugs.jpg",
         "videoUrls": [
-            "videoUrlOne",
-            "videoUrlTwo"
+            "https://www.youtube.com/embed/x5qLWy97hfo"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Maze Generator / Solver",
+        "description" : "Data normalization, storage and search platform.",
+        "overview": "Uses a modified version of Kruskal's algorithm to generate a maze and then solves using different algorithms.",
+        "implementationDetails": "This program implements the Disjoint Set data structure and then uses it with a modified version of Kruskal's algorithm (modified in that it attempts to make a spanning tree instead of MST) in order to generate mazes. It then uses either BFS, DFS or randomization to solve the maze.",
+        "technologyInfo": [
+            "Java",
+            "Swing"
+        ],
+        "runningInstructions": {
+            "numbered": false,
+            "instructions": [
+                "The executable jar is run from the command line and takes two arguments; choice of algorithm to solve (bfs/dfs/random) and an integer for the number of cells wide the maze should be made."
+            ]
+        },
+        "uniqueUrlKey": "maze-generator-solver",
+        "repoUrl": "https://github.com/RyCSmith/Maze_Creator-Solver",
+        "previewImageUrl": "/images/maze.jpg",
+        "videoUrls": [
+            "https://www.youtube.com/embed/vlI6xWngsEk"
         ]
     }
 ]
