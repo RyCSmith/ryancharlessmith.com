@@ -179,7 +179,9 @@ class ProjectsSingleView extends React.Component {
 			if (project.repoUrl) {
 		  		innerContent.push(
 			  		<ResumeRow key={"github"} label="GitHub">
-			  			<ParagraphsText content={project.repoUrl} />
+			  			<a href={project.repoUrl}>
+			  				<ParagraphsText content={project.repoUrl} />
+			  			</a>
 			  		</ResumeRow>
 			  	);
 		  	}
