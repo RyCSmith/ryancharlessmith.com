@@ -22,6 +22,9 @@ export const REACT_200_200 = DOMAIN_IMAGE_PREFIX + '/react.jpg';
 export const SCSS_200_200 = DOMAIN_IMAGE_PREFIX + '/scss.png';
 
 
+export const GITHUB_196_191 = DOMAIN_IMAGE_PREFIX + '/githubmobile.png';
+
+
 // Home time images
 export const ABOUT_TILE_IMAGE = DOG_LAB_400_400;
 export const EXPERIENCE_TILE_IMAGE = MOUTAIN_BIRDS_400_400;

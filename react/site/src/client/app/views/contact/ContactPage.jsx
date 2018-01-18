@@ -1,10 +1,11 @@
 import React from 'react';
 var classNames = require('classnames');
 
+import FluentImageTilesBox from '../../components/FluentImageTilesBox.jsx';
 var SITE_URLS = require('../../constants/SiteUrls');
-import css from './contact_page.scss'
-
+var IMAGE_URLS = require('../../constants/ImageUrls');
 import { httpPost } from '../../util/SimpleHttpRequest.jsx';
+import css from './contact_page.scss'
 
 class ContactPage extends React.Component {
 
@@ -92,6 +93,11 @@ class ContactPage extends React.Component {
 							</div>
 			  			</div>
 			  		</div>
+			  		<div className={classNames("row")}>
+						<div className={classNames("col-sm-12")}>
+							<FluentImageTilesBox imageUrls={IMAGE_URLS.SKILL_PICS} />
+						</div>
+					</div>
 			  	</div>
 			</div>
 	  	);
