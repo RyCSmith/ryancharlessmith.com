@@ -4,8 +4,22 @@ var classNames = require('classnames');
 import FluentImageTilesBox from '../../components/FluentImageTilesBox.jsx';
 var SITE_URLS = require('../../constants/SiteUrls');
 var IMAGE_URLS = require('../../constants/ImageUrls');
+var EXTERNAL_URLS = require('../../constants/ExternalUrls');
 import { httpPost } from '../../util/SimpleHttpRequest.jsx';
 import css from './contact_page.scss'
+
+
+const caption = "Feel free to get in touch by email using the form or via the social media links below.";
+
+const socialImageLinks = [
+	[IMAGE_URLS.GITHUB_200_200, EXTERNAL_URLS.GITHUB_URL],
+	[IMAGE_URLS.INSTAGRAM_200_200, EXTERNAL_URLS.INSTAGRAM_URL],
+	[IMAGE_URLS.QUORA_200_200, EXTERNAL_URLS.QUORA_URL],
+	[IMAGE_URLS.LINKEDIN_200_200, EXTERNAL_URLS.LINKEDIN_URL],
+	[IMAGE_URLS.FACEBOOK_200_200, EXTERNAL_URLS.FACEBOOK_URL],
+	[IMAGE_URLS.STACKOVERFLOW_200_200, EXTERNAL_URLS.STACKOVERFLOW_URL],
+	[IMAGE_URLS.TWITTER_200_200, EXTERNAL_URLS.TWITTER_URL]
+];
 
 class ContactPage extends React.Component {
 
@@ -59,7 +73,6 @@ class ContactPage extends React.Component {
 	}
 
 	render() {
-		let caption = "Feel free to get in touch via email using the form below.";
 
 		return (
 	  		<div className={css.pageBox}>
@@ -93,9 +106,10 @@ class ContactPage extends React.Component {
 							</div>
 			  			</div>
 			  		</div>
-			  		<div className={classNames("row")}>
+			  		<hr/>
+			  		<div className={classNames("row", css.socialLinksRow)}>
 						<div className={classNames("col-sm-12")}>
-							<FluentImageTilesBox imageUrls={IMAGE_URLS.SKILL_PICS} />
+							<FluentImageTilesBox imageUrls={socialImageLinks} />
 						</div>
 					</div>
 			  	</div>

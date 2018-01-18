@@ -7,6 +7,12 @@ var IMAGE_URLS = require('../constants/ImageUrls');
 
 import css from './fluent_image_tiles_box.scss'
 
+/*
+	Bootstrap row which will create image squares that fill the screen evenly
+	and roll down as the screen resizes.
+
+	Takes [[image_url, link_url]] - will only wrap tile in link if link_url present.
+*/
 class FluentImageTilesBox extends React.Component {
 
 	constructor(props) {
@@ -17,9 +23,16 @@ class FluentImageTilesBox extends React.Component {
 
 		let squares  = [];
 		for (let i = 0; i < this.props.imageUrls.length; i++) {
-			squares.push(<div key={'fluentRowSB' + i } className={classNames(css.squareBox)}>
-				<img className={classNames(css.squareBoxPic)} src={this.props.imageUrls[i]} />
-			</div>);
+			let currentPair = this.props.imageUrls[i];
+			let key = 'fluentRowSB' + currentPair[0];
+			let imageTile = (
+				<div key={key} className={classNames(css.squareBox)}>
+					<img className={classNames(css.squareBoxPic)} src={currentPair[0]} />
+				</div>
+			);
+			squares.push(
+				currentPair[1] ? (<a key={'a_' + key} href={currentPair[1]}>{imageTile}</a>) : imageTile
+			);
 		}
 
 		return (

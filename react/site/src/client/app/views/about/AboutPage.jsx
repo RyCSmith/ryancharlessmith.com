@@ -11,6 +11,8 @@ import css from './about_page.scss'
 class AboutPage extends React.Component {
 
 	render() {
+		// no links on these images
+		let imageUrlsArr = IMAGE_URLS.SKILL_PICS.map(x => [x, null]);
 
 		return (
 			<div className={css.pageBox}>
@@ -33,7 +35,7 @@ class AboutPage extends React.Component {
 					</div>
 					<div className={classNames("row")}>
 						<div className={classNames("col-sm-12", css.overviewCol)}>
-							<FluentImageTilesBox imageUrls={IMAGE_URLS.SKILL_PICS} />
+							<FluentImageTilesBox imageUrls={imageUrlsArr} />
 						</div>
 					</div>
 				</div>

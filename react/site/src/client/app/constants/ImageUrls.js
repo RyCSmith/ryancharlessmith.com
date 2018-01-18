@@ -7,7 +7,7 @@ export const TABLE_BOOK_400_400 = DOMAIN_IMAGE_PREFIX + '/3.jpg';
 export const PROFILE_PIC = DOMAIN_IMAGE_PREFIX + '/profile.jpg';
 export const RESUME_PHOTO = DOMAIN_IMAGE_PREFIX + '/resume_photo.png';
 
-
+// skill
 export const JAVA_400_400 = DOMAIN_IMAGE_PREFIX + '/java.jpg';
 export const PYTHON_400_400 = DOMAIN_IMAGE_PREFIX + '/python.jpg';
 export const C_400_400 = DOMAIN_IMAGE_PREFIX + '/c.jpg';
@@ -21,11 +21,17 @@ export const SPRING_200_200 = DOMAIN_IMAGE_PREFIX + '/spring2.jpg';
 export const REACT_200_200 = DOMAIN_IMAGE_PREFIX + '/react.jpg';
 export const SCSS_200_200 = DOMAIN_IMAGE_PREFIX + '/scss.png';
 
+// social
+export const GITHUB_200_200 = DOMAIN_IMAGE_PREFIX + '/github2.png';
+export const INSTAGRAM_200_200 = DOMAIN_IMAGE_PREFIX + '/instagram.jpg';
+export const QUORA_200_200 = DOMAIN_IMAGE_PREFIX + '/quora.jpg';
+export const LINKEDIN_200_200 = DOMAIN_IMAGE_PREFIX + '/linkedin.jpg';
+export const FACEBOOK_200_200 = DOMAIN_IMAGE_PREFIX + '/facebook.jpg';
+export const STACKOVERFLOW_200_200 = DOMAIN_IMAGE_PREFIX + '/stackoverflow.png';
+export const TWITTER_200_200 = DOMAIN_IMAGE_PREFIX + '/twitter.jpg';
 
-export const GITHUB_196_191 = DOMAIN_IMAGE_PREFIX + '/githubmobile.png';
 
-
-// Home time images
+// Home tile images
 export const ABOUT_TILE_IMAGE = DOG_LAB_400_400;
 export const EXPERIENCE_TILE_IMAGE = MOUTAIN_BIRDS_400_400;
 export const PROJECTS_TILE_IMAGE = TABLE_BOOK_400_400;
@@ -48,3 +54,4 @@ export const SKILL_PICS = [
 	REACT_200_200,
 	SCSS_200_200
 ]
+
