@@ -58,9 +58,16 @@ class ContactPage extends React.Component {
 	}
 
 	render() {
+		let caption = "Feel free to get in touch via email using the form below.";
+
 		return (
 	  		<div className={css.pageBox}>
 			  	<div className="container">
+			  		<div className="row">
+			  			<div className={classNames("col-lg-12", "text-center", css.caption)}>
+			  				{caption}
+			  			</div>
+			  		</div>
 			  		<div className="row">
 			  			<div className="col-md-12">
 			  				<div className={css.contactBox}>
