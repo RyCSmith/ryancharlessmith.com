@@ -1,4 +1,4 @@
-package com.ryancharlessmith;
+package com.ryancharlessmith.mail.client;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -16,6 +16,9 @@ import org.springframework.stereotype.Component;
 
 import com.google.gson.Gson;
 
+import com.ryancharlessmith.mail.client.MailClient;
+import com.ryancharlessmith.mail.data.MailRequest;
+
 /*
  * 
 <dependency>
@@ -25,7 +28,7 @@ import com.google.gson.Gson;
 </dependency>
  */
 @Component
-public class MailinEdited
+public class MailinEdited implements MailClient
 {
 	//sendTESTblue
 	private static final String EMPTY_STRING = "";
@@ -35,7 +38,13 @@ public class MailinEdited
     @Value("${sendinblue.api.key}")
 	private String api_key;
 
+	@Override
+	public String relay(MailRequest mailRequest) {
+		return relay(mailRequest.getName(), mailRequest.getEmail(), mailRequest.getMessage());
+	}
+
     public String relay(String name, String email, String message) {
+    	System.out.println("HEREEE\n\n\n");
 		Map < String, String > to = new HashMap < String, String > ();
 			to.put("rycsmith@gmail.com", "Ryan Smith");
 

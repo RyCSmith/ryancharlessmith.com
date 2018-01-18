@@ -1,4 +1,5 @@
-package com.ryancharlessmith;
+package com.ryancharlessmith.mail.client;
+
 import java.util.Properties;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -8,7 +9,7 @@ import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-public class MailClient {
+public class SimpleMailClient {
 
 	static Properties mailServerProperties;
 	static Session getMailSession;

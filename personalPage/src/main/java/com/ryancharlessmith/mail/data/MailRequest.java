@@ -1,10 +1,19 @@
-package com.ryancharlessmith;
+package com.ryancharlessmith.mail.data;
 
 public class MailRequest {
 	
 	private String name;
 	private String email;
 	private String message;
+
+	public MailRequest() {
+	}
+	
+	public MailRequest(String name, String email, String message) {
+		this.name = name;
+		this.email = email;
+		this.message = message;
+	}
 	
 	public String getName() {
 		return name;
