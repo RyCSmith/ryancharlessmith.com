@@ -44,8 +44,10 @@ public class MailinEdited implements MailClient
 	}
 
     public String relay(String name, String email, String message) {
-    	System.out.println("HEREEE\n\n\n");
-		Map < String, String > to = new HashMap < String, String > ();
+    	// hacky Herkou logging via print
+    	System.out.println(String.format("Relaying message:[%s], [%s], [%s]", name, email, message));
+		
+    	Map < String, String > to = new HashMap < String, String > ();
 			to.put("rycsmith@gmail.com", "Ryan Smith");
 
 		Map < String, Object > data = new HashMap < String, Object > ();
