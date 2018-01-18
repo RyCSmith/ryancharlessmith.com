@@ -15,6 +15,6 @@ export const PROJECT_API_FILTER = (uniqueUrlKeys) => PROJECT_API_PREFIX + '/filt
 export const PROJECT_API_FILTER_ALL = PROJECT_API_PREFIX + '/filter?returnAll=true';
 
 // export const MAIL_API_RECEIVE = (name, email, message) => '/receivemail?name=' + name + '&email=' + email + '&message=' + message;
-export const MAIL_API_RECEIVE = '/receivemailll';
+export const MAIL_API_RECEIVE = '/receivemail';
 
 export const FILES_RESUME = '/files/Ryan_Smith_CV.pdf';
