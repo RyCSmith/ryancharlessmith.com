@@ -1,0 +1,35 @@
+@import '../../universal';
+
+@media (max-width: 575px) {
+	.captionCol {
+		font-size: 16px;
+	}
+	.imageLimiter {
+		width: 90%;
+	}
+}
+
+@media (min-width: 576px) {
+	.captionCol {
+		font-size: 18px;
+	}
+	.imageLimiter {
+		width: 400px;
+	}
+}
+
+@media (min-width: 992px) {
+	.captionCol {
+		padding-top: 25px;
+	}
+}
+
+.captionCol {
+	padding-right: 50px;
+	padding-left: 50px;
+	margin-bottom: 20px;
+}
+
+.experienceContainer {
+	font-family: 'Lato', sans-serif;
+}

@@ -16,3 +16,5 @@ export const PROJECT_API_FILTER_ALL = PROJECT_API_PREFIX + '/filter?returnAll=tr
 
 // export const MAIL_API_RECEIVE = (name, email, message) => '/receivemail?name=' + name + '&email=' + email + '&message=' + message;
 export const MAIL_API_RECEIVE = '/receivemailll';
+
+export const FILES_RESUME = '/files/Ryan_Smith_CV.pdf';
