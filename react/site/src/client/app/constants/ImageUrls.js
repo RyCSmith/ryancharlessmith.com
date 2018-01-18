@@ -3,7 +3,8 @@ export const DOMAIN_IMAGE_PREFIX = '/images';
 // base image urls
 export const DOG_LAB_400_400 = DOMAIN_IMAGE_PREFIX + '/1.jpg';
 export const MOUTAIN_BIRDS_400_400 = DOMAIN_IMAGE_PREFIX + '/2.jpg';
-export const TABLE_BOOK_400_400 = DOMAIN_IMAGE_PREFIX + '/3.jpg';
+export const MAILBOXES_400_400 = DOMAIN_IMAGE_PREFIX + '/3.jpg';
+export const ASTRONAUT_400_400 = DOMAIN_IMAGE_PREFIX + '/4.jpg';
 export const PROFILE_PIC = DOMAIN_IMAGE_PREFIX + '/profile.jpg';
 export const RESUME_PHOTO = DOMAIN_IMAGE_PREFIX + '/resume_photo.png';
 
@@ -34,8 +35,8 @@ export const TWITTER_200_200 = DOMAIN_IMAGE_PREFIX + '/twitter.jpg';
 // Home tile images
 export const ABOUT_TILE_IMAGE = DOG_LAB_400_400;
 export const EXPERIENCE_TILE_IMAGE = MOUTAIN_BIRDS_400_400;
-export const PROJECTS_TILE_IMAGE = TABLE_BOOK_400_400;
-export const CONTACT_TILE_IMAGE = DOG_LAB_400_400;
+export const PROJECTS_TILE_IMAGE = ASTRONAUT_400_400;
+export const CONTACT_TILE_IMAGE = MAILBOXES_400_400;
 
 export const EXPERIENCE_PAGE_IMAGE = RESUME_PHOTO;
 

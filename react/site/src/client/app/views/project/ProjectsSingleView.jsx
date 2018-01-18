@@ -5,6 +5,8 @@ var classNames = require('classnames');
 import css from './projects_single_view.scss'
 var SITE_URLS = require('../../constants/SiteUrls');
 import { httpGet } from '../../util/SimpleHttpRequest.jsx';
+import List from '../../components/List.jsx';
+import ParagraphsText from '../../components/ParagraphsText.jsx';
 
 class ResumeRow extends React.Component {
 	render() {
@@ -17,41 +19,6 @@ class ResumeRow extends React.Component {
 					{this.props.children}
 				</div>
 			</div>
-		);
-	}
-}
-
-class List extends React.Component {
-	
-	render() {
-
-		let rows = []
-		for (let i = 0; i < this.props.content.length; i++) {
-			rows.push(
-				<li key={"listContent_" + i}>{this.props.content[i]}</li>
-			);
-		}
-
-		let comp = this.props.numbered ? <ol>{rows}</ol> : <ul>{rows}</ul>;
-		return (
-			comp
-		);
-	}
-}
-
-class ParagraphsText extends React.Component {
-	render() {
-		
-		let paragraphs = []
-		let split = this.props.content.split("\n");
-		for (let i = 0; i < this.props.content.length; i++) {
-			paragraphs.push(
-				<p key={"paragraph_" + i}>{split[i]}</p>
-			);
-		}
-
-		return (
-			<div>{paragraphs}</div>
 		);
 	}
 }
