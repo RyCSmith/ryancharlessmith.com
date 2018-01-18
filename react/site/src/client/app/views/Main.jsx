@@ -21,7 +21,6 @@ class Main extends React.Component {
 					<Route exact path={SITE_URLS.EXPERIENCE} component={ExperiencePage}/>
 					<Route exact path={SITE_URLS.CONTACT} component={ContactPage}/>
 					<Route path={SITE_URLS.PROJECTS} component={ProjectsMain}/>
-					<Redirect from="*" to={SITE_URLS.HOME} />
 				</Switch>
 			</div>
 		);

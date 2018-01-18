@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PageController {
 
-    @RequestMapping(value="/")
-    public String homepage(Model model) {
-        return "index";
-    }
+    // @RequestMapping(value="/")
+    // public String homepage(Model model) {
+    //     return "index";
+    // }
 
-    @RequestMapping(value="/test/**")
+    @RequestMapping({"/", "/about/", "/experience","/projects/**", "/contact/"})
     public String test(Model model, HttpServletRequest request) {
         System.out.println(request.getRequestURI());
         return "test";
