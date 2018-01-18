@@ -4,13 +4,15 @@ var path = require('path');
 var BUILD_DIR = path.resolve(__dirname, '../../personalPage/src/main/resources/static');
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
-const isProdBuild = process.env.NODE_ENV === "production";
+const isProdBuild = false; // NOTE: turn this back on to enable versioning (also see look here) //process.env.NODE_ENV === "production";
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
     filename: 'css/styles' + (isProdBuild ? '.[contenthash]' : '') + '.css'
 });
+
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 var config = {
     entry: APP_DIR + '/App.jsx',
@@ -33,7 +35,7 @@ var config = {
                             loader: 'css-loader', // translates CSS into CommonJS
                             query: {
                                 modules: true,
-                                minimize: isProdBuild,
+                                minimize: true, //isProdBuild, LOOK-HERE
                                 localIdentName: '[name]__[local]___[hash:base64:5]'
                             }
                         }, 
@@ -49,7 +51,11 @@ var config = {
         ]
     },
     plugins: [
-        extractSass
+        extractSass,
+        new UglifyJSPlugin(),
+        new webpack.DefinePlugin({
+          'process.env.NODE_ENV': JSON.stringify('production')
+        })
     ]
 };
 

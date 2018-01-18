@@ -13,6 +13,7 @@ SETUP COMMANDS
 	npm install sass-loader node-sass webpack --save-dev
 	npm i css-loader --save-dev
 	npm install --save-dev extract-text-webpack-plugin
+	npm install uglifyjs-webpack-plugin -S
 
 
 WEBPACK REACT
