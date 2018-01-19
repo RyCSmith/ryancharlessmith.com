@@ -100,9 +100,8 @@
     {
         "id": 6,
         "name": "Maze Generator / Solver",
-        "description" : "Data normalization, storage and search platform.",
-        "overview": "Uses a modified version of Kruskal's algorithm to generate a maze and then solves using different algorithms.",
-        "implementationDetails": "This program implements the Disjoint Set data structure and then uses it with a modified version of Kruskal's algorithm (modified in that it attempts to make a spanning tree instead of MST) in order to generate mazes. It then uses either BFS, DFS or randomization to solve the maze.",
+        "description" : "Builds and solves mazes using different algorithms.",
+        "overview": "This program implements the Disjoint Set data structure and then uses it with a modified version of Kruskal's algorithm (modified in that it attempts to make a spanning tree instead of MST) in order to generate mazes. It then uses either BFS, DFS or randomization to solve the maze.",
         "technologyInfo": [
             "Java",
             "Swing"
