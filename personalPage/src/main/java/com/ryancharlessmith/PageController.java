@@ -20,7 +20,7 @@ public class PageController {
     @RequestMapping({"/", "/about", "/experience","/projects/**", "/contact"})
     public String test(Model model, HttpServletRequest request) {
         System.out.println(request.getRequestURI());
-        return "test";
+        return "page";
     }
     
     
