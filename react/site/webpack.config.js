@@ -4,7 +4,7 @@ var path = require('path');
 var BUILD_DIR = path.resolve(__dirname, '../../personalPage/src/main/resources/static');
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
-const isProdBuild = false; // NOTE: turn this back on to enable versioning (also see look here) //process.env.NODE_ENV === "production";
+const isProdBuild = false; // NOTE: turn this back on to enable versioning (also see look here below) //process.env.NODE_ENV === "production" (for some reason this might not work so manually toggle to true if required);
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 

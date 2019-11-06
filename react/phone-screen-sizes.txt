@@ -1,0 +1,7 @@
+notes:
+	iphone5 320
+	iphone6 375
+	iphone6+ 414
+	sm ipad 768
+	md ipad 834
+	lg ipad 1024
