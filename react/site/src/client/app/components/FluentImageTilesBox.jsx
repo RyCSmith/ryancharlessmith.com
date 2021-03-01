@@ -37,7 +37,7 @@ class FluentImageTilesBox extends React.Component {
 
 		return (
 			<div className={classNames("row")}>
-				<div className={classNames(css.limitBox)}>
+				<div className={classNames(css.limitBox, "text-center")}>
 					{squares}
 				</div>
 			</div>
