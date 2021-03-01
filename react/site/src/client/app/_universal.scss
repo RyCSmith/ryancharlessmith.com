@@ -4,12 +4,14 @@ $bluegreen: #06958a;
 @media (max-width: 575px) {
 	.pageBox {
 		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 }
 
 @media (min-width: 576px) {
 	.pageBox {
 		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 }
 
