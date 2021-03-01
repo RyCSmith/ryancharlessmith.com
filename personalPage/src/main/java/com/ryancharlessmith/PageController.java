@@ -22,7 +22,4 @@ public class PageController {
         System.out.println(request.getRequestURI());
         return "page";
     }
-    
-    
-
 }
