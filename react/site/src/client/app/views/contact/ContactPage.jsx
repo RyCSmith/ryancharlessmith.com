@@ -5,12 +5,9 @@ import FluentImageTilesBox from '../../components/FluentImageTilesBox.jsx';
 var SITE_URLS = require('../../constants/SiteUrls');
 var IMAGE_URLS = require('../../constants/ImageUrls');
 var EXTERNAL_URLS = require('../../constants/ExternalUrls');
+var SITE_STRINGS = require('../../constants/SiteStrings');
 import { httpPost } from '../../util/SimpleHttpRequest.jsx';
 import css from './contact_page.scss'
-
-
-const caption = "Feel free to get in touch by email using the form or via the social media links below.";
-const successCaption = "Thanks for the message! I look forward to connecting.";
 
 const socialImageLinks = [
 	[IMAGE_URLS.LINKEDIN_200_200, EXTERNAL_URLS.LINKEDIN_URL],
@@ -78,14 +75,14 @@ class ContactPage extends React.Component {
 			  	<div className="container">
 			  		<div className="row">
 			  			<div className={classNames("col-lg-12", "text-center", css.caption)}>
-			  				{caption}
+			  				{SITE_STRINGS.CONTACTPAGE_MAIN_CAPTION}
 			  			</div>
 			  		</div>
 			  		<div className="row">
 			  			<div className="col-md-12">
 			  				<div className={css.contactBox}>
 			  					<div className={classNames("alert", "alert-success", css.mailSent, {[css.mailSentHidden] : !this.state.mailSent})} role="alert">
-									{successCaption}
+									{SITE_STRINGS.CONTACTPAGE_SUCCESS_CAPTION}
 								</div>
 				  				<div className={classNames(css.inputWrapper, css.inputField)}>
 							        <input type='text' placeholder='Name' 
