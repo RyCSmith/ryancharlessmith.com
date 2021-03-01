@@ -10,15 +10,12 @@ import css from './contact_page.scss'
 
 
 const caption = "Feel free to get in touch by email using the form or via the social media links below.";
+const successCaption = "Thanks for the message! I look forward to connecting.";
 
 const socialImageLinks = [
-	[IMAGE_URLS.GITHUB_200_200, EXTERNAL_URLS.GITHUB_URL],
-	[IMAGE_URLS.INSTAGRAM_200_200, EXTERNAL_URLS.INSTAGRAM_URL],
-	[IMAGE_URLS.QUORA_200_200, EXTERNAL_URLS.QUORA_URL],
 	[IMAGE_URLS.LINKEDIN_200_200, EXTERNAL_URLS.LINKEDIN_URL],
-	[IMAGE_URLS.FACEBOOK_200_200, EXTERNAL_URLS.FACEBOOK_URL],
-	[IMAGE_URLS.STACKOVERFLOW_200_200, EXTERNAL_URLS.STACKOVERFLOW_URL],
-	[IMAGE_URLS.TWITTER_200_200, EXTERNAL_URLS.TWITTER_URL]
+	[IMAGE_URLS.INSTAGRAM_200_200, EXTERNAL_URLS.INSTAGRAM_URL],
+	[IMAGE_URLS.GITHUB_200_200, EXTERNAL_URLS.GITHUB_URL]
 ];
 
 class ContactPage extends React.Component {
@@ -30,7 +27,8 @@ class ContactPage extends React.Component {
 			name : '',
 			email : '',
 			message : '',
-			emailMissing : false
+			emailMissing : false,
+			mailSent: false
 		};
 		this.sendMail = this.sendMail.bind(this);
 	}
@@ -67,7 +65,8 @@ class ContactPage extends React.Component {
 				name : '',
 				email : '',
 				message : '',
-				emailMissing: false
+				emailMissing: false,
+				mailSent: true
 			});
 		}
 	}
@@ -85,6 +84,9 @@ class ContactPage extends React.Component {
 			  		<div className="row">
 			  			<div className="col-md-12">
 			  				<div className={css.contactBox}>
+			  					<div className={classNames("alert", "alert-success", css.mailSent, {[css.mailSentHidden] : !this.state.mailSent})} role="alert">
+									{successCaption}
+								</div>
 				  				<div className={classNames(css.inputWrapper, css.inputField)}>
 							        <input type='text' placeholder='Name' 
 							        	value={this.state.name} 
@@ -104,6 +106,7 @@ class ContactPage extends React.Component {
 							    	SEND
 							    </div>
 							</div>
+
 			  			</div>
 			  		</div>
 			  		<hr/>
